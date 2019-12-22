@@ -85,7 +85,8 @@
     "closest": "0.0.1",
     "jquery": "^3.4.1",
     "object-fit-images": "^3.2.4",
-    "svg4everybody": "^2.1.8"
+    "svg4everybody": "^2.1.8",
+    "ttf2woff2": "^3.0.0"
   },
   "husky": {
     "hooks": {

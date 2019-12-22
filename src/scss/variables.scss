@@ -54,8 +54,8 @@ $line-height:                 1.5;
 
 $typo-margin-vertical:        1em;
 
-$font-family:                 -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-$font-family--monospace:     SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+$font-family:                'montserrat-regular', -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$font-family--monospace:     'HelveticaNeue', SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 // Georgia, Times New Roman, Times, serif
 
 
@@ -63,24 +63,24 @@ $font-family--monospace:     SFMono-Regular, Menlo, Monaco, Consolas, Liberation
 // Ширины
 
 $screen-xs:                   0;
-$screen-sm:                   480px;
+$screen-sm:                   320px;
 $screen-md:                   768px;
-$screen-lg:                   992px;
-$screen-xl:                   1200px;
-$screen-xxl:                  1800px;
+// $screen-lg:                   992px;
+$screen-xl:                   1280px;
+// $screen-xxl:                  1800px;
 
-$container-sm:                100%;
-$container-md:                100%;
-$container-lg:                $screen-lg - 30;
-$container-xl:                $screen-xl - 30;
-$container-xxl:               $screen-xxl - 30;
+$container-sm:                $screen-sm - 40;
+$container-md:                $screen-md - 48;
+// $container-lg:                $screen-lg - 30;
+$container-xl:                $screen-xl - 80;
+// $container-xxl:               $screen-xxl - 30;
 
 
 
 // Модульная сетка
 
 $grid-columns:                12;
-$grid-gutter-width:           30px;
+$grid-gutter-width:           0;
 
 
 
@@ -94,7 +94,7 @@ $opacity:                     0.7;
 $transition-time:             0.3s;
 $shadow:                      0 4px 2px -2px rgba(0, 0, 0, 0.3);
 
-$menu-desktop-width:          $screen-lg;
+$menu-desktop-width:          $screen-xl;
 $toggler-part-height:         3px;
 $toggler-part-bg-color:       #000;
 

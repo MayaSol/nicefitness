@@ -15,14 +15,41 @@
 
 
 /* stylelint-disable */
-// @font-face {
-//   font-family: 'FONTNAME';
-//   src: url('../fonts/FONTNAME.woff2') format('woff2'),
-//        url('../fonts/FONTNAME.woff') format('woff');
-//   font-weight: 400;
-//   font-style: normal;
-//   font-display: swap;
-// }
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('../fonts/HelveticaNeue.woff2') format('woff2'),
+       url('../fonts/HelveticaNeue.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('../fonts/HelveticaNeue-CondensedBold.woff2') format('woff2'),
+       url('../fonts/HelveticaNeue-CondensedBold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'montserrat-regular';
+  src: url('../fonts/montserrat-regular.woff2') format('woff2'),
+       url('../fonts/montserrat-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'montserrat-semibold';
+  src: url('../fonts/montserrat-semibold.woff2') format('woff2'),
+       url('../fonts/montserrat-semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'montserrat-bold';
+  src: url('../fonts/montserrat-bold.woff2') format('woff2'),
+       url('../fonts/montserrat-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
 /* stylelint-enable */
 
 
@@ -41,6 +68,16 @@
 
   &__content {
     flex-grow: 1;
+    color: red;
+    // background-color: #000;
+    &::before {
+      z-index: -1;
+      position: absolute;
+      left: 280px;
+      top: 0px;
+      content: url('../img/temp/index.png');
+      opacity: 0.4;
+    }
   }
 
   &__footer-wrapper {

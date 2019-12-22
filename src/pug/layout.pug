@@ -38,11 +38,12 @@ html(class='page  no-js', lang='ru')
 
     .page__inner
       .page__content
-
         +page-header()
-          +logo('/')
-            img(src='img/demo-logo.svg', alt='Logo', width='64', height='15')
-          block nav
+          .page-header__top
+            +logo('/')
+              img(src='img/logo.png', alt='Logo', width='216', height='29')
+            block nav
+            +schedule('top')
 
         block content
           p содержимое
