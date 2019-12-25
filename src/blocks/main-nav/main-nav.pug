@@ -1,34 +1,85 @@
 //- Все примеси в этом файле должны начинаться c имени блока (main-nav)
 //- Структура меню — в main-nav.data.pug
 
-mixin main-nav(selectedID)
+mixin main-nav-top(selectedID)
+  //- подключаем файл со структурой данных блока
+  include main-nav.data.pug
+
+  -
+    var menu = topMenu;
+    // console.log(attributes);
+    // console.log(menu);
+
+  +makeNav(selectedID,menu,attributes)(id='nav-top' class='main-nav--top')
 
   //- Принимает:
   //-   selectedID {string} - id пункта меню (по умолчанию — из main-nav.data.pug)
   //- Вызов:
         +main-nav('1')
 
+mixin main-nav-side(selectedID)
   //- подключаем файл со структурой данных блока
   include main-nav.data.pug
 
-  nav.main-nav#nav&attributes(attributes)
-    +burger('Показать главное меню', 'nav', 'main-nav--open')(class='main-nav__toggler')
+  -
+    var menu = sideMenu;
+
+  +makeNav(selectedID,menu,attributes)(id = 'nav-side' class= 'main-nav--side')
+
+mixin main-nav-fitness(selectedID)
+  //- подключаем файл со структурой данных блока
+  include main-nav.data.pug
+
+  -
+    var menu = finessMenu;
+
+  +makeNav(selectedID,menu,attributes)(id = 'nav-fitness')
+
+mixin main-nav-cardusers(selectedID)
+  //- подключаем файл со структурой данных блока
+  include main-nav.data.pug
+
+  -
+    var menu = cardusersMenu;
+
+  +makeNav(selectedID,menu,attributes)(id = 'nav-cardusers')
+
+
+//- mixin main-nav-footer(selectedID)
+//-   //- подключаем файл со структурой данных блока
+//-   include main-nav.data.pug
+
+//-   -
+//-     var menu = footerMenu;
+
+//-   +makeNav(selectedID,menu,attributes)
+
+
+mixin makeNav(selectedID,menu,attr)
+
+  //- подключаем файл со структурой данных блока
+  //- include main-nav.data.pug
+
+  nav.main-nav&attributes(attr)&attributes(attributes)
+    //- +burger('Показать боковое меню')(class='side-nav__toggler' data-toggle="off-canvas")
     ul.main-nav__list
-      each menuItem in mainMenu
+      each menuItem in menu
         +main-nav-item(selectedID, menuItem, 1)
-          if (typeof(menuItem.childs) !== 'undefined' && menuItem.childs)
-            +main-nav-sublist-wrapper(2)
-              each menuItem2 in menuItem.childs
-                +main-nav-item(selectedID, menuItem2, 2)
-                  if (typeof(menuItem2.childs) !== 'undefined' && menuItem2.childs)
-                    +main-nav-sublist-wrapper(3)
-                      each menuItem3 in menuItem2.childs
-                        +main-nav-item(selectedID, menuItem3, 3)
+          //- if (typeof(menuItem.childs) !== 'undefined' && menuItem.childs)
+          //-   +main-nav-sublist-wrapper(2)
+          //-     each menuItem2 in menuItem.childs
+          //-       +main-nav-item(selectedID, menuItem2, 2)
+          //-         if (typeof(menuItem2.childs) !== 'undefined' && menuItem2.childs)
+          //-           +main-nav-sublist-wrapper(3)
+          //-             each menuItem3 in menuItem2.childs
+          //-               +main-nav-item(selectedID, menuItem3, 3)
+
 
 mixin main-nav-item(selectedID, item, level)
   -
     var thisItemClass = 'main-nav__item';
     var thisLinkClass = 'main-nav__link';
+
     if(selectedID == item.id) {
       thisItemClass += '  main-nav__item--active';
     }
@@ -41,7 +92,7 @@ mixin main-nav-item(selectedID, item, level)
     }
 
   li(class= thisItemClass)
-    a(class= thisLinkClass, href=item.url)= item.name
+    a(class= thisLinkClass, href=item.url)&attributes(item.attrs)= item.name
     block
 
 mixin main-nav-sublist-wrapper(level)

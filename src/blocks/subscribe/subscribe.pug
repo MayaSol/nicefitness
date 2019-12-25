@@ -1,0 +1,24 @@
+//- Все примеси в этом файле должны начинаться c имени блока (subscribe)
+
+mixin subscribe(mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+  //- Вызов:
+        +subscribe()
+          p «Подвал»
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' subscribe--' + modsList[i].trim();
+      }
+    }
+
+  .subscribe(class=allMods)&attributes(attributes)
+    .subscribe__inner
+      .subscribe__title Подпишитесь на рассылку
+      +btn('Подписаться','common')(class="subscribe__btn")
+

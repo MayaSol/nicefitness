@@ -36,23 +36,33 @@ html(class='page  no-js', lang='ru')
   body
     noscript У вас отключен JavaScript. Это пугает.
 
-    .page__inner
+    block vars
+
+    .off-canvas#off-canvas
+      aside.off-canvas__aside(role='complementary', aria-label='Меню')
+        block off-canvas
+      .off-canvas__overlay(data-toggle='off-canvas')
+
+    .page__inner(class= pageClass)
       .page__content
         +page-header()
-          .page-header__top
-            +logo('/')
-              img(src='img/logo.png', alt='Logo', width='216', height='29')
-            block nav
-            +schedule('top')
+          .page-header__inner
+            .page-header__top
+              +logo('/')
+                img(src='img/logo.png', alt='Logo', width='216', height='29')
+              block nav
+              +schedule('top')
+              +phone('top')
+              +burger('Открыть меню')(class='burger--off-canvas-top' data-toggle="off-canvas")
+            block page-header-bg
 
         block content
           p содержимое
 
       .page__footer-wrapper
-        +page-footer()
-          block footer
-            p «Подвал»
-            p Контактный телефон: #[a(href='tel:+70000000000') +7 000 000 00 00]
+        block footer
+          //- +page-footer()
+            //- p Контактный телефон: #[a(href='tel:+70000000000') +7 000 000 00 00]
 
     block page-bottom
       script(src='js/bundle.js')

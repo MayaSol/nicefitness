@@ -1,0 +1,20 @@
+//- Все примеси в этом файле должны начинаться c имени блока (card-link)
+
+mixin card-link(mods)
+
+  -
+   var allMods = '';
+   if(typeof(mods) !== 'undefined' && mods) {
+     var modsList = mods.split(',');
+     for (var i = 0; i < modsList.length; i++) {
+       allMods = allMods + ' card-link--' + modsList[i].trim();
+     }
+   }
+
+  .card-link(class=allMods)&attributes(attributes)
+    .card-link__inner
+      a(href='/').card-link__link
+        .card-link__legend Клубная карта
+        .card-link__title nicefitness
+
+

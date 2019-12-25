@@ -194,7 +194,8 @@ function generatePngSprite(cb) {
   let spritePngPath = `${dir.blocks}sprite-png/png/`;
   if(nth.config.alwaysAddBlocks.indexOf('sprite-png') > -1 && fileExist(spritePngPath)) {
     del(`${dir.blocks}sprite-png/img/*.png`);
-    let fileName = 'sprite-' + Math.random().toString().replace(/[^0-9]/g, '') + '.png';
+    // let fileName = 'sprite-' + Math.random().toString().replace(/[^0-9]/g, '') + '.png';
+    let fileName = 'sprite.png';
     let spriteData = src(spritePngPath + '*.png')
       .pipe(spritesmith({
         imgName: fileName,

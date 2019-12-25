@@ -87,6 +87,28 @@ $columns-width:              (xl: 386px 428px  386px, md: 232px 256px 232px, sm:
 }
 
 
+@mixin container-wide ()
+{
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $screen-sm) {
+    width: $screen-sm;
+  }
+
+  @media (min-width: $screen-md) {
+    width: $screen-md;
+  }
+
+  @media (min-width: $screen-xl) {
+    width: $screen-xl;
+  }
+
+}
+
+
 
 //------------------------------------------------------------------------------
 //  Генератор правил для прямого родителя модульной сетки

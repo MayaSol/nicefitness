@@ -8,13 +8,14 @@ let config = {
     'no-js',
   ],
   'alwaysAddBlocks': [
-    // 'sprite-svg',
-    // 'sprite-png',
-    // 'object-fit-polyfill',
+    'sprite-svg',
+    'sprite-png',
+    'object-fit-polyfill'
   ],
   'addStyleBefore': [
     'src/scss/variables.scss',
     'src/scss/mixins.scss',
+    '@glidejs/glide/src/assets/sass/glide.core'
     // 'somePackage/dist/somePackage.css', // для 'node_modules/somePackage/dist/somePackage.css',
   ],
   'addStyleAfter': [
@@ -29,7 +30,9 @@ let config = {
   'addAssets': {
     'src/fonts/*.{woff,woff2}': 'fonts/',
     'src/img/*.{png,svg,jpg,jpeg}': 'img/',
-    'src/img/temp/*': 'img/temp/'
+    'src/img/temp/*': 'img/temp/',
+    'src/img/content/*': 'img/content/',
+    'src/video/*': 'video'
     // 'src/favicon/*.{png,ico,svg,xml,webmanifest}': 'img/favicon',
     // 'node_modules/somePackage/images/*.{png,svg,jpg,jpeg}': 'img/',
   },

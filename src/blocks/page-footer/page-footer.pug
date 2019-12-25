@@ -19,4 +19,42 @@ mixin page-footer(mods)
 
   footer.page-footer(class=allMods, role='contentinfo')&attributes(attributes)
     .page-footer__inner
-      block
+      +subscribe(class="page-footer__subscribe")
+      .page-footer__row.page-footer__row--bottom
+        .page-footer__col.page-footer__col--fitness
+          .page-footer__subtitle Фитнесс
+          +main-nav-fitness(class='main-nav--footer main-nav--fitness')
+        .page-footer__col.page-footer__col--card-users
+          .page-footer__subtitle Держателям карт
+          +main-nav-cardusers(class='main-nav--footer main-nav--cardusers')
+        .page-footer__col.page-footer__col--others
+          .page-footer__row-inner
+            +schedule(class="page-footer__schedule")
+            +phone(class="page-footer__phone")
+          .page-footer__row-inner
+            +social(class="page-footer__social")
+              +social-link('https://www.facebook.com/profile.php?id=100011672930358', 'vk')(title='Facebook')
+                svg(width="32", height="32")
+                  use(xlink:href="img/sprite.svg#vk")
+              +social-link('https://www.facebook.com/profile.php?id=100011672930358', 'fb')(title='Facebook')
+                svg(width="32", height="32")
+                  use(xlink:href="img/sprite.svg#fb")
+              +social-link('https://www.facebook.com/profile.php?id=100011672930358', 'insta')(title='Facebook')
+                svg(width="32", height="32")
+                  use(xlink:href="img/sprite.svg#insta")
+              +social-link('https://www.facebook.com/profile.php?id=100011672930358', 'yt')(title='Facebook')
+                svg(width="32", height="32")
+                  use(xlink:href="img/sprite.svg#yt")
+              +social-link('https://www.facebook.com/profile.php?id=100011672930358', 'ok')(title='Facebook')
+                svg(width="32", height="32")
+                  use(xlink:href="img/sprite.svg#ok")
+            +address('inline')(class="page-footer__address")
+          .page-footer__row-inner
+            .page-footer__pay-caption Способы оплаты
+            ul.page-footer__pay-list
+              li.page-footer__pay-item.page-footer__pay-item--mastercard
+              li.page-footer__pay-item.page-footer__pay-item--mir
+              li.page-footer__pay-item.page-footer__pay-item--visa
+              li.page-footer__pay-item.page-footer__pay-item--sovest
+
+

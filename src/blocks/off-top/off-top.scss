@@ -1,0 +1,57 @@
+// В этом файле должны быть стили для БЭМ-блока off-top, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.off-top {
+
+  $block-name:                &; // #{$block-name}__element
+  overflow: hidden;
+
+  &__close {
+    font-size: 15px;
+    color: #000;
+  }
+
+  &__top {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 31px;
+  }
+
+  &__menu {
+    @include container;
+    display: flex;
+  }
+
+  &__title {
+    font-family: $font-family--monospace;
+    font-size: 314px;
+    font-weight: 700;
+    text-align: center;
+    height: 1em;
+    margin-top: -0.22em;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &__title-text {
+    position: absolute;
+    white-space: nowrap;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 1;
+    z-index: -1;
+  }
+
+  &__bottom {
+    @include container;
+    display: flex;
+  }
+
+  &__card-link {
+    margin-left: auto;
+    margin-top: 35px;
+    color: #000;
+  }
+}

@@ -1,0 +1,16 @@
+//- Все примеси в этом файле должны начинаться c имени блока (address)
+
+mixin address(mods)
+
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' address--' + modsList[i].trim();
+      }
+    }
+
+  .address(class=allMods)&attributes(attributes)
+    .address__location Санкт-Петербург, ул. Братиславская, д.30
+    .address__metro Марьино

@@ -1,0 +1,34 @@
+//- Все примеси в этом файле должны начинаться c имени блока (main-slider)
+
+mixin main-slider(mods)
+
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' main-slider--' + modsList[i].trim();
+      }
+    }
+
+  .main-slider(class=allMods)&attributes(attributes)
+    .main-slider__inner
+      .glide.main-slider__slider
+        .glide__track.main-slider__track(data-glide-el="track")
+          ul.main-slider__list.glide__slides
+            +main-slider-item({id: '1',title: 'title1', text: 'desc1', src: 'img/content/card-02.jpg'})
+            +main-slider-item({id: '2',title: 'title2', text: 'desc2', src: 'img/content/card-02.jpg'})
+            +main-slider-item({id: '3',title: 'title3', text: 'desc3', src: 'img/content/card-02.jpg'})
+      .main-slider__arrows
+        +btn('','arrow-left,slider-prev')(class="main-slider__prev")
+        +btn('','arrow-right,slider-next')(class="main-slider__next")
+
+
+mixin main-slider-item(props)
+  li.main-slider__item.glide__slide(data-index= props.id)
+    .main-slider__item-inner
+      .main-slider__desc
+        .main-slider__item-title !{props.title}
+        .main-slider__item-text !{props.text}
+      .main-slider__img
+        img(src= props.src)

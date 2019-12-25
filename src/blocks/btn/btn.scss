@@ -7,7 +7,7 @@
   display: inline-block;
   max-width: 100%;
   margin: 0;
-  border-radius: $border-radius;
+  border-radius: 0;
   // border: 1px solid $gray-lighter;
   border: 0;
   padding: $field-padding-vertical  $field-padding-horizontal;
@@ -17,21 +17,25 @@
   user-select: none;
   text-align: center;
   font-size: 1em;
-  font-family: inherit;
+  font-family: $font-family--monospace;
   line-height: $line-height;
   text-decoration: none;
   text-transform: none;
-  color: $text-color;
-  background-color: $gray-lightest;
+  color: currentColor;
+  // color: $text-color;
+  background-color: transparent;
   background-image: none;
   cursor: pointer;
   overflow: hidden;
+  outline: none;
+  border: none;
+  box-shadow: none;
 
   &:hover,
   &:focus {
     text-decoration: none;
-    color: $text-color;
-    background-color: darken($gray-lightest, 10%);
+    color: currentColorr;
+    //background-color: darken($gray-lightest, 10%);
     // border-color: darken($gray-lighter, 12%);
   }
 
@@ -41,7 +45,7 @@
 
   &:active,
   &:focus {
-    @include field-focus;
+    //@include field-focus;
   }
 
   &--disabled,
@@ -55,6 +59,59 @@
     @at-root a.btn--disabled {
       pointer-events: none;
     }
+  }
+
+  &--common {
+      padding: 8px 0;
+      font-weight: 700;
+      border-bottom: 2px solid currentColor;
+      text-transform: uppercase;
+
+      &:hover,
+      &:focus {
+        color: currentColor;
+      }
+  }
+
+  &--accent {
+    padding: 20px 23px;
+    color: #000000;
+    font-family: $font-family--monospace;
+    font-size: 13px;
+    font-weight: 900;
+    text-transform: uppercase;
+    background-color: #fff;
+
+    &:hover,
+    &:focus {
+      color: #000000;
+    }
+  }
+
+  &--arrow-right {
+    &::after {
+      @include sprite($arrow-long-white);
+      content: '';
+      display: block;
+    }
+  }
+
+  &--arrow-left {
+    &::after {
+      @include sprite($arrow-long-white);
+      content: '';
+      display: block;
+      transform: rotate(180deg);
+    }
+  }
+
+  &--play {
+    padding: 0;
+    width: 87px;
+    height: 87px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background-color: transparent;
   }
 
   // &__icon {

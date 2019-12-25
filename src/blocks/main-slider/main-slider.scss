@@ -1,0 +1,63 @@
+// В этом файле должны быть стили для БЭМ-блока main-slider, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.main-slider {
+
+  $block-name:                &; // #{$block-name}__element
+
+  @media (min-width: $screen-xl) {
+    padding-top: 164px;
+  }
+
+  background-color: $black;
+  overflow: hidden;
+
+
+  &__inner {
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+
+  }
+
+  &__img {
+    line-height: 0;
+    img {
+      max-width: none;
+    }
+  }
+
+  .glide__slide--active {
+
+    #{$block-name}__img {
+      direction: rtl;
+      img {
+      }
+    }
+
+    & + .glide__slide {
+      margin-top: 56px;
+    }
+
+  }
+
+  &__list.glide__slides {
+    // overflow-x: visible;
+  }
+
+  &__track.glide__track {
+    overflow: visible;
+  }
+
+  &__slider.glide {
+      @include container-wide();
+  }
+
+}

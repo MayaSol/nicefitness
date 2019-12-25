@@ -1,0 +1,41 @@
+// В этом файле должны быть стили для БЭМ-блока address, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.address {
+
+  $block-name:                &; // #{$block-name}__element
+
+  font-family: "montserrat";
+  font-size: 13px;
+  font-weight: 600;
+
+  &__location {
+  }
+
+  &__metro {
+
+  }
+
+  &--inline {
+
+    #{$block-name} {
+      &__location {
+        display: inline;
+      }
+
+      &__metro {
+        display: inline;
+        line-height: 1.5;
+
+        &::before {
+          content: '';
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 0.3em;
+          @include sprite($metro);
+        }
+      }
+    }
+  }
+}

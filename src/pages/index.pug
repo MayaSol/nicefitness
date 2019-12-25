@@ -7,12 +7,36 @@ block meta
 //- block append head
 //-   link(rel='stylesheet', href='css/some.css')
 
+block vars
+  -
+    var pageClass = 'page--main';
+
+
+block off-canvas
+  +off-top()
+
 block nav
-  +main-nav('10')
+  +main-nav-top('10')
+block page-header-bg
+  .page-header__bg
+    //- <iframe id="page-header-video" class="video-hidden" width="560" height="315" src="https://www.youtube.com/embed/ScMzIvxBSi4?enablejsapi=1&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    video#page-header-video.video-hidden.page-header-video(width="100%")
+      source(src="video/dummy.mov" type="video/mp4")
+  .page-header__bottom.page-header__bottom--main
+    .page-header__bottom-inner
+      .page-title.page-title--main Правильный фитнес клуб в Чертаново
+      .page-header__links
+        .page-header__links-row
+          +btn('Получить 7 дней тест драйва','accent')(href="/")
+          +btn('','play')(class="page-header__btn-play")
+        .page-header__links-row
+          +btn('Как получить клубную карту?','common')(href="/" class="page-header__card-link")
 
 block content
-  h1 Заголовок
-  p Содержимое. #[a(href='blocks-demo.html') Библиотека блоков].
+    +main-slider()
+
+block footer
+  +page-footer()
 
 //- block footer
 //-   p footer

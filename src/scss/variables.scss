@@ -1,6 +1,6 @@
 // Базовые цвета https://colorscheme.ru/color-converter.html
 
-$black:                       hsl(0, 0%, 0%);
+$black:                       #090606;
 $gray-darkest:                hsl(0, 0%, 10%);
 $gray-darker:                 hsl(0, 0%, 20%);
 $gray-darken:                 hsl(0, 0%, 30%);
@@ -11,6 +11,7 @@ $gray-lighten:                hsl(0, 0%, 70%);
 $gray-lighter:                hsl(0, 0%, 80%);
 $gray-lightest:               hsl(0, 0%, 90%);
 $white:                       hsl(0, 0%, 100%);
+$green:                       #66cc33;
 
 $color-main:                  hsl(208, 98%, 43%);
 $color-success:               hsl(120, 39%, 54%);
@@ -54,7 +55,7 @@ $line-height:                 1.5;
 
 $typo-margin-vertical:        1em;
 
-$font-family:                'montserrat-regular', -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$font-family:                'montserrat', -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 $font-family--monospace:     'HelveticaNeue', SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 // Georgia, Times New Roman, Times, serif
 
@@ -65,7 +66,7 @@ $font-family--monospace:     'HelveticaNeue', SFMono-Regular, Menlo, Monaco, Con
 $screen-xs:                   0;
 $screen-sm:                   320px;
 $screen-md:                   768px;
-// $screen-lg:                   992px;
+// $screen-lg:                   1200px;
 $screen-xl:                   1280px;
 // $screen-xxl:                  1800px;
 
@@ -95,7 +96,8 @@ $transition-time:             0.3s;
 $shadow:                      0 4px 2px -2px rgba(0, 0, 0, 0.3);
 
 $menu-desktop-width:          $screen-xl;
-$toggler-part-height:         3px;
-$toggler-part-bg-color:       #000;
+$toggler-part-height:         4px;
+$toggler-part-bg-color:       red;
+$toggler-part-border-radius:  2px;
 
 $z-index-modal:               100;
