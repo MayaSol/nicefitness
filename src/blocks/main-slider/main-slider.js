@@ -6,39 +6,60 @@ const closest = require('closest');
 ready(function(){
   console.log(document.documentElement.clientWidth);
 
-  var mainSlider = document.querySelector('.main-slider__slider');
-  if (!mainSlider) {
+  var primarySlider = document.querySelector('.main-slider__primary-slider');
+  if (!primarySlider) {
     return;
   }
 
-  var mainSlider = new Glide('.main-slider__slider', {
+  var primarySlider = new Glide('.main-slider__primary-slider', {
     type: 'carousel',
     perView: 1,
     gap: 0,
-    bound: true,
-    peek: { before: 0, after: 426 },
+    // animationTimingFunc: 'linear',
+    //peek: {before: '0', arter: '428'},
     breakpoints: {
       1279: {
-        peek: { before: 0, after: 426 }
       }
     }
   });
 
-  mainSlider.mount();
+  primarySlider.mount();
+
+  var secondSlider = new Glide('.main-slider__second-slider', {
+    type: 'carousel',
+    perView: 1,
+    gap: 0,
+    //peek: {before: '0', arter: '428'},
+    breakpoints: {
+      1279: {
+      }
+    }
+  });
+
+  secondSlider.on('run.before', function() {
+    console.log(secondSlider.index);
+  })
+
+  secondSlider.mount();
 
   var arrows = document.querySelector('.main-slider__arrows');
-  sliderArrows(arrows, mainSlider);
+  sliderArrows(arrows, [primarySlider,secondSlider]);
 
 
   //Стрелки слайдера навигации по моделям
   // index - текущий слайдер типа
-  function sliderArrows(arrowsElem,slider) {
+  function sliderArrows(arrowsElem,sliders) {
+
     arrowsElem.querySelector('.btn--slider-next').addEventListener("click", function(event) {
-      slider.go('>');
+      for (let i=0; i<sliders.length; i++) {
+        sliders[i].go('>');
+      }
     });
 
     arrowsElem.querySelector('.btn--slider-prev').addEventListener("click", function(event) {
-      slider.go('<');
+      for (let i=0; i<sliders.length; i++) {
+        sliders[i].go('<');
+      }
     });
   }
 

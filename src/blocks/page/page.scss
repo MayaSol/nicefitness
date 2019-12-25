@@ -76,20 +76,69 @@
   &__content {
     flex-grow: 1;
     color: red;
+    position: relative;
     // background-color: #090606;
 
 
-    &::before {
-      z-index: -1;
-      position: absolute;
-      left: 280px;
-      top: 0;
-      //top: -5280px;
-      content: url('../img/temp/index.png');
-      opacity: 0.4;
+    // &::before {
+    //   z-index: -1;
+    //   position: absolute;
+    //   left: 280px;
+    //   top: 0;
+    //   //top: -5280px;
+    //   content: url('../img/temp/index.png');
+    //   opacity: 0.4;
+    // }
+
+  }
+
+  .page-bg {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    // background-color: rgba(200,10,10,0.2);
+    // opacity: 1;
+
+    &__inner {
+      position: relative;
+      height: 100%;
+      @include container-wide;
     }
 
+    &__line {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: 100;
 
+      &--left {
+        left: 0;
+        width: 1px;
+        background-color: #fff;
+        opacity: 0.2;
+      }
+
+      &--first {
+        left: 427px;
+        width: 1px;
+        background-color: #fff;
+        opacity: 0.2;
+      }
+
+      &--second {
+        left: 853px;
+        width: 1px;
+        background-color: #66cc33;
+      }
+
+      &--right {
+        right: 1px;
+        width: 1px;
+        background-color: #fff;
+        opacity: 0.2;
+      }
+    }
   }
 
   &__footer-wrapper {

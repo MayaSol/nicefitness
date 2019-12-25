@@ -45,6 +45,13 @@ html(class='page  no-js', lang='ru')
 
     .page__inner(class= pageClass)
       .page__content
+        .page-bg
+          .page-bg__inner
+            .page-bg__line.page-bg__line--left
+            .page-bg__line.page-bg__line--first
+            .page-bg__line.page-bg__line--second
+            .page-bg__line.page-bg__line--right
+
         +page-header()
           .page-header__inner
             .page-header__top
@@ -54,7 +61,8 @@ html(class='page  no-js', lang='ru')
               +schedule('top')
               +phone('top')
               +burger('Открыть меню')(class='burger--off-canvas-top' data-toggle="off-canvas")
-            block page-header-bg
+            block page-header-add
+          block page-header-bg
 
         block content
           p содержимое
