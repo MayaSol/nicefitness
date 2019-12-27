@@ -19,6 +19,7 @@ let config = {
     // 'somePackage/dist/somePackage.css', // для 'node_modules/somePackage/dist/somePackage.css',
   ],
   'addStyleAfter': [
+    'src/scss/test.scss'
     // 'src/scss/print.scss',
   ],
   'addJsBefore': [

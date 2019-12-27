@@ -77,18 +77,17 @@
     flex-grow: 1;
     color: red;
     position: relative;
-    // background-color: #090606;
 
 
-    // &::before {
-    //   z-index: -1;
-    //   position: absolute;
-    //   left: 280px;
-    //   top: 0;
-    //   //top: -5280px;
-    //   content: url('../img/temp/index.png');
-    //   opacity: 0.4;
-    // }
+    &::before {
+      z-index: -1;
+      position: absolute;
+      left: 0;
+      top: 0;
+      //top: -5280px;
+      content: url('../img/temp/index.png');
+      opacity: 0.4;
+    }
 
   }
 
@@ -120,7 +119,7 @@
       }
 
       &--first {
-        left: 427px;
+        left: 426px;
         width: 1px;
         background-color: #fff;
         opacity: 0.2;
@@ -445,5 +444,56 @@ pre {
     font-weight: 600;
     line-height: 1.1;
    }
+}
+
+.section-title {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+
+.icon {
+
+  &::before {
+    content: '';
+    display: block;
+  }
+
+  &--cardio-white {
+    &::before {
+      @include sprite($cardio-white);
+    }
+  }
+
+  &--combat-white {
+    &::before {
+      @include sprite($combat-white);
+    }
+  }
+
+  &--gym-white {
+    &::before {
+      @include sprite($gym-white);
+    }
+  }
+
+  &--group-white {
+    &::before {
+      @include sprite($group-white);
+    }
+  }
+
+  &--sauna-white {
+    &::before {
+      @include sprite($sauna-white);
+    }
+  }
+
+  &--fitness-white {
+    &::before {
+      @include sprite($fitness-white);
+    }
+  }
+
 }
 

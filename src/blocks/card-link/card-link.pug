@@ -1,6 +1,6 @@
 //- Все примеси в этом файле должны начинаться c имени блока (card-link)
 
-mixin card-link(mods)
+mixin card-link(mods,price)
 
   -
    var allMods = '';
@@ -13,8 +13,10 @@ mixin card-link(mods)
 
   .card-link(class=allMods)&attributes(attributes)
     .card-link__inner
+      if (price)
+        .card-link__price !{price}
       a(href='/').card-link__link
         .card-link__legend Клубная карта
-        .card-link__title nicefitness
-
+        .card-link__title
+          span nicefitness
 

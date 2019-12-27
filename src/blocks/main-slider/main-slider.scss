@@ -6,43 +6,53 @@
 
   $block-name:                &; // #{$block-name}__element
 
-
   background-color: $black;
   overflow: hidden;
-  height: 888px;
 
 
   @media (min-width: $screen-xl) {
+    padding-bottom: 92px;
     padding-top: 164px;
   }
 
 
   &__inner {
-    // @include container-wide();
     display: flex;
   }
 
   &__arrows {
     position: absolute;
-    z-index: 99999;
+    left: 140px;
+    bottom: 35px;
+    z-index: 99;
+  }
+
+  &__prev {
+    margin-right: 15px;
   }
 
   &__primary {
-    // width: 885px;
-    width: 1174px;
+    width: 885px;
+    height: 668px;
+    position: relative;
   }
 
   &__second {
     width: 428px;
+    position: relative;
+  }
+
+  &__card-link {
+    position: absolute;
+    left: 130px;
+    top: -68px;
   }
 
 }
 
 .primary-slider {
 
-
   $block-name:                &; // #{$block-name}__element
-  // width: 885px;
 
   &__list {
     list-style: none;
@@ -50,48 +60,76 @@
     padding: 0;
   }
 
-  &__item.glide__slide {
-    // visibility: hidden;
+  &__item-inner {
+    position: relative;
+    padding-bottom: 56px;
   }
+
 
   &__img {
     line-height: 0;
     direction: rtl;
     overflow: hidden;
+    display: flex;
+    height: 668px;
 
     img {
       max-width: none;
+      object-fit: none;
+      object-position: right top;
     }
   }
 
-
-  .glide__slide.glide__slide--active {
-
-    visibility: visible;
-
-    #{$block-name}__img {
-      overflow: visible;
-    }
-
-    & + .glide__slide #{$block-name}__img {
-      // visibility: visible;
-    }
-
+  &__desc {
+    position: absolute;
+    right: 236px;
+    // left: 1px;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 618px;
+    padding-top: 42px;
+    padding-left: 40px;
+    padding-right: 50px;
+    padding-bottom: 73px;
+    background-color: #fff;
+    color: #000;
   }
 
-  &__track.glide__track {
-    // overflow: visible;
+  .glide-slider--active {
+    // right: 235px;
   }
 
-  &__slider.glide {
+  &__number {
+    font-family: $font-family--monospace;
+    font-size: 210px;
+    font-weight: 700;
+    line-height: 0.7;
+  }
+
+  &__item-title {
+    margin-top: 10px;
+    flex-basis: 288px;
+    font-size: 24px;
+    line-height: 1.1;
+    font-weight: 700;
+  }
+
+  &__item-text {
+    flex-basis: 430px;
+    margin-top: 58px;
+    line-height: 18px;
+    font-size: 13px;
+    font-weight: 400;
   }
 
 }
 
 .second-slider {
+  position: relative;
 
   $block-name:                &; // #{$block-name}__element
-  // width: 428px;
   margin-top: 56px;
 
   &__list {
@@ -100,35 +138,45 @@
     padding: 0;
   }
 
-  &__item.glide__slide {
-    // visibility: hidden;
+  &__item {
+    position: relative;
+    // &::after {
+    //   content: attr(data-index);
+    //   font-family: $font-family--monospace;
+    //   color: rgba(255,255,255,0.1);
+    //   text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+    //   position: absolute;
+    //   left: 30px;
+    //   top: 30px;
+    //   font-size: 100px;
+    //   font-weight: 700;
+    // }
   }
 
-  .glide__slide.glide__slide--active {
+  &__number {
+    position: absolute;
+    display: block;
+    left: 140px;
+    top: 240px;
 
-    visibility: visible;
-    z-index: 1;
-
-    #{$block-name}__img {
-      overflow: visible;
-    }
-
-    & + .glide__slide #{$block-name}__img {
-      // visibility: visible;
+    text {
+      font-family: $font-family--monospace;
+      font-weight: 700;
+      font-size: 210px;
+      line-height: 0.7;
     }
 
   }
 
   &__img {
     line-height: 0;
+    background-color: $black;
+    height: 668px;
 
     img {
       max-width: none;
+      opacity: 0.32;
     }
-  }
-
-  &__track.glide__track {
-    // overflow: visible;
   }
 
 }

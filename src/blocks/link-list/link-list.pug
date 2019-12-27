@@ -1,0 +1,42 @@
+//- Все примеси в этом файле должны начинаться c имени блока (link-list)
+
+mixin link-list(mods)
+
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' link-list--' + modsList[i].trim();
+      }
+    }
+
+  .link-list(class=allMods)&attributes(attributes)
+    .link-list__inner
+      ul.link-list__list
+        +link-list-item({name: 'Кардио', icon: 'cardio-white'},'cardio')
+        +link-list-item({name: 'Единоборства', icon: 'combat-white'},'active','combat')
+        +link-list-item({name: 'Тренажерка', icon: 'gym-white'},'gym')
+        +link-list-item({name: 'Групповые', icon: 'group-white'},'group')
+        +link-list-item({name: 'Фитнесс', icon: 'fitness-white'},'fitness')
+        +link-list-item({name: 'Сауна', icon: 'sauna-white'},'sauna')
+
+
+mixin link-list-item(props,mods)
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' link-list__item--' + modsList[i].trim();
+      }
+    }
+
+    var iconClass = "icon icon--" + props.icon;
+
+  li.link-list__item(class=allMods)&attributes(attributes)
+    a.link-list__link(href="/")
+      span.link-list__name(class=iconClass) !{props.name}
+      .link-list__img
+        img(src="img/content/services.jpg")
+

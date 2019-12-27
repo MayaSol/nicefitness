@@ -62,7 +62,7 @@
   }
 
   &--common {
-      padding: 8px 0;
+      padding: 9px 0 8px;
       font-weight: 700;
       border-bottom: 2px solid currentColor;
       text-transform: uppercase;
@@ -74,7 +74,7 @@
   }
 
   &--accent {
-    padding: 20px 23px;
+    padding: 18px 24px;
     color: #000000;
     font-family: $font-family--monospace;
     font-size: 13px;

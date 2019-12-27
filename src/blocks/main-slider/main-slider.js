@@ -11,6 +11,15 @@ ready(function(){
     return;
   }
 
+  var screenWidth = document.documentElement.clientWidth;
+  var containerWidth = document.querySelector('.page-bg__inner').offsetWidth;
+  var secondLineLeft = document.querySelector('.page-bg__line--second').offsetLeft;
+  var primaryContainer = document.querySelector('.main-slider__primary');
+
+  var primaryWidth = secondLineLeft + (screenWidth - containerWidth)/2;
+  primaryContainer.style.width = primaryWidth + 'px';
+
+
   var primarySlider = new Glide('.main-slider__primary-slider', {
     type: 'carousel',
     perView: 1,
@@ -24,6 +33,27 @@ ready(function(){
   });
 
   primarySlider.mount();
+
+
+
+  var secondContainer = document.querySelector('.main-slider__second');
+
+  var secondWidth = containerWidth - secondLineLeft + (screenWidth - containerWidth)/2;
+  secondContainer.style.width = secondWidth + 'px';
+
+  // var secondItems = document.querySelectorAll('.second-slider__item');
+
+  // for (let i=0; i<secondItems.length; i++) {
+  //   let text = secondItems[i].querySelector('.second-slider__number svg text');
+  //   console.log(secondItems[i].dataset.index);
+  //   let index = secondItems[i].dataset.index;
+  //   if (index.toString.length < 2) {
+  //     index = '0' + index;
+  //   }
+  //   text.textContent = index;
+  //   console.log(text);
+  // }
+
 
   var secondSlider = new Glide('.main-slider__second-slider', {
     type: 'carousel',

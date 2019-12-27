@@ -5,6 +5,7 @@
 .card-link {
 
   $block-name:                &; // #{$block-name}__element
+  color: #000;
 
   &__link {
     display: block;
@@ -24,22 +25,39 @@
   }
 
   &__title {
-    position: relative;
-    padding-right: 20px;
     font-family: $font-family--monospace;
     font-size: 36px;
     font-weight: 900;
     line-height: 1;
 
-    &::after {
-      content: '';
-      position: absolute;
-      right: 0;
-      bottom: 0.3em;
-      border-style: solid;
-      border-width: 6.5px 0 6.5px 11px;
-      border-color: transparent transparent transparent #000;
+    span {
+      position: relative;
+      padding-right: 20px;
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0.4em;
+        border-style: solid;
+        border-width: 6.5px 0 6.5px 11px;
+        border-color: transparent transparent transparent #000;
+      }
     }
+
+  }
+
+  &__price {
+    margin-bottom: 50px;
+    color: #ffffff;
+    font-family: $font-family--monospace;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  &--large {
+    background-color: $green;
+    padding: 42px 30px 30px 25px;
   }
 
 }

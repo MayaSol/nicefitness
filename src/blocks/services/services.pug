@@ -1,0 +1,17 @@
+//- Все примеси в этом файле должны начинаться c имени блока (services)
+
+mixin services(mods)
+
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' services--' + modsList[i].trim();
+      }
+    }
+
+  section.services(class=allMods)&attributes(attributes)
+    .services__inner
+      .section-title.services__title Услуги
+      +link-list(class="services__list")
