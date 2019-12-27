@@ -9,7 +9,7 @@ block meta
 
 block vars
   -
-    var pageClass = 'page--main';
+    var pageClass = 'page-main';
 
 
 block off-canvas
@@ -35,7 +35,8 @@ block page-header-bg
 
 block content
     +main-slider()
-    +services()
+    +services(class="page__services page__section")
+    +info(class="page__info page__section")
 
 block footer
   +page-footer()

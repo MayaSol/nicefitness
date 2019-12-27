@@ -1,0 +1,43 @@
+// В этом файле должны быть стили для БЭМ-блока info, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.info {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    @include container;
+    display: flex;
+  }
+
+  &__figures {
+    width: get-point(1, xl);
+    flex-shrink: 0;
+  }
+
+  &__figure {
+    margin-bottom: 44px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+
+    @at-root &#{$block-name}__lead {
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+  }
+
+  &__text {
+    padding-top: 22px;
+    padding-left: 49px;
+  }
+}

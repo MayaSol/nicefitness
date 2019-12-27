@@ -143,6 +143,20 @@
   &__footer-wrapper {
     flex-shrink: 0;
   }
+
+  &__section {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__services {
+    padding-bottom: 227px;
+    background-color: $black;
+  }
+
+  &__info {
+    padding-bottom: 108px;
+  }
 }
 
 *,

@@ -6,11 +6,6 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  padding-bottom: 300px;
-  background-color: $black;
-  position: relative;
-  z-index: 1;
-
   &__inner {
     @include container;
   }

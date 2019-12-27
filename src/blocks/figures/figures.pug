@@ -1,0 +1,17 @@
+//- Все примеси в этом файле должны начинаться c имени блока (figures)
+
+mixin figures(props, mods)
+
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' figures--' + modsList[i].trim();
+      }
+    }
+
+  .figures(class=allMods)&attributes(attributes)
+    .figures__inner
+      .figures__value !{props.value}
+      .figures__caption !{props.caption}

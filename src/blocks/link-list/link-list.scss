@@ -40,7 +40,7 @@
     display: block;
     position: relative;
     z-index: 10;
-    color: #fff;
+    color: currentColor;
     text-decoration: none;
     transition: 0.3s;
 
@@ -50,6 +50,7 @@
       margin-bottom: -5px;
       padding-left: 96px;
       flex-shrink: 0;
+      color: currentColor;
 
       // &:not(:last-child) {
       //   margin-right: 70px;
@@ -62,8 +63,7 @@
         height: 1px;
         left: 0;
         bottom: 0.8em;
-        background-color: #fff;
-        background-color: red;
+        background-color: currentColor;
         margin-right: 32px;
       }
 
@@ -92,7 +92,7 @@
     font-size: 13px;
     font-weight: 700;
     line-height: 20px;
-    color: #fff;
+    color: currentColor;
     text-decoration: none;
 
     &::before {
