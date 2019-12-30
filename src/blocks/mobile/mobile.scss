@@ -1,0 +1,117 @@
+// В этом файле должны быть стили для БЭМ-блока mobile, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.mobile {
+
+  $block-name:                &; // #{$block-name}__element
+  color: #070505;
+
+  &__inner {
+    @include container;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 46px;
+    padding-top: 10px;
+  }
+
+  &__desc {
+    margin-bottom: 40px;
+  }
+
+  &__tagline {
+    width: 700px;
+    margin-bottom: 48px;
+    line-height: 41px;
+  }
+
+  &__download {
+    display: flex;
+  }
+
+  &__download-item {
+    margin-right: 15px;
+  }
+
+  &__phone {
+    margin-right: 43px;
+    width: 300px;
+    height: 597px;
+    background-image: url("../img/phone-bg.png");
+  }
+
+
+  &__phone-inner {
+    padding: 68px 36px 45px;
+  }
+
+  &__logo {
+    margin-bottom: 40px;
+  }
+
+  &__classes-title {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 31px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  &__text {
+    margin-bottom: 22px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &__classes-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.classes-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 7px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #100a0a;
+  font-family: $font-family--monospace;
+
+  &__date {
+    display: flex;
+    align-items: baseline;
+    flex-shrink: 0;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  &__day {
+    margin-right: 5px;
+    font-size: 24px;
+  }
+
+  &__weekday {
+    font-size: 10px;
+  }
+
+  &__time {
+    flex-shrink: 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  &__trainer {
+    font-family: $font-family;
+    width: 60px;
+    font-size: 10px;
+    line-height: 1.1;
+    font-weight: 700;
+    word-break: keep-all;
+  }
+
+}

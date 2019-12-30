@@ -1,0 +1,47 @@
+// В этом файле должны быть стили для БЭМ-блока social-section, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.social-section {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    @include container;
+  }
+
+  &__header {
+    width: 450px;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    flex-shrink: 0;
+    display: flex;
+    &--fb {
+      width: 438px;
+      margin-top: 30px;
+      justify-content: flex-end;
+    }
+
+    &--vk {
+      width: 360px;
+      margin-top: -155px;
+      margin-left: 45px;
+    }
+
+    &--insta {
+      width: 426px;
+      margin-left: 22px;
+      margin-top: -270px;
+    }
+  }
+}

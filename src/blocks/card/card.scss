@@ -1,66 +1,63 @@
-// В этом файле должны быть стили для БЭМ-блока card, его элементов,
+// В этом файле должны быть стили для БЭМ-блока card-link, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .card {
 
   $block-name:                &; // #{$block-name}__element
+  color: #000;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  z-index: 0;
-  min-width: 200px;
-  padding: 0 15px;
-  margin-bottom: 30px;
+  &__link {
+    display: block;
+    color: currentColor;
+    text-decoration: none;
 
-  &__inner {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    margin-bottom: 20px;
+    &:hover,
+    &:focus {
+      color: currentColor;
+      text-decoration: none;
+    }
   }
 
-  &__img-wrap {
-    display: block;
-    flex-shrink: 0;
-    margin-bottom: 20px;
-  }
-
-  &__img {
-    display: block;
+  &__legend {
+    font-size: 14px;
+    font-weight: 600;
   }
 
   &__title {
-    margin: 0 0 20px;
-  }
-
-  &__new {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 50%;
-    padding: 5px 10px;
+    font-family: $font-family--monospace;
+    font-size: 36px;
+    font-weight: 900;
     line-height: 1;
-    font-weight: 700;
-    color: #fff;
-    background: $color-success;
-    transform: translateX(-50%) rotate(-10deg);
+
+    span {
+      position: relative;
+      padding-right: 20px;
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0.4em;
+        border-style: solid;
+        border-width: 6.5px 0 6.5px 11px;
+        border-color: transparent transparent transparent #000;
+      }
+    }
+
   }
 
   &__price {
-    flex-shrink: 0;
-    margin: auto 0 0;
-    font-size: $font-size-h3;
+    margin-bottom: 50px;
+    color: #ffffff;
+    font-family: $font-family--monospace;
+    font-size: 70px;
     font-weight: 700;
     line-height: 1;
   }
 
-  &__buy {
-    flex-shrink: 0;
+  &--large {
+    background-color: $green;
+    padding: 42px 30px 30px 25px;
   }
+
 }

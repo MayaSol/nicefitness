@@ -239,7 +239,7 @@ $columns-width:              (xl: 386px 428px  386px, md: 232px 256px 232px, sm:
   $columns: 1,
   $screen: xl) {
 
-  @debug "get-point: #{map-get($columns-width, $screen)}";
+  // @debug "get-point: #{map-get($columns-width, $screen)}";
 
   $width: 0;
 

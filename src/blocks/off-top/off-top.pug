@@ -19,9 +19,11 @@ mixin off-top(mods)
         +btn('Закрыть','common')(class="off-top__close" data-toggle="off-canvas")
       .off-top__menu
         +main-nav-side('10')
-      .off-top__title
-        .off-top__title-text nicefitness
+      +caption-large('nicefitness')(class="off-top__title")
+      //- .off-top__title.caption-large
+      //-   .caption-large__inner
+      //-     .off-top__title-text.caption-large__text nicefitness
       .off-top__bottom
-        +card-link(class="off-top__card-link")
+        +card(class="off-top__card-link")
 
 

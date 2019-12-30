@@ -25,24 +25,27 @@
   }
 
   &__title {
-    font-family: $font-family--monospace;
-    font-size: 314px;
-    font-weight: 700;
-    text-align: center;
-    height: 1em;
     margin-top: -0.22em;
-    overflow: hidden;
-    width: 100%;
   }
 
-  &__title-text {
-    position: absolute;
-    white-space: nowrap;
-    left: 50%;
-    transform: translateX(-50%);
-    line-height: 1;
-    z-index: -1;
-  }
+  // &__title {
+  //   font-family: $font-family--monospace;
+  //   font-size: 314px;
+  //   font-weight: 700;
+  //   text-align: center;
+  //   height: 1em;
+  //   overflow: hidden;
+  //   width: 100%;
+  // }
+
+  // &__title-text {
+  //   position: absolute;
+  //   white-space: nowrap;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  //   line-height: 1;
+  //   z-index: -1;
+  // }
 
   &__bottom {
     @include container;

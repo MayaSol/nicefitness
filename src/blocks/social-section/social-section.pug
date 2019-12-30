@@ -1,0 +1,27 @@
+//- Все примеси в этом файле должны начинаться c имени блока (social-section)
+
+mixin social-section(mods)
+
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' social-section--' + modsList[i].trim();
+      }
+    }
+
+  section.social-section(class=allMods)&attributes(attributes)
+    .social-section__inner
+      .social-section__header.icon-quotes
+        h2.section-title.social-section__title Nicefitness<br> в социальных сетях
+      .social-section__list
+        .social-section__item.social-section__item--fb
+          .social-section__item-inner
+            img(src="img/content/fb-widget.jpg")
+        .social-section__item.social-section__item--vk
+          .social-section__item-inner
+            img(src="img/content/vk-widget.jpg")
+        .social-section__item.social-section__item--insta
+          .social-section__item-inner
+            img(src="img/content/insta-widget.jpg")

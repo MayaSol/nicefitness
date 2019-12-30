@@ -27,7 +27,7 @@ mixin main-slider(mods)
               +second-slider-item({id: '1', num: '01',title: 'title1', text: 'desc1', src: 'img/content/card-02.jpg'})
               +second-slider-item({id: '2', num: '02',title: 'title2', text: 'desc2', src: 'img/content/card-03.jpg'})
               +second-slider-item({id: '3', num: '03',title: 'title3', text: 'desc3', src: 'img/content/card-02.jpg'})
-        +card-link('large','2 000 ₽')(class="main-slider__card-link")
+        +card('large', {price: '2 000 ₽'})(class="main-slider__card-link")
         .main-slider__arrows
           +btn('','arrow-left,slider-prev')(class="main-slider__prev")
           +btn('','arrow-right,slider-next')(class="main-slider__next")

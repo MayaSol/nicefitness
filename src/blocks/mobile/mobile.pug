@@ -1,0 +1,41 @@
+//- Все примеси в этом файле должны начинаться c имени блока (mobile)
+
+mixin mobile(props, mods)
+
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' mobile--' + modsList[i].trim();
+      }
+    }
+
+  section.mobile(class=allMods)&attributes(attributes)
+    .mobile__inner
+      .mobile__desc
+        .mobile__tagline.page-tagline Мобильное приложение Nicefitness для эффективного достижения ваших спортивных целей
+        .mobile__download
+          .mobile__download-item.mobile__download-item--appstore
+            img(src ="img/content/app-store-btn.png")
+          .mobile__download-item.mobile__download-item--googleplay
+            img(src ="img/content/google-play-btn.png")
+      .mobile__phone
+        .mobile__phone-inner
+          +logo(href="/" class="mobile__logo")
+            img(src="img/logo-black.png" width="186" height="24")
+          .mobile__classes-title Классы тренировок
+          .mobile__text Цель - стать сильным, выносливым и счастливым!
+          ul.mobile__classes-list
+            +mobile-classes-item({day: '26', weekday: 'среда', time: '08:00-09:00', trainer: 'Марина Юдина'})
+            +mobile-classes-item({day: '27', weekday: 'четверг', time: '08:00-09:00', trainer: 'Марина Юдина'})
+            +mobile-classes-item({day: '29', weekday: 'суббота', time: '19:00-20:00', trainer: 'Макс Деревянко'})
+
+
+mixin mobile-classes-item(props)
+  li.classes-item
+    .classes-item__date
+      .classes-item__day !{props.day}
+      .classes-item__weekday !{props.weekday}
+    .classes-item__time !{props.time}
+    .classes-item__trainer !{props.trainer}

@@ -91,54 +91,6 @@
 
   }
 
-  .page-bg {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    bottom: 0;
-    // background-color: rgba(200,10,10,0.2);
-    // opacity: 1;
-
-    &__inner {
-      position: relative;
-      height: 100%;
-      @include container-wide;
-    }
-
-    &__line {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      z-index: 100;
-
-      &--left {
-        left: 0;
-        width: 1px;
-        background-color: #fff;
-        opacity: 0.2;
-      }
-
-      &--first {
-        left: 426px;
-        width: 1px;
-        background-color: #fff;
-        opacity: 0.2;
-      }
-
-      &--second {
-        left: 853px;
-        width: 1px;
-        background-color: #66cc33;
-      }
-
-      &--right {
-        right: 1px;
-        width: 1px;
-        background-color: #fff;
-        opacity: 0.2;
-      }
-    }
-  }
 
   &__footer-wrapper {
     flex-shrink: 0;
@@ -150,12 +102,65 @@
   }
 
   &__services {
-    padding-bottom: 227px;
-    background-color: $black;
+    padding-bottom: 243px;
   }
 
   &__info {
-    padding-bottom: 108px;
+    padding-bottom: 63px;
+  }
+
+  &__social {
+    padding-top: 92px;
+  }
+}
+
+
+.page-bg {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  // background-color: rgba(200,10,10,0.2);
+  // opacity: 1;
+
+  &__inner {
+    position: relative;
+    height: 100%;
+    @include container-wide;
+  }
+
+  &__line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+
+    &--left {
+      left: 0;
+      width: 1px;
+      background-color: #fff;
+      opacity: 0.2;
+    }
+
+    &--first {
+      left: 426px;
+      width: 1px;
+      background-color: #fff;
+      opacity: 0.2;
+    }
+
+    &--second {
+      left: 853px;
+      width: 1px;
+      background-color: #66cc33;
+    }
+
+    &--right {
+      right: 1px;
+      width: 1px;
+      background-color: #fff;
+      opacity: 0.2;
+    }
   }
 }
 
@@ -180,7 +185,7 @@ body {
   line-height: $line-height;
   text-align: left;
   color: $text-color;
-  background-color: $body-bg;
+  background-color: $bg-color;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -452,6 +457,8 @@ pre {
 
 .page-title {
    &--main {
+    margin-top: 0;
+    margin-bottom: 0;
     width: 560px;
     font-family: $font-family;
     font-size: 80px;
@@ -463,6 +470,12 @@ pre {
 .section-title {
   font-size: 60px;
   font-weight: 600;
+}
+
+.page-tagline {
+  font-size: 36px;
+  font-weight: 600;
+  color: currentColor;
 }
 
 
@@ -509,5 +522,22 @@ pre {
     }
   }
 
+}
+
+.icon-quotes {
+    &::after {
+      content: "\02EE";
+      display: block;
+      height: 0.3em;
+      margin-bottom: 10px;
+      font-family: $font-family--monospace;
+      font-size: 380px;
+      font-weight: 700;
+      line-height: 0.3;
+      color: currentColor;
+      border: 1px solid red;
+      transform: rotate(180deg) translateY(80%);
+      margin-right: -15px;
+    }
 }
 

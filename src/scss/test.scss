@@ -1,31 +1,68 @@
-// .main-slider {
-//   background-color: transparent;
+.main-slider {
+  background-color: transparent;
 
-//   & * {
-//     background-color: transparent;
-//   }
+  & * {
+    background-color: transparent;
+  }
 
-//     img {
-//       opacity: 0 !important;
-//     }
-//     border: 1px solid red;
-// }
+    img {
+      opacity: 0 !important;
+    }
+    border: 1px solid red;
+}
 
-// .main-slider__card-link {
-//   background-color: transparent;
-//   color: red;
-//   border: 1px solid red;
+.main-slider__card-link {
+  background-color: transparent;
+  color: red;
+  border: 1px solid red;
 
-//   .card-link__price {
-//     color: red;
-//   }
-// }
+  .card-link__price {
+    color: red;
+  }
+}
 
-// .primary-slider__img {
-//   border: 1px solid red;
-// }
+.primary-slider__img {
+  border: 1px solid red;
+}
 
-// .secondary-slider__img {
+.secondary-slider__img {
 
-// }
+}
+
+.info__bg {
+  outline: 1px solid red;
+}
+
+.mobile {
+  color: red;
+}
+
+.mobile__phone {
+  outline: 1px solid red;
+  background-image: none;
+}
+
+.classes-item {
+  border-color: red;
+}
+
+.page {
+
+  &__content {
+
+    &::before {
+      z-index: -1;
+      position: absolute;
+      left: 0;
+      top: 0;
+      //top: -5280px;
+      content: url('../img/temp/index.png');
+      opacity: 0.4;
+    }
+
+  }
+}
+
+
+
 

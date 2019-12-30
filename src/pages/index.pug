@@ -20,7 +20,7 @@ block nav
 block page-header-add
   .page-header__bottom.page-header__bottom--main
     .page-header__bottom-inner
-      .page-title.page-title--main Правильный фитнес клуб в Чертаново
+      h1.page-title.page-title--main Правильный фитнес клуб в Чертаново
       .page-header__links
         .page-header__links-row
           +btn('Получить 7 дней тест драйва','accent')(href="/")
@@ -37,6 +37,9 @@ block content
     +main-slider()
     +services(class="page__services page__section")
     +info(class="page__info page__section")
+    +caption-large('nicefitness')(class="page__caption page__section")
+    +social-section(class="page__section page__social")
+    +mobile(class="page__mobile page__section")
 
 block footer
   +page-footer()
