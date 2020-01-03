@@ -99,19 +99,24 @@
   &__section {
     position: relative;
     z-index: 1;
+
+    &--mobile {
+      z-index: 2;
+    }
+
+    &--social {
+      padding-top: 92px;
+    }
+
+    &--info {
+      padding-bottom: 63px;
+    }
+
+    &--services {
+      padding-bottom: 243px;
+    }
   }
 
-  &__services {
-    padding-bottom: 243px;
-  }
-
-  &__info {
-    padding-bottom: 63px;
-  }
-
-  &__social {
-    padding-top: 92px;
-  }
 }
 
 

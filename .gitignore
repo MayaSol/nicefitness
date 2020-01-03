@@ -1,5 +1,6 @@
 design/
 PSD/
+pictures/
 build/*
 !build/readme.md
 

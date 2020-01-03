@@ -114,6 +114,12 @@
     background-color: transparent;
   }
 
+  &--tour {
+    margin-right: 30px;
+    font-family: $font-family--monospace;
+    font-size: 13px;
+  }
+
   // &__icon {
   //   display: inline-block;
   //   vertical-align: middle;

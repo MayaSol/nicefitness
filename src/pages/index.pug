@@ -35,11 +35,13 @@ block page-header-bg
 
 block content
     +main-slider()
-    +services(class="page__services page__section")
-    +info(class="page__info page__section")
-    +caption-large('nicefitness')(class="page__caption page__section")
-    +social-section(class="page__section page__social")
-    +mobile(class="page__mobile page__section")
+    +services(class="page__section page__section--services")
+    +info(class="page__section page__section--info")
+    +caption-large('nicefitness')(class="page__section page__section--caption")
+    +social-section(class="page__section page__section--social")
+    +mobile(class="page__section page__section--mobile")
+    +tour(class="page__section page__section--tour")
+      +card-tour('large,tour', {text: 'Виртуальный тур'})
 
 block footer
   +page-footer()

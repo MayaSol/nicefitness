@@ -1,0 +1,18 @@
+//- Все примеси в этом файле должны начинаться c имени блока (tour)
+
+mixin tour(mods)
+
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' tour--' + modsList[i].trim();
+      }
+    }
+
+  .tour(class=allMods)&attributes(attributes)
+    .tour__inner
+      block
+      .tour__bottom
+        .tour__title Ультрасовременное новое пространство занимает общую площадь в 3900 кв.м

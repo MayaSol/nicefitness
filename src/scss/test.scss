@@ -11,6 +11,11 @@
     border: 1px solid red;
 }
 
+.card {
+  border: 1px solid red;
+  color: red;
+}
+
 .main-slider__card-link {
   background-color: transparent;
   color: red;
@@ -60,6 +65,13 @@
       opacity: 0.4;
     }
 
+  }
+
+  &__section {
+    &--tour {
+      background-image: none;
+      border: 1px solid red;
+    }
   }
 }
 

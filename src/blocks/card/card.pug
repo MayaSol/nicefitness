@@ -3,20 +3,36 @@
 mixin card(mods,props)
 
   -
-   var allMods = '';
-   if(typeof(mods) !== 'undefined' && mods) {
-     var modsList = mods.split(',');
-     for (var i = 0; i < modsList.length; i++) {
-       allMods = allMods + ' card--' + modsList[i].trim();
-     }
-   }
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' card--' + modsList[i].trim();
+      }
+    }
+
+    if (typeof props == 'undefined') {
+      props = {}
+    }
+
+    if (typeof props.text == 'undefined') {
+      props.text = 'Клубная карта'
+    }
 
   .card(class=allMods)&attributes(attributes)
     .card__inner
-      if ( !(typeof props == 'undefined') && (props) )
+      if ( !(typeof props.price == 'undefined') )
         .card__price !{props.price}
       a(href='/').card__link
-        .card__text Клубная карта
+        .card__text !{props.text}
         .card__title
           span nicefitness
+      block
+
+mixin card-tour(mods,props)
+  +card(mods,props)
+    .card__bottom
+      +btn('Начать','common,tour')(href="/")
+      .card__big-figure 360
+        span &ocy;
 

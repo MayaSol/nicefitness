@@ -6,6 +6,14 @@
 
   $block-name:                &; // #{$block-name}__element
   color: #000;
+  display: flex;
+  justify-content: center;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
   &__link {
     display: block;
@@ -19,7 +27,7 @@
     }
   }
 
-  &__legend {
+  &__text {
     font-size: 14px;
     font-weight: 600;
   }
@@ -40,7 +48,7 @@
         bottom: 0.4em;
         border-style: solid;
         border-width: 6.5px 0 6.5px 11px;
-        border-color: transparent transparent transparent #000;
+        border-color: transparent transparent transparent currentColor;
       }
     }
 
@@ -55,9 +63,42 @@
     line-height: 1;
   }
 
+  &__bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  &__big-figure {
+    display: flex;
+    font-family: $font-family--monospace;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1.1;
+
+    span {
+      font-size: 50px;
+    }
+  }
+
   &--large {
+    width: 256px;
+    height: 248px;
+    padding-top: 42px;
+    padding-bottom: 24px;
+    box-sizing: border-box;
+  }
+
+  &--main-slider {
     background-color: $green;
-    padding: 42px 30px 30px 25px;
+  }
+
+  &--tour {
+    position: absolute;
+    top: 333px;
+    left: 0;
+    padding-top: 18px;
+    padding-bottom: 31px;
   }
 
 }

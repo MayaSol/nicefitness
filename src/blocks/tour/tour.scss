@@ -1,0 +1,39 @@
+// В этом файле должны быть стили для БЭМ-блока tour, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.tour {
+
+  $block-name:                &; // #{$block-name}__element
+
+  height: 800px;
+  width: 100%;
+  margin-top: -107px;
+
+  background-image: url("../img/content/tour.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  margin-bottom: 100px;
+
+  &__inner {
+    @include container();
+    position: relative;
+    height: 100%;
+  }
+
+  &__bottom {
+    position: absolute;
+    width: 100%;
+    bottom: -66px;
+    left: 0;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 605px;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+}
