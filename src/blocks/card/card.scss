@@ -7,7 +7,7 @@
   $block-name:                &; // #{$block-name}__element
   color: #000;
   display: flex;
-  justify-content: center;
+  // justify-content: center;
 
   &__inner {
     display: flex;
@@ -82,11 +82,16 @@
   }
 
   &--large {
-    width: 256px;
+    width: 272px;
     height: 248px;
     padding-top: 42px;
     padding-bottom: 24px;
+    padding-left: 24px;
     box-sizing: border-box;
+
+    @media (min-width: $screen-md) {
+      width: 256px;
+    }
   }
 
   &--main-slider {
@@ -99,6 +104,7 @@
     left: 0;
     padding-top: 18px;
     padding-bottom: 31px;
+    background-color: $white;
   }
 
 }

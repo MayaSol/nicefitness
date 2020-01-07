@@ -9,9 +9,16 @@
   &__value {
     margin-bottom: 32px;
     font-family: $font-family--monospace;
-    font-size: 212px;
+    font-size: 190px;
     font-weight: 700;
     line-height: 0.8;
+
+    @media (min-width: $screen-md) {
+      font-size: 212px;
+    }
+
+    @media (min-width: $screen-xl) {
+    }
   }
 
   &__caption {

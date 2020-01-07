@@ -7,23 +7,66 @@
   $block-name:                &; // #{$block-name}__element
 
   overflow: hidden;
+  padding-top: 164px;
 
-
-  @media (min-width: $screen-xl) {
-    padding-bottom: 92px;
-    padding-top: 164px;
+  @media (min-width: $screen-lg) {
+    margin-bottom: 110px;
   }
 
+  @media (min-width: $screen-xl) {
+    padding-bottom: 100px;
+    margin-bottom: 0;
+  }
 
   &__inner {
-    display: flex;
+    @include container-wide;
+    position: relative;
+    margin-bottom: 162px;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      position: static;
+      display: flex;
+      width: auto;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__container {
+    @include container;
   }
 
   &__arrows {
     position: absolute;
-    left: 140px;
-    bottom: 35px;
+    display: flex;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 99;
+
+    @media (min-width: $screen-md) {
+      left: 30px;
+      transform: none;
+    }
+
+    @media (min-width: $screen-lg) {
+      bottom: 0;
+      left: auto;
+      right: 40px;
+    }
+
+    @media (min-width: $screen-xl) {
+      left: auto;
+      bottom: auto;
+      right: -130px;
+      transform: translateX(100%);
+      bottom: 35px;
+    }
   }
 
   &__prev {
@@ -31,9 +74,23 @@
   }
 
   &__primary {
-    width: 885px;
-    height: 668px;
-    position: relative;
+    width: 100%;
+    height: 966px;
+
+    @media (min-width: $screen-md) {
+      //height: 694px;
+      height: auto;
+    }
+
+    @media (min-width: $screen-lg) {
+      height: auto;
+    }
+
+    @media (min-width: $screen-xl) {
+      position: relative;
+      width: 885px;
+      height: 668px;
+    }
   }
 
   &__second {
@@ -43,8 +100,23 @@
 
   &__card-link {
     position: absolute;
-    left: 130px;
-    top: -68px;
+    top: -69px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    @media (min-width: $screen-md) {
+      left: auto;
+      right: 40px;
+      transform: none;
+    }
+
+    @media (min-width: $screen-xl) {
+      left: auto;
+      right: -130px;
+      transform: translateX(100%);
+      top: -68px;
+    }
   }
 
 }
@@ -61,7 +133,18 @@
 
   &__item-inner {
     position: relative;
-    padding-bottom: 56px;
+    padding-bottom: 298px;
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 26px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-bottom: 56px;
+    }
+
+    @media (min-width: $screen-xl) {
+    }
   }
 
 
@@ -81,19 +164,40 @@
 
   &__desc {
     position: absolute;
-    right: 236px;
-    // left: 1px;
-    bottom: 0;
+    left: 0;
+    top: 286px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 618px;
     padding-top: 42px;
-    padding-left: 40px;
-    padding-right: 50px;
+    padding-left: 24px;
+    padding-right: 24px;
     padding-bottom: 73px;
     background-color: #fff;
     color: #000;
+
+    @media (min-width: $screen-md) {
+      padding-top: 35px;
+      padding-left: 38px;
+      width: 729px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 643px;
+      top: auto;
+      bottom: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 618px;
+      top: auto;
+      left: auto;
+      right: 234px;
+      bottom: 0;
+      padding-left: 40px;
+      padding-right: 50px;
+    }
   }
 
   .glide-slider--active {
@@ -101,26 +205,46 @@
   }
 
   &__number {
+    margin-bottom: 40px;
     font-family: $font-family--monospace;
     font-size: 210px;
     font-weight: 700;
     line-height: 0.7;
+    order: -1;
+
+    @media (min-width: $screen-md) {
+      order: 0;
+      margin-bottom: 0;
+    }
   }
 
   &__item-title {
     margin-top: 10px;
-    flex-basis: 288px;
+    flex-basis: 100%;
     font-size: 24px;
-    line-height: 1.1;
+    line-height: 1.2;
     font-weight: 700;
+
+    @media (min-width: $screen-md) {
+      flex-basis: 376px;
+    }
+
+    @media (min-width: $screen-xl) {
+      flex-basis: 288px;
+    }
   }
 
   &__item-text {
     flex-basis: 430px;
-    margin-top: 58px;
-    line-height: 18px;
+    margin-top: 38px;
+    line-height: 20px;
     font-size: 13px;
     font-weight: 400;
+
+    @media (min-width: $screen-md) {
+      line-height: 18px;
+      margin-top: 48px;
+    }
   }
 
 }
@@ -130,6 +254,12 @@
 
   $block-name:                &; // #{$block-name}__element
   margin-top: 56px;
+
+  display: none;
+
+  @media (min-width: $screen-xl) {
+    display: block;
+  }
 
   &__list {
     list-style: none;

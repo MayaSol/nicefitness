@@ -8,51 +8,126 @@
 
   background-color: #fff;
   color: #000;
+  padding-bottom: 30px;
 
   &__inner {
     @include container;
   }
 
   &__subscribe {
-    padding-top: 125px;
-    margin-bottom: 75px;
+    padding-top: 115px;
+    margin-bottom: 65px;
+
+    @media (min-width: $screen-xl) {
+      padding-top: 125px;
+      margin-bottom: 75px;
+    }
+  }
+
+  &__row--content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 105px;
+    align-items: flex-end;
+
+    @media (min-width: $screen-md) {
+      align-items: flex-start;
+      margin-bottom: 130px;
+    }
+
+    @media (min-width: $screen-xl) {
+      flex-wrap: nowrap;
+    }
   }
 
   &__row--bottom {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
+
+    @media (min-width: $screen-md) {
+      align-items: baseline;
+    }
+
+    @media (min-width: $screen-xl) {
+    }
   }
 
   &__subtitle {
     font-family: $font-family;
     font-size: 24px;
     font-weight: 700;
-    margin-bottom: 80px;
+    margin-bottom: 35px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 80px;
+    }
   }
 
   &__col--fitness {
-    flex-basis: 20%;
+    flex-basis: 100%;
+    margin-bottom: 45px;
+
+    @media (min-width: $screen-md) {
+      flex-basis: 50%;
+      margin-bottom: 105px;
+    }
+
+    @media (min-width: $screen-xl) {
+      flex-basis: 20%;
+      margin-bottom: 0;
+    }
   }
 
   &__col--card-users {
-    flex-basis: 20%;
+    flex-basis: 100%;
+    margin-bottom: 67px;
+
+    @media (min-width: $screen-md) {
+      flex-basis: 50%;
+    }
+
+    @media (min-width: $screen-xl) {
+      flex-basis: 20%;
+      margin-bottom: 0;
+    }
   }
 
   &__col--others {
-    flex-basis: 58%;
+    flex-basis: 100%;
+
+    @media (min-width: $screen-xl) {
+      flex-basis: 58%;
+    }
 
     #{$block-name}__row-inner {
       display: flex;
       justify-content: center;
+      flex-basis: 100%;
+      flex-wrap: wrap;
+
+      @media (min-width: $screen-md) {
+        flex-basis: auto;
+        flex-wrap: nowrap;
+      }
 
       &:first-child {
-        margin-bottom: 80px;
-        align-items: flex-end;
+        margin-bottom: 38px;
+
+        @media (min-width: $screen-md) {
+          align-items: flex-end;
+          margin-bottom: 50px;
+        }
       }
 
       &:nth-child(2) {
         align-items: flex-end;
-        margin-bottom: 54px;
+        margin-bottom: 45px;
+
+        @media (min-width: $screen-md) {
+          margin-bottom: 54px;
+        }
       }
 
       &:nth-child(3) {
@@ -63,45 +138,112 @@
 
   &__schedule {
     display: flex;
-    justify-content: flex-end;
-    flex-basis: 41%;
-    margin-right: 50px;
+    flex-basis: 100%;
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-md) {
+      justify-content: flex-end;
+      flex-basis: 50%;
+      margin-right: 50px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      flex-basis: 41%;
+    }
   }
 
   &__social {
     display: flex;
-    justify-content: flex-end;
-    flex-basis: 41%;
-    margin-right: 50px;
+    justify-content: space-between;
+    flex-basis: 100%;
+    padding-right: 10px;
+
+    @media (min-width: $screen-md) {
+      flex-basis: 50%;
+      justify-content: flex-end;
+      margin-right: 50px;
+      padding-right: 0;
+    }
+
+    @media (min-width: $screen-lg) {
+    }
+
+    @media (min-width: $screen-xl) {
+      flex-basis: 41%;
+    }
   }
 
   &__address {
-    flex-basis: 41%;
+    flex-basis: 100%;
+    margin-bottom: 38px;
+    order: -1;
+
+    @media (min-width: $screen-md) {
+      flex-basis: 50%;
+      order: 1;
+      flex-shrink: 0;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      flex-basis: 41%;
+    }
   }
 
   &__phone {
-    flex-basis: 41%;
+    flex-basis: 100%;
+
+    @media (min-width: $screen-md) {
+      flex-basis: 50%;
+      flex-shrink: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      flex-basis: 41%;
+    }
   }
 
   &__pay-caption {
     display: flex;
-    justify-content: flex-end;
-    flex-basis: 41%;
-    margin-right: 50px;
+    flex-basis: 100%;
+    margin-bottom: 10px;
     font-size: 11px;
     font-weight: 600;
+
+    @media (min-width: $screen-md) {
+      justify-content: flex-end;
+      flex-basis: 41%;
+      margin-right: 50px;
+      margin-bottom: 0;
+    }
   }
 
   &__pay-list {
     display: flex;
-    flex-basis: 41%;
+    flex-basis: 100%;
+    align-items: center;
+    justify-content: space-between;
     list-style: none;
     margin: 0;
     padding: 0;
+
+    @media (min-width: $screen-md) {
+      flex-basis: 50%;
+      flex-shrink: 0;
+      justify-content: flex-start;
+    }
+
+    @media (min-width: $screen-xl) {
+      flex-basis: 41%;
+    }
   }
 
   &__pay-item {
-    margin-right: 20px;
+
+    @media (min-width: $screen-md) {
+      margin-right: 20px;
+    }
 
     &:last-child {
       margin-right: 0;
@@ -121,6 +263,45 @@
 
     &--mir {
       @include sprite($mir);
+    }
+  }
+
+  &__creds {
+    span {
+      color: #000;
+      font-size: 11px;
+      font-weight: 400;
+      display: block;
+
+      @media (min-width: $screen-md) {
+        display: inline;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &__madeby {
+    text-decoration: none;
+    color: #000;
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      align-items: baseline;
+    }
+
+    span {
+      margin-right: 8px;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.55px;
+    }
+    &::after {
+      content: '';
+      display: block;
+      @include sprite($lab01);
+    }
+    &:hover {
+      color: currentColor;
     }
   }
 

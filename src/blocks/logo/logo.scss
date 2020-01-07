@@ -12,4 +12,12 @@
   img {
     display: block;
   }
+
+  &--off-top {
+    width: 190px;
+
+    @media (min-width: $screen-xl) {
+      width: auto;
+    }
+  }
 }

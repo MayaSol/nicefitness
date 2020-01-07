@@ -6,10 +6,22 @@
 
   $block-name:                &; // #{$block-name}__element
   overflow: hidden;
+  height: 100%;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
 
   &__close {
     font-size: 15px;
     color: #000;
+
+    &:hover {
+      color: #000;
+    }
   }
 
   &__top {
@@ -25,7 +37,19 @@
   }
 
   &__title {
-    margin-top: -0.22em;
+    margin-top: 65px;
+
+    @media (min-width: $screen-md) {
+      margin-top: auto;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-top: -0.5em;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-top: -0.22em;
+    }
   }
 
   // &__title {
@@ -50,6 +74,7 @@
   &__bottom {
     @include container;
     display: flex;
+    margin-bottom: 50px;
   }
 
   &__card-link {

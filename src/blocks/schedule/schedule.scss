@@ -24,12 +24,22 @@
 
   &__hours {
     font-weight: 700;
+    white-space: nowrap;
   }
 
   &--top {
+    display: none;
     position: absolute;
-    left: get-point(2, xl);
     transform: translateX(-100%);
     padding-right: 45px;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+      left: get-point(2, lg) - $screen-padding-lg;
+    }
+
+    @media (min-width: $screen-xl) {
+      left: get-point(2, xl) - $screen-padding-xl;
+    }
   }
 }

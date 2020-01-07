@@ -14,7 +14,7 @@ $container-xxl:               ($screen-xxl - 30) !default;
 $grid-columns:                12 !default;
 $grid-gutter-width:           30px !default;
 
-$columns-width:              (xl: 386px 428px  386px, md: 232px 256px 232px, sm: 280px);
+$columns-width:              (xl: 426px 426px 426px, lg: 340px 341px 340px, md: 255px 254px 255px, sm: 64px 190px 64px);
 
 
 
@@ -58,14 +58,14 @@ $columns-width:              (xl: 386px 428px  386px, md: 232px 256px 232px, sm:
     }
   }
 
-  // @media (min-width: $screen-lg) {
-  //   width: $container-lg;
+  @media (min-width: $screen-lg) {
+    width: $container-lg;
 
-  //   @if ($lg-grid-gutter != $md-grid-gutter) {
-  //     padding-left: ($lg-grid-gutter / 2);
-  //     padding-right: ($lg-grid-gutter / 2);
-  //   }
-  // }
+    @if ($lg-grid-gutter != $md-grid-gutter) {
+      padding-left: ($lg-grid-gutter / 2);
+      padding-right: ($lg-grid-gutter / 2);
+    }
+  }
 
   @media (min-width: $screen-xl) {
     width: $container-xl;
@@ -100,6 +100,10 @@ $columns-width:              (xl: 386px 428px  386px, md: 232px 256px 232px, sm:
 
   @media (min-width: $screen-md) {
     width: $screen-md;
+  }
+
+  @media (min-width: $screen-lg) {
+    width: $screen-lg;
   }
 
   @media (min-width: $screen-xl) {
@@ -216,14 +220,15 @@ $columns-width:              (xl: 386px 428px  386px, md: 232px 256px 232px, sm:
 }
 
 
-@mixin get-width ($start: 1, $columns: 1, $screen: xl) {
+@function get-width ($start: 1, $columns: 1, $screen: xl) {
 
-  @for $i from $start through $columns {
-      $width: $width + nth(map-get($columns-width, $screen),$i)
+  $width: 0;
+
+  @for $i from $start through ($start + $columns - 1) {
+      $width: $width + nth(map-get($columns-width, $screen),$i) + $i - 1;
   }
 
-  flex: 0 0 $width;
-  max-width: $width;
+  @return $width;
 }
 
 //------------------------------------------------------------------------------
@@ -239,15 +244,7 @@ $columns-width:              (xl: 386px 428px  386px, md: 232px 256px 232px, sm:
   $columns: 1,
   $screen: xl) {
 
-  // @debug "get-point: #{map-get($columns-width, $screen)}";
-
-  $width: 0;
-
-  @for $i from 1 through $columns {
-      $width: $width + nth(map-get($columns-width, $screen),$i)
-  }
-
-  @return $width;
+  @return get-width(1, $columns, $screen);
 }
 
 

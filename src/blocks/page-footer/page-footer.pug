@@ -20,7 +20,7 @@ mixin page-footer(mods)
   footer.page-footer(class=allMods, role='contentinfo')&attributes(attributes)
     .page-footer__inner
       +subscribe(class="page-footer__subscribe")
-      .page-footer__row.page-footer__row--bottom
+      .page-footer__row.page-footer__row--content
         .page-footer__col.page-footer__col--fitness
           .page-footer__subtitle Фитнесс
           +main-nav-fitness(class='main-nav--footer main-nav--fitness')
@@ -52,9 +52,14 @@ mixin page-footer(mods)
           .page-footer__row-inner
             .page-footer__pay-caption Способы оплаты
             ul.page-footer__pay-list
+              li.page-footer__pay-item.page-footer__pay-item--visa
               li.page-footer__pay-item.page-footer__pay-item--mastercard
               li.page-footer__pay-item.page-footer__pay-item--mir
-              li.page-footer__pay-item.page-footer__pay-item--visa
               li.page-footer__pay-item.page-footer__pay-item--sovest
-
+      .page-footer__row.page-footer__row--bottom
+        .page-footer__creds
+          span © 2019 - Nicefitness.
+          span Все права защищены
+        a(href="/").page-footer__madeby
+          span Сделано
 

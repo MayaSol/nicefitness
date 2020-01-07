@@ -10,20 +10,34 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding-bottom: 24px;
+    flex-wrap: wrap;
+    padding-bottom: 18px;
     border-bottom: 2px solid rgba(0,0,0,0.14);
+
+    @media (min-width: $screen-md) {
+      flex-wrap: nowrap;
+    }
   }
 
   &__btn {
     font-size: 13px;
+    flex-shrink: 0;
   }
 
   &__title {
     font-family: $font-family--monospace;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 700;
-    line-height: 1;
+    line-height: 1.2;
     text-transform: uppercase;
     color: rgba(0,0,0,0.14);
+    margin-bottom: 18px;
+
+    @media (min-width: $screen-md) {
+      width: 380px;
+      font-size: 60px;
+      margin-bottom: 0;
+      letter-spacing: -0.02em;
+    }
   }
 }

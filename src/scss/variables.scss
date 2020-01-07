@@ -67,16 +67,22 @@ $font-family--monospace:     'HelveticaNeue', SFMono-Regular, Menlo, Monaco, Con
 $screen-xs:                   0;
 $screen-sm:                   320px;
 $screen-md:                   768px;
-// $screen-lg:                   1200px;
+$screen-lg:                   1024px;
 $screen-xl:                   1280px;
 // $screen-xxl:                  1800px;
 
-$container-sm:                $screen-sm - 40;
-$container-md:                $screen-md - 48;
-// $container-lg:                $screen-lg - 30;
-$container-xl:                $screen-xl - 80;
-// $container-xxl:               $screen-xxl - 30;
 
+$screen-padding-sm:          20px;
+$screen-padding-md:          40px;
+$screen-padding-lg:          40px;
+$screen-padding-xl:          40px;
+
+
+$container-sm:                $screen-sm - $screen-padding-sm * 2;
+$container-md:                $screen-md - $screen-padding-md * 2;
+$container-lg:                $screen-lg - $screen-padding-lg * 2;
+$container-xl:                $screen-xl - $screen-padding-xl * 2;
+// $container-xxl:               $screen-xxl - 30;
 
 
 // Модульная сетка
@@ -98,7 +104,7 @@ $shadow:                      0 4px 2px -2px rgba(0, 0, 0, 0.3);
 
 $menu-desktop-width:          $screen-xl;
 $toggler-part-height:         4px;
-$toggler-part-bg-color:       red;
+$toggler-part-bg-color:       $white;
 $toggler-part-border-radius:  2px;
 
 $z-index-modal:               100;

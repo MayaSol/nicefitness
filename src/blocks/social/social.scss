@@ -9,12 +9,27 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 0;
+  justify-content: space-between;
+  padding-left: 0;
   margin-bottom: 0;
   list-style: none;
 
+
+  @media (min-width: $screen-xl) {
+    justify-content: flex-start;
+  }
+
+
+
   &__link-wrap {
-    margin-right: 20px;
+
+    @media (min-width: $screen-md) {
+      margin-right: 40px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-right: 20px;
+    }
 
     &:last-child {
      margin-right: 0;
@@ -53,9 +68,12 @@
 
   &__link {
     display: block;
-    padding-left: 10px;
-    padding-right: 10px;
     background-color: transparent;
+
+    @media (min-width: $screen-xl) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
 
     // #{$block-name}__link-wrap--vk & {
     //   background-color: $color-vk;

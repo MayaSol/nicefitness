@@ -12,6 +12,16 @@
 
   &__title {
     margin-top: 0;
-    margin-bottom: 135px;
+    margin-bottom: 62px;
+    position: relative;
+    z-index: 10;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 152px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 145px;
+    }
   }
 }

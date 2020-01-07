@@ -9,7 +9,7 @@
   width: 28px;
   border: none;
   padding: 0;
-  line-height: 20px;
+  line-height: 28px;
   background: transparent;
   user-select: none;
   cursor: pointer;
@@ -24,7 +24,7 @@
     color: transparent;
     border-radius: $toggler-part-border-radius;
     background: $toggler-part-bg-color;
-    transition: background $transition-time $transition-time;
+    // transition: background $transition-time $transition-time;
 
     &:before,
     &:after {
@@ -35,8 +35,8 @@
       height: $toggler-part-height;
       border-radius: $toggler-part-border-radius;
       background: $toggler-part-bg-color;
-      transform-origin: 50% 50%;
-      transition: top $transition-time $transition-time, transform $transition-time;
+      // transform-origin: 50% 50%;
+      // transition: top $transition-time $transition-time, transform $transition-time;
       transform: translateX(-50%);
     }
 

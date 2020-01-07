@@ -2,7 +2,11 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-$off-canvas-height:            768px !default; // ширина этого блока
+$off-canvas-height-xl:            768px; // высота этого блока
+$off-canvas-height-lg:            768px; // высота этого блока
+$off-canvas-height-md:            1024px; // высота этого блока
+$off-canvas-height-sm:            712px;
+
 
 .off-canvas {
 
@@ -32,7 +36,19 @@ $off-canvas-height:            768px !default; // ширина этого бло
     }
 
     #{$block-name}__page-content {
-      transform: translateY($off-canvas-height);
+      transform: translateY($off-canvas-height-sm);
+
+      @media (min-width: $screen-md) {
+        transform: translateY($off-canvas-height-md);
+      }
+
+      @media (min-width: $screen-lg) {
+        transform: translateY($off-canvas-height-lg);
+      }
+
+      @media (min-width: $screen-xl) {
+        transform: translateY($off-canvas-height-xl);
+      }
     }
   }
 
@@ -49,9 +65,24 @@ $off-canvas-height:            768px !default; // ширина этого бло
       position: fixed;
       z-index: 999;
       width: 100%;
-      height: $off-canvas-height;
+      height: $off-canvas-height-sm;
+      transform: translateY(($off-canvas-height-sm * -1));
       max-height: none;
-      transform: translateY(($off-canvas-height * -1));
+
+      @media (min-width: $screen-md) {
+        height: $off-canvas-height-md;
+        transform: translateY(($off-canvas-height-md * -1));
+      }
+
+      @media (min-width: $screen-lg) {
+        height: $off-canvas-height-lg;
+        transform: translateY(($off-canvas-height-lg * -1));
+      }
+
+      @media (min-width: $screen-xl) {
+        height: $off-canvas-height-xl;
+        transform: translateY(($off-canvas-height-xl * -1));
+      }
     }
   }
 

@@ -5,45 +5,122 @@
 .mobile {
 
   $block-name:                &; // #{$block-name}__element
-  color: #070505;
 
   &__inner {
-    @include container;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    // margin-bottom: 46px;
     padding-top: 10px;
+
+    @media (min-width: $screen-md) {
+      @include container;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      padding-top: 0;
+    }
+
+    @media (min-width: $screen-lg) {
+      align-items: center;
+    }
   }
 
   &__desc {
     margin-bottom: 40px;
+    @include container;
+
+    @media (min-width: $screen-md) {
+      width: auto;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: auto;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: auto;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
   }
 
   &__tagline {
-    width: 700px;
     margin-bottom: 48px;
-    line-height: 41px;
+
+    @media (min-width: $screen-md) {
+      width: 370px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: auto;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 700px;
+    }
   }
 
   &__download {
     display: flex;
+    flex-wrap: wrap;
+
+    @media (min-width: $screen-xl) {
+      flex-wrap: nowrap;
+    }
   }
 
   &__download-item {
     margin-right: 15px;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
+    }
   }
 
   &__phone {
-    margin-right: 43px;
-    width: 300px;
     height: 597px;
+    color: #070505;
     background-image: url("../img/phone-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 291px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: $screen-md) {
+      margin-top: 12px;
+      flex-shrink: 0;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 300px;
+      margin-right: 43px;
+    }
   }
 
 
   &__phone-inner {
     padding: 68px 36px 45px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 223px;
+
+    @media (min-width: $screen-md) {
+      width: auto;
+      padding-right: 36px;
+      padding-left: 36px;
+    }
   }
 
   &__logo {
@@ -68,6 +145,20 @@
     margin: 0;
     padding: 0;
     list-style: none;
+  }
+
+  &__list {
+    margin-top: 40px;
+    list-style: none;
+    padding: 0;
+    color: $white;
+  }
+
+  &__item {
+    font-family: $font-family--monospace;
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 30px;
   }
 }
 

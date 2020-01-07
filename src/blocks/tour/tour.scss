@@ -13,7 +13,11 @@
   background-image: url("../img/content/tour.jpg");
   background-repeat: no-repeat;
   background-position: center top;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 100px;
+  }
 
   &__inner {
     @include container();
@@ -24,16 +28,36 @@
   &__bottom {
     position: absolute;
     width: 100%;
-    bottom: -66px;
+    bottom: -52px;
     left: 0;
+
+    @media (min-width: $screen-md) {
+      bottom: -63px;
+    }
+
+    @media (min-width: $screen-xl) {
+      bottom: -66px;
+    }
   }
 
   &__title {
     margin-top: 0;
     margin-bottom: 0;
-    width: 605px;
-    font-size: 36px;
+    width: 100%;
+    font-size: 24px;
     font-weight: 600;
     line-height: 1.2;
+
+    @media (min-width: $screen-md) {
+      font-size: 36px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 555px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 605px;
+    }
   }
 }

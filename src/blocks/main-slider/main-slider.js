@@ -11,13 +11,17 @@ ready(function(){
     return;
   }
 
-  var screenWidth = document.documentElement.clientWidth;
-  var containerWidth = document.querySelector('.page-bg__inner').offsetWidth;
-  var secondLineLeft = document.querySelector('.page-bg__line--second').offsetLeft;
-  var primaryContainer = document.querySelector('.main-slider__primary');
+  //  Ширина первого слайдера для узких экранов
+   if (document.documentElement.clientWidth > 1279) {
 
-  var primaryWidth = secondLineLeft + (screenWidth - containerWidth)/2;
-  primaryContainer.style.width = primaryWidth + 'px';
+    var screenWidth = document.documentElement.clientWidth;
+    var containerWidth = document.querySelector('.page-bg__inner').offsetWidth;
+    var secondLineLeft = document.querySelector('.page-bg__line--second').offsetLeft;
+    var primaryContainer = document.querySelector('.main-slider__primary');
+
+    var primaryWidth = secondLineLeft + (screenWidth - containerWidth)/2;
+    primaryContainer.style.width = primaryWidth + 'px';
+  }
 
 
   var primarySlider = new Glide('.main-slider__primary-slider', {
@@ -35,11 +39,12 @@ ready(function(){
   primarySlider.mount();
 
 
+  //На широком экране подключаем второй слайдер
+  if (document.documentElement.clientWidth > 1279) {
+    var secondContainer = document.querySelector('.main-slider__second');
 
-  var secondContainer = document.querySelector('.main-slider__second');
-
-  var secondWidth = containerWidth - secondLineLeft + (screenWidth - containerWidth)/2;
-  secondContainer.style.width = secondWidth + 'px';
+    var secondWidth = containerWidth - secondLineLeft + (screenWidth - containerWidth)/2;
+    secondContainer.style.width = secondWidth + 'px';
 
   // var secondItems = document.querySelectorAll('.second-slider__item');
 
@@ -56,21 +61,23 @@ ready(function(){
 
 
   var secondSlider = new Glide('.main-slider__second-slider', {
-    type: 'carousel',
-    perView: 1,
-    gap: 0,
-    //peek: {before: '0', arter: '428'},
-    breakpoints: {
-      1279: {
+      type: 'carousel',
+      perView: 1,
+      gap: 0,
+      startAt: 1,
+      //peek: {before: '0', arter: '428'},
+      breakpoints: {
+        1279: {
+        }
       }
-    }
-  });
+    });
 
-  secondSlider.on('run.before', function() {
-    console.log(secondSlider.index);
-  })
+    secondSlider.on('run.before', function() {
+      console.log(secondSlider.index);
+    })
 
-  secondSlider.mount();
+    secondSlider.mount();
+  }
 
   var arrows = document.querySelector('.main-slider__arrows');
   sliderArrows(arrows, [primarySlider,secondSlider]);

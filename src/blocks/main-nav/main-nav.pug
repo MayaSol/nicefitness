@@ -80,13 +80,17 @@ mixin main-nav-item(selectedID, item, level)
     var thisItemClass = 'main-nav__item';
     var thisLinkClass = 'main-nav__link';
 
-    if(selectedID == item.id) {
+    if (!(typeof item.mod == 'undefined') && item.mod) {
+      thisItemClass += " main-nav__item--" + item.mod;
+    }
+
+    if (selectedID == item.id) {
       thisItemClass += '  main-nav__item--active';
     }
-    if(item.childs) {
+    if (item.childs) {
       thisItemClass += '  main-nav__item--has-child';
     }
-    if(level > 1) {
+    if (level > 1) {
       thisItemClass += '  main-nav__item--lvl-' + level;
       thisLinkClass += '  main-nav__link--lvl-' + level;
     }

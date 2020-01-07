@@ -17,10 +17,10 @@ mixin link-list(mods)
         +link-list-item({name: 'Кардио', icon: 'cardio-white'},'cardio')
         +link-list-item({name: 'Единоборства', icon: 'combat-white'},'active','combat')
         +link-list-item({name: 'Тренажерка', icon: 'gym-white'},'gym')
+        .w100
         +link-list-item({name: 'Групповые', icon: 'group-white'},'group')
         +link-list-item({name: 'Фитнесс', icon: 'fitness-white'},'fitness')
         +link-list-item({name: 'Сауна', icon: 'sauna-white'},'sauna')
-
 
 mixin link-list-item(props,mods)
   -
@@ -32,11 +32,13 @@ mixin link-list-item(props,mods)
       }
     }
 
-    var iconClass = "icon icon--" + props.icon;
+    var iconClass = "link-list__icon icon icon--" + props.icon;
 
   li.link-list__item(class=allMods)&attributes(attributes)
     a.link-list__link(href="/")
-      span.link-list__name(class=iconClass) !{props.name}
+      span.link-list__name
+        i(class=iconClass)
+        span !{props.name}
       .link-list__img
         img(src="img/content/services.jpg")
 

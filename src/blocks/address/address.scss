@@ -6,15 +6,16 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  font-family: "montserrat";
+  font-family: $font-family;
   font-size: 13px;
   font-weight: 600;
+  line-height: 1.2;
 
   &__location {
   }
 
   &__metro {
-
+    white-space: nowrap;
   }
 
   &--inline {
@@ -22,6 +23,7 @@
     #{$block-name} {
       &__location {
         display: inline;
+        margin-right: 5px;
       }
 
       &__metro {

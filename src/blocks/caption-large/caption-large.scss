@@ -13,6 +13,19 @@
     text-align: center;
     height: 1em;
     overflow: hidden;
+    font-size: 80px;
+
+    @media (min-width: $screen-md) {
+      font-size: 190px;
+    }
+
+    @media (min-width: $screen-lg) {
+      font-size: 250px;
+    }
+
+    @media (min-width: $screen-xl) {
+      font-size: 314px;
+    }
 
   &__inner {
     position: absolute;
@@ -24,6 +37,9 @@
   &__text {
     white-space: nowrap;
     line-height: 1;
+  }
+
+  &--off-top {
   }
 
 }

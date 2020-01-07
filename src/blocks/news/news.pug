@@ -1,0 +1,41 @@
+//- Все примеси в этом файле должны начинаться c имени блока (news)
+
+mixin news(mods)
+
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' news--' + modsList[i].trim();
+      }
+    }
+
+  section.news(class=allMods)&attributes(attributes)
+    .news__inner
+      .news__header
+        h2.section-title.news__title Клубные новости<br> и акции
+      .news__content
+        .news__main
+          +news-item({day: '26', month: 'октября',text: 'Установили новый, суперкрутой и эффективный тренажёр Foreman FS-404 жим от плеч'})(class="news__item--main")
+            .news__img
+              img(src="img/content/legs.jpg")
+        .news__col-right
+          ul.news__list
+            li.news__item
+              +news-item({day: '20', month: 'октября',text: 'Объявляется набор в группу триатлон для начинающих и продолжающих после летнего перерыва!'})
+            li.news__item
+              +news-item({day: '17', month: 'октября',text: 'Презентация новых площадей в фитнес-бутике на Земляном валу'})
+            li.news__item
+              +news-item({day: '09', month: 'октября',text: 'Соревнования за звание самого подготовленного фитнес-атлета клуба Nicefitness'})
+          .news__btn
+            +btn('Все новости и акции','common')(href="/")
+
+
+mixin news-item(props)
+  a(href="/").news__excerpt
+    .news__date
+      .news__day !{props.day}
+      .news__month !{props.month}
+    .news__text !{props.text}
+    block

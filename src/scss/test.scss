@@ -1,3 +1,7 @@
+body {
+  background-color: transparent;
+}
+
 .main-slider {
   background-color: transparent;
 
@@ -55,13 +59,17 @@
 
   &__content {
 
+    color: red;
+    outline: 1px solid red;
+
     &::before {
       z-index: -1;
       position: absolute;
+      top: -30px;
+      //top: -30px;
       left: 0;
-      top: 0;
-      //top: -5280px;
-      content: url('../img/temp/index.png');
+      // top: -3108px;
+      content: url('../img/temp/mobile.jpg');
       opacity: 0.4;
     }
 
@@ -75,6 +83,43 @@
   }
 }
 
+.icon-quotes {
+  &::after {
+    border: 1px solid red;
+  }
+}
+
+.page-footer {
+  background-color: transparent;
+  color: red;
+}
+
+.subscribe__title {
+  color: rgba(200, 0,0, 0.14);
+}
+
+.page-header__bg video {
+  display: none;
+  background-color: transparent;
+}
+
+.btn--accent {
+  background-color: transparent;
+  outline: 1px solid red;
+  color: red;
+}
+
+.social-section__item {
+  img {
+    opacity: 0;
+  }
+}
+
+.social-section__item-inner {
+    outline: 1px solid red;
+}
 
 
-
+.primay-slider__desc {
+  outline: 1px solid red;
+}
