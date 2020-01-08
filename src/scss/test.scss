@@ -65,11 +65,10 @@ body {
     &::before {
       z-index: -1;
       position: absolute;
-      top: -30px;
       //top: -30px;
       left: 0;
       // top: -3108px;
-      content: url('../img/temp/mobile.jpg');
+      content: url('../img/temp/index.png');
       opacity: 0.4;
     }
 

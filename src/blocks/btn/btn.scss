@@ -90,6 +90,8 @@
   }
 
   &--arrow-right {
+    padding-bottom: 0;
+    padding-top: 0;
     &::after {
       @include sprite($arrow-long-white);
       content: '';
@@ -98,6 +100,8 @@
   }
 
   &--arrow-left {
+    padding-bottom: 0;
+    padding-top: 0;
     &::after {
       @include sprite($arrow-long-white);
       content: '';

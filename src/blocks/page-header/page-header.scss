@@ -75,7 +75,7 @@
 
     @media (min-width: $screen-lg) {
       position: absolute;
-      top: -170px;
+      top: -140px;
       right: 0;
     }
 
@@ -101,16 +101,19 @@
 
     @media (min-width: $screen-md) {
       width: 100%;
+      margin-top: 0;
     }
 
     @media (min-width: $screen-lg) {
-      margin-top: 30px;
+      margin-top: 20px;
+      margin-bottom: 0;
       width: auto;
       order: 1;
     }
 
     @media (min-width: $screen-xl) {
       margin-bottom: 0;
+      margin-top: 0;
     }
   }
 
@@ -131,10 +134,11 @@
 
       @media (min-width: $screen-lg) {
         position: relative;
+        margin-bottom: 10px;
       }
 
       @media (min-width: $screen-xl) {
-        margin-bottom: 30px;
+        margin-bottom: 0;
       }
     }
 

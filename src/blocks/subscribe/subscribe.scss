@@ -39,5 +39,9 @@
       margin-bottom: 0;
       letter-spacing: -0.02em;
     }
+
+    @media (min-width: $screen-lg) {
+      width: auto;
+    }
   }
 }

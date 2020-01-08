@@ -32,7 +32,7 @@
 
     @media (min-width: $screen-lg) {
       width: auto;
-      margin-top: 160px;
+      margin-top: 120px;
       margin-left: 0;
       margin-right: 0;
     }
@@ -57,6 +57,10 @@
     @media (min-width: $screen-lg) {
       margin-left: 40px;
       width: get-width(3,1,lg) - $screen-padding-lg - 40px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-top: -100px;
     }
 
     @media (min-width: $screen-xl) {
@@ -107,7 +111,7 @@
 
       @media (min-width: $screen-lg) {
         width: 345px;
-        margin-top: 273px;
+        margin-top: 300px;
         margin-bottom: 0;
       }
     }
@@ -191,6 +195,7 @@
 
     @media (min-width: $screen-lg) {
       bottom: -58%;
+      left: 125px;
     }
   }
 

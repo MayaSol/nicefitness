@@ -20,6 +20,10 @@
       margin-bottom: 152px;
     }
 
+    @media (min-width: $screen-lg) {
+      margin-bottom: 140px;
+    }
+
     @media (min-width: $screen-xl) {
       margin-bottom: 145px;
     }
