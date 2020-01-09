@@ -1,0 +1,22 @@
+//- Все примеси в этом файле должны начинаться c имени блока (form-messages)
+
+mixin form-messages()
+
+  +modal('form-msg-success','','form-msg,form-msg-success')
+    +form-msg({
+      title: 'Сообщение отправлено!',
+      msg: 'Наш менеджер свяжется с вами в ближайшее время.',
+      mods: 'success'
+    })
+  +modal('form-msg-error','','form-msg,form-msg-error')
+    +form-msg({
+      title: 'Произошла ошибка! Сожалеем...',
+      msg: 'Наш менеджер свяжется с вами в ближайшее время.',
+      mods: 'error'
+    })
+  +modal('form-msg-wait','','form-msg,form-msg-wait')
+    +form-msg({
+      title: 'Пожалуйста подождите...',
+      msg: 'Наш менеджер свяжется с вами в ближайшее время. Повторите немного позже...',
+      mods: 'wait'
+    })

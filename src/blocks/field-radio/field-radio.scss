@@ -31,14 +31,16 @@
   &__name {
     display: inline-block;
     position: relative;
-    margin-right: 0.6em;
-    padding-left: 1.5em;
+    // margin-right: 0.6em;
+    // padding-left: 1.5em;
     font-weight: 400;
     line-height: $line-height;
   }
 
   &__name-text {
     display: inline-block;
+    display: flex;
+    align-items: center;
 
     // своя радиокнопка с картинкой
 
@@ -66,13 +68,15 @@
 
     &:before {
       content: '';
-      position: absolute;
-      top: 5px;
-      left: 0;
-      width: 14px;
-      height: 14px;
-      border: 2px solid currentColor;
-      border-radius: 50%;
+      display: block;
+      // position: absolute;
+      // top: 5px;
+      // left: 0;
+      width: 32px;
+      height: 32px;
+      margin-right: 0.6em;
+      border: 1px solid currentColor;
+      border-radius: 0;
     }
 
     @at-root input:focus ~ &:before {
@@ -86,11 +90,12 @@
 
     &:after {
       content: '';
+      display: block;
       position: absolute;
-      top: 9px;
-      left: 4px;
-      width: 6px;
-      height: 6px;
+      top: 16px;
+      left: 16px;
+      width: 14px;
+      height: 14px;
       opacity: 0;
       border-radius: 50%;
       background-color: currentColor;

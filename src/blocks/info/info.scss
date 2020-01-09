@@ -112,11 +112,11 @@
       @media (min-width: $screen-lg) {
         width: auto;
         padding-right: 176px;
-        line-height: 1.15;
+        // line-height: 1.15;
       }
 
       @media (min-width: $screen-xl) {
-        width: 472px;
+        width: 480px;
         padding-right: 0;
       }
 
@@ -139,7 +139,7 @@
 
         @media (min-width: $screen-xl) {
           width: 264px;
-          right: -28px;
+          right: -22px;
           transform: translateX(100%);
         }
       }
@@ -147,13 +147,39 @@
   }
 
   &__text {
-    padding-top: 22px;
     padding-left: 0;
     flex-basis: 100%;
 
     @media (min-width: $screen-lg) {
-      padding-left: 49px;
       flex-basis: auto;
     }
   }
+
+  &--main {
+
+    #{$block-name}__text {
+      padding-top: 22px;
+
+      @media (min-width: $screen-lg) {
+        padding-left: 49px;
+      }
+    }
+
+    p {
+      @at-root &#{$block-name}__lead {
+
+        @media (min-width: $screen-lg) {
+          // line-height: 1.15;
+        }
+      }
+    }
+
+
+  }
+
+  &--schedule {
+    margin-top: 112px;
+  }
+
+
 }

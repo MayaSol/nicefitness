@@ -41,6 +41,9 @@ html(class='page  no-js', lang='ru')
 
     block vars
 
+    -
+      var pageClass= 'page-' + pageName;
+
     .off-canvas#off-canvas
       aside.off-canvas__aside(role='complementary', aria-label='Меню')
         block off-canvas
@@ -55,7 +58,7 @@ html(class='page  no-js', lang='ru')
             .page-bg__line.page-bg__line--second
             .page-bg__line.page-bg__line--right
 
-        +page-header()
+        +page-header(pageName)
           .page-header__inner
             .page-header__top
               +logo('/')

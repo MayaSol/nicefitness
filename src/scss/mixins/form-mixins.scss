@@ -6,22 +6,28 @@
   width: 100%;
   min-height: calc(#{$line-height}em + #{$field-padding-vertical} + #{$field-padding-vertical} + 2px); // Привет, IE
   margin: 0;
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
-  padding: $field-padding-vertical  $field-padding-horizontal;
+  padding: 14px 13px;
+  border: none;
+  border-bottom: 1px solid #0f0c0c;;
+  border-radius: 0;
   line-height: $line-height;
-  font-size: 1em;
+  font-size: 30px;
+  font-weight: 600;
   font-family: inherit;
-  background-color: #fff;
+  color: currentColor;
+  background-color: transparent;
+  outline: none;
   -moz-appearance: textfield; // stylelint-disable-line
   appearance: textfield;
+  box-sizing: border-box;
 
   &:focus {
     @include field-focus;
   }
 
-  &[disabled],
-  &[readonly] {
+  &[disabled]
+  // &[readonly]
+  {
     cursor: not-allowed;
     background-color: $gray-lighter;
   }
@@ -38,7 +44,7 @@
   }
 
   &::placeholder {
-    color: $text-color-muted;
+    color: #000;
     opacity: 1;
   }
 }
@@ -58,8 +64,8 @@
 
 
 @mixin field-focus {
-  outline: 0;
-  box-shadow: 0 0 0 2px rgba($color-main, $opacity);
+  // outline: 0;
+  // box-shadow: 0 0 0 2px rgba($color-main, $opacity);
 }
 
 
@@ -67,5 +73,6 @@
   display: block;
   margin-bottom: 0.4em;
   line-height: $line-height;
-  font-weight: 700;
+  font-size: 11px;
+  font-weight: 600;
 }

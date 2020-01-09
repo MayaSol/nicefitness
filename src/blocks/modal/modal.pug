@@ -25,8 +25,50 @@ mixin modal(id, title, mods)
 
   .modal(id=id, class=allMods, tabindex='-1', role='dialog')&attributes(attributes)
     .modal__dialog(role='document')
-        .modal__content
+        .modal__inner
           .modal__header
-            span.close.modal__close(data-dismiss='modal', aria-label='Закрыть') #[span]
-            h4.modal__title!= title
-          block
+            //-span.close.modal__close(data-dismiss='modal', aria-label='Закрыть') #[span]
+            +btn('Закрыть','common')(class="modal__close" data-dismiss="modal" aria-label='Закрыть')
+            h4.modal__title !{title}
+          .modal__content
+            block
+
+
+mixin modal-test-drive(id, title, mods)
+
+  +modal(id, title, mods)&attributes(attributes)
+    form(class="test-drive")
+      .test-drive__field.test-drive__field--name
+        .test-drive__field-inner
+          +field-text({
+            title: 'Ваше имя',
+            mods: 'test-drive,form',
+            val: '',
+            attrs: {
+              name: 'name',
+              placeholder: '',
+            }
+          })
+      .test-drive__field.test-drive__field--phone
+        .test-drive__field-inner
+          +field-text({
+            title: 'Контактный телефон',
+            mods: 'test-drive,form',
+            val: '',
+            attrs: {
+              name: 'phone',
+              placeholder: '',
+            }
+          })
+      .test-drive__field.test-drive__field--user-content
+        .test-drive__field-inner
+          +field-checkbox([
+            {
+              title: 'Я соглашаюсь с условиями <a class="privacy-link" href="/">обработки персональных данных</a>',
+              mods: 'user-content',
+              attrs: {
+                name: 'user-content',
+                checked: false,
+              }
+            }])
+      +btn('Отправить сообщение','submit')(class="test-drive__btn-submit")

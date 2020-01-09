@@ -141,6 +141,16 @@
     font-size: 13px;
   }
 
+  &--submit {
+    padding: 18px 23px;
+    color: #ffffff;
+    font-family: $font-family--monospace;
+    font-size: 13px;
+    font-weight: 900;
+    text-transform: uppercase;
+    background-color: #0e130b;
+  }
+
   // &__icon {
   //   display: inline-block;
   //   vertical-align: middle;

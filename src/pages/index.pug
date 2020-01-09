@@ -9,7 +9,7 @@ block meta
 
 block vars
   -
-    var pageClass = 'page-main';
+    var pageName = 'main';
 
 
 block off-canvas
@@ -23,21 +23,28 @@ block page-header-add
       h1.page-title.page-title--main Правильный фитнес клуб в Чертаново
       .page-header__links
         .page-header__links-row
-          +btn('Получить 7 дней тест драйва','accent')(href="/")
+          +btn('Получить 7 дней тест драйва','accent')(data-toggle="modal" data-target="#test-drive")
           +btn('','play')(class="page-header__btn-play paused")
         .page-header__links-row
           +btn('Как получить клубную карту?','common')(href="/" class="page-header__card-link")
+block page-header-bg
+  .page-header__bg
+    //- <iframe  id="page-header-video" class="video" width="100%" height="auto" src="https://www.youtube.com/embed/bp76QUMUVVk?enablejsapi=1&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    video#page-header-video.page-header-video(width="100%")
+      source(src="video/nicefit.mp4" type="video/mp4")
 
 block content
     +main-slider()
     +services(class="page__section page__section--services")
-    +info(class="page__section page__section--info")
+    +info-main('main')(class="page__section page__section--info")
     +caption-large('nicefitness')(class="page__section page__section--caption")
     +social-section(class="page__section page__section--social")
     +mobile(class="page__section page__section--mobile")
     +tour(class="page__section page__section--tour")
       +card-tour('large,tour', {text: 'Виртуальный тур'})
     +news(class="page__section page__section--news")
+    +modal-test-drive("test-drive","Обратная<br> связь с Nicefitness")
 
 block footer
   +page-footer()

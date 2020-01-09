@@ -8,17 +8,39 @@
 
   position: relative;
 
+  &--main {
+    #{$block-name}__inner {
+      height: 800px;
+    }
+  }
+
+
   &__inner {
     @include container-wide;
     position: relative;
-    height: 800px;
   }
+
 
   &__top {
     padding-top: 30px;
     @include container;
     display: flex;
     position: relative;
+  }
+
+  &__content {
+    @include container;
+
+    &--schedule {
+      margin-top: 65px;
+    }
+  }
+
+  &__content-row {
+    &--breadcrumbs {
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 
   &__bg {

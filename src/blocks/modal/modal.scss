@@ -19,6 +19,8 @@
   left: 0;
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
+  color: #000000;
+  font-family: $font-family;
 
   .js-modal-open & {
     overflow-x: hidden;
@@ -32,7 +34,7 @@
     margin: 0;
 
     @media (min-width: $screen-lg) {
-      width: 600px;
+      width: 1000px;
       margin: auto;
 
       @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -45,7 +47,7 @@
     }
   }
 
-  &__content {
+  &__inner {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -57,22 +59,27 @@
 
   &__header {
     flex-shrink: 0;
-    padding: 0 40px 0 15px;
+    padding: 0 40px 0 80px;
+  }
+
+  &__content {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 80px;
   }
 
   &__title {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    font-size: $font-size-h4;
-    line-height: 1.2;
-    font-weight: 700;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-size: 60px;
+    font-weight: 600;
     color: currentColor;
   }
 
   &__close {
     position: absolute !important; // stylelint-disable-line  declaration-no-important
-    top: 5px;
-    right: 5px;
+    top: 40px;
+    right: 40px;
   }
 
   &__body {

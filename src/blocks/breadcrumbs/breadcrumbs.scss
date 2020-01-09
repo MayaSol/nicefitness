@@ -4,32 +4,41 @@
 
 .breadcrumbs {
   list-style: none;
-  margin-top: $typo-margin-vertical;
-  margin-bottom: $typo-margin-vertical;
+  margin-top: 0;
+  margin-bottom: 0;
   padding: 0;
-  color: $text-color;
+  text-align: right;
 
   a {
-    color: $text-color;
+    color: currentColor;
     text-decoration: none;
+    font-size: 11px;
+    font-weight: 400;
 
     &:hover,
     &:focus {
-      color: $text-color;
+      color: currentColor;
       text-decoration: none;
     }
   }
 
   &__item {
     display: inline-block;
-    margin-right: 0.6em;
     white-space: nowrap;
+    font-size: 18px;
+    font-weight: 600;
+
+    &:last-child {
+      display: block;
+      margin-top: 3px;
+    }
 
     &:not(:last-child):after {
-      content: '>';
+      content: '\2013';
       display: inline-block;
-      margin-left: 0.8em;
-      color: $gray;
+      font-size: 11px;
+      font-weight: 400;
+      color: currentColor;
     }
   }
 }
