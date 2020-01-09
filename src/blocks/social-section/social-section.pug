@@ -18,10 +18,15 @@ mixin social-section(mods)
       .social-section__list
         .social-section__item.social-section__item--fb
           .social-section__item-inner
-            img(src="img/content/fb-widget.jpg")
+            //- img(src="img/content/fb-widget.jpg")
+            .fb-page( data-href="https://www.facebook.com/nicefitness.ru", data-width="252" data-height="304" data-hide-cover="false" data-show-facepile="false" data-show-faces="true" data-stream="false" data-header="true")
         .social-section__item.social-section__item--vk
           .social-section__item-inner
-            img(src="img/content/vk-widget.jpg")
+            //- //img(src="img/content/vk-widget.jpg")
+            #vk_groups
+            script.
+              VK.Widgets.Group("vk_groups", {mode: 0, width: "252", height: "320", color1:"FFFFFF", color2: "2B587A", color3:"5B7FA6"}, 51360900);
         .social-section__item.social-section__item--insta
           .social-section__item-inner
-            img(src="img/content/insta-widget.jpg")
+            //- img(src="img/content/insta-widget.jpg")
+            <iframe src="https://averin.pro/widget.php?l=nicefitness_ru&style=1&width=252&gallery=1&s=80&icc=3&icr=3&t=0&tt=Мы в Инстаграм&h=1&ttcolor=FFFFFF&th=c3c3c3&bw=f9f9f9&bscolor=FFFFFF&bs=FF0000&ts=Подписаться" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:252px; height: 350px" ></iframe>

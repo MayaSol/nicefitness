@@ -32,9 +32,12 @@ html(class='page  no-js', lang='ru')
       link(rel='stylesheet', href='css/style.css')
       script
         include ../js/head-script.js
+      script(type="text/javascript" src="https://vk.com/js/api/openapi.js?116")
 
   body
     noscript У вас отключен JavaScript. Это пугает.
+    #fb-root
+    script(async defer crossorigin="anonymous" src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v5.0")
 
     block vars
 

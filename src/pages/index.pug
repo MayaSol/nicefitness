@@ -24,14 +24,9 @@ block page-header-add
       .page-header__links
         .page-header__links-row
           +btn('Получить 7 дней тест драйва','accent')(href="/")
-          +btn('','play')(class="page-header__btn-play")
+          +btn('','play')(class="page-header__btn-play paused")
         .page-header__links-row
           +btn('Как получить клубную карту?','common')(href="/" class="page-header__card-link")
-block page-header-bg
-  .page-header__bg
-    //- <iframe id="page-header-video" class="video-hidden" width="560" height="315" src="https://www.youtube.com/embed/ScMzIvxBSi4?enablejsapi=1&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    video#page-header-video.video-hidden.page-header-video(width="100%")
-      source(src="video/dummy.mov" type="video/mp4")
 
 block content
     +main-slider()

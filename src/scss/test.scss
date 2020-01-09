@@ -1,124 +1,124 @@
-body {
-  background-color: transparent;
-}
+// body {
+//   background-color: transparent;
+// }
 
-.main-slider {
-  background-color: transparent;
+// .main-slider {
+//   background-color: transparent;
 
-  & * {
-    background-color: transparent;
-  }
+//   & * {
+//     background-color: transparent;
+//   }
 
-    img {
-      opacity: 0 !important;
-    }
-    border: 1px solid red;
-}
+//     img {
+//       opacity: 0 !important;
+//     }
+//     border: 1px solid red;
+// }
 
-.card {
-  border: 1px solid red;
-  color: red;
-}
+// .card {
+//   border: 1px solid red;
+//   color: red;
+// }
 
-.main-slider__card-link {
-  background-color: transparent;
-  color: red;
-  border: 1px solid red;
+// .main-slider__card-link {
+//   background-color: transparent;
+//   color: red;
+//   border: 1px solid red;
 
-  .card-link__price {
-    color: red;
-  }
-}
+//   .card-link__price {
+//     color: red;
+//   }
+// }
 
-.primary-slider__img {
-  border: 1px solid red;
-}
+// .primary-slider__img {
+//   border: 1px solid red;
+// }
 
-.secondary-slider__img {
+// .secondary-slider__img {
 
-}
+// }
 
-.info__bg {
-  outline: 1px solid red;
-}
+// .info__bg {
+//   outline: 1px solid red;
+// }
 
-.mobile {
-  color: red;
-}
+// .mobile {
+//   color: red;
+// }
 
-.mobile__phone {
-  outline: 1px solid red;
-  background-image: none;
-}
+// .mobile__phone {
+//   outline: 1px solid red;
+//   background-image: none;
+// }
 
-.classes-item {
-  border-color: red;
-}
+// .classes-item {
+//   border-color: red;
+// }
 
-.page {
+// .page {
 
-  &__content {
+//   &__content {
 
-    color: red;
-    outline: 1px solid red;
+//     color: red;
+//     outline: 1px solid red;
 
-    &::before {
-      z-index: -1;
-      position: absolute;
-      //top: -30px;
-      left: 0;
-      // top: -3108px;
-      content: url('../img/temp/index.png');
-      opacity: 0.4;
-    }
+//     &::before {
+//       z-index: -1;
+//       position: absolute;
+//       //top: -30px;
+//       left: 0;
+//       // top: -3108px;
+//       content: url('../img/temp/index.png');
+//       opacity: 0.4;
+//     }
 
-  }
+//   }
 
-  &__section {
-    &--tour {
-      background-image: none;
-      border: 1px solid red;
-    }
-  }
-}
+//   &__section {
+//     &--tour {
+//       background-image: none;
+//       border: 1px solid red;
+//     }
+//   }
+// }
 
-.icon-quotes {
-  &::after {
-    border: 1px solid red;
-  }
-}
+// .icon-quotes {
+//   &::after {
+//     border: 1px solid red;
+//   }
+// }
 
-.page-footer {
-  background-color: transparent;
-  color: red;
-}
+// .page-footer {
+//   background-color: transparent;
+//   color: red;
+// }
 
-.subscribe__title {
-  color: rgba(200, 0,0, 0.14);
-}
+// .subscribe__title {
+//   color: rgba(200, 0,0, 0.14);
+// }
 
-.page-header__bg video {
-  display: none;
-  background-color: transparent;
-}
+// .page-header__bg video {
+//   display: none;
+//   background-color: transparent;
+// }
 
-.btn--accent {
-  background-color: transparent;
-  outline: 1px solid red;
-  color: red;
-}
+// .btn--accent {
+//   background-color: transparent;
+//   outline: 1px solid red;
+//   color: red;
+// }
 
-.social-section__item {
-  img {
-    opacity: 0;
-  }
-}
+// .social-section__item {
+//   img {
+//     opacity: 0;
+//   }
+// }
 
-.social-section__item-inner {
-    outline: 1px solid red;
-}
+// .social-section__item-inner {
+//     outline: 1px solid red;
+// }
 
 
-.primay-slider__desc {
-  outline: 1px solid red;
-}
+// .primay-slider__desc {
+//   outline: 1px solid red;
+// }

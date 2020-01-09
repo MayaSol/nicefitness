@@ -81,7 +81,7 @@
     margin-bottom: 62px;
 
     @media (min-width: $screen-xl) {
-      width: $item-width;
+      //width: $item-width;
     }
 
     &:last-child {
@@ -98,7 +98,7 @@
     }
 
     @media (min-width: $screen-xl) {
-      width: get-width(1,2,xl);
+      width: get-width(1,2,xl) - $screen-padding-xl;
     }
 
     #{$block-name}__excerpt {
