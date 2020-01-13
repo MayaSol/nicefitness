@@ -10,13 +10,13 @@ mixin form-messages()
     })
   +modal('form-msg-error','','form-msg,form-msg-error')
     +form-msg({
-      title: 'Произошла ошибка! Сожалеем...',
+      title: 'Упсс... ошибка',
       msg: 'Наш менеджер свяжется с вами в ближайшее время.',
       mods: 'error'
     })
   +modal('form-msg-wait','','form-msg,form-msg-wait')
     +form-msg({
-      title: 'Пожалуйста подождите...',
-      msg: 'Наш менеджер свяжется с вами в ближайшее время. Повторите немного позже...',
+      title: 'Минутку...',
+      msg: 'Наш менеджер свяжется с вами в ближайшее время.',
       mods: 'wait'
     })

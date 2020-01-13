@@ -32,14 +32,22 @@
     @include container;
 
     &--schedule {
-      margin-top: 65px;
+
+      margin-top: 2em;
+
+      @media (min-width: $screen-xl) {
+        margin-top: 65px;
+      }
     }
   }
 
   &__content-row {
     &--breadcrumbs {
       display: flex;
-      justify-content: flex-end;
+
+      @media (min-width: $screen-xl) {
+        justify-content: flex-end;
+      }
     }
   }
 

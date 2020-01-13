@@ -9,7 +9,7 @@ block meta
 
 block vars
   -
-    var pageName = 'main';
+    var pageName = 'schedule';
 
 
 block off-canvas
@@ -18,33 +18,44 @@ block off-canvas
 block nav
   +main-nav-top('10')
 block page-header-add
-  .page-header__bottom.page-header__bottom--main
-    .page-header__bottom-inner
-      h1.page-title.page-title--main Правильный фитнес клуб в Чертаново
-      .page-header__links
-        .page-header__links-row
-          +btn('Получить 7 дней тест драйва','accent')(data-toggle="modal" data-target="#test-drive")
-          +btn('','play')(class="page-header__btn-play paused")
-        .page-header__links-row
-          +btn('Как получить клубную карту?','common')(href="/" class="page-header__card-link")
-block page-header-bg
-  .page-header__bg
-    //- <iframe  id="page-header-video" class="video" width="100%" height="auto" src="https://www.youtube.com/embed/bp76QUMUVVk?enablejsapi=1&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-    video#page-header-video.page-header-video(width="100%")
-      source(src="video/nicefit.mp4" type="video/mp4")
+  .page-header__content.page-header__content--schedule
+    .page-header__content-row.page-header__content-row--breadcrumbs
+      +breadcrumbs()
+        +breadcrumbs-item('Главная ', '/home')
+        +breadcrumbs-item('Расписание')
+    .page-header__content-row.page-header__content-row--title
+      h1.page-title.page-title--schedule Расписание
 
 block content
-    +main-slider()
-    +services(class="page__section page__section--services")
-    +info-main('main')(class="page__section page__section--info")
-    +caption-large('nicefitness')(class="page__section page__section--caption")
-    +social-section(class="page__section page__section--social")
-    +mobile(class="page__section page__section--mobile")
-    +tour(class="page__section page__section--tour")
-      +card-tour('large,tour', {text: 'Виртуальный тур'})
-    +news(class="page__section page__section--news")
-    +modal-test-drive("test-drive","Обратная<br> связь с Nicefitness")
+    +caption-large('nicefitness','schedule')(class="page__section page__section--caption")
+    +info-schedule('schedule')(class="page__section page__section--info")
+    +schedule-widget(class="page__section page__section--schedule")
+    +expand('programms')(class="page__section page__section--programms")
+      +expand-item({title: 'MIND BODY'})
+        +classes('programms')
+          +classes-item({title: 'HATHA YOGA'})
+            p Hatha YOGA — начальная ступень в практиках йоги, позволяющая узнать собственные возможности, научиться контролировать внутренние энергетические потоки, гармонизировать жизнь
+          +classes-item({title: 'PILATES'})
+            p Pilates — силовая тренировка низкой и средней интенсивности с использованием упражнений направленных на проработку всех мышц в статике и медленной динамике, так же их растяжка. Включены упражнения на балансировку в статике и динамике. Профилактирующая тренировка для позвоночника, крупных и мелких суставов.утренние энергетические потоки, гармонизировать жизнь
+      +expand-item({title: 'Аэробные классы'})
+        p content
+      +expand-item({title: 'Боевые классы'})
+        p content
+      +expand-item({title: 'Мероприятия'})
+        p content
+      +expand-item({title: 'ОФП'})
+        p content
+      +expand-item({title: 'Силовые классы'})
+        p content
+      +expand-item({title: 'Танцевальные классы'})
+        p content
+      +expand-item({title: 'Функциональные тренировки'})
+        p content
+    +important('schedule')
+      p Особенностью нашего фитнес-клуба является многофункциональность и огромный выбор групповых программ, нацеленных на оздоровление и общее укреплении организма.
+      p К вашим услугам различные виды аэробных программ, стрейчинг, йога, пилатес, танцы, а также силовые тренировки в оборудованных всем необходимым для этого залах.
+    +news('schedule')(class="page__section page__section--news")
+    +mobile('schedule')(class="page__section page__section--mobile")
 
 block footer
   +page-footer()

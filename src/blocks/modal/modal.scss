@@ -32,6 +32,7 @@
     position: relative;
     width: 100%;
     margin: 0;
+    box-shadow: 0 8px 80px rgba(0, 0, 0, 0.24);
 
     @media (min-width: $screen-lg) {
       width: 1000px;
@@ -70,7 +71,7 @@
 
   &__title {
     margin-top: 80px;
-    margin-bottom: 80px;
+    margin-bottom: 65px;
     font-size: 60px;
     font-weight: 600;
     color: currentColor;
@@ -78,7 +79,7 @@
 
   &__close {
     position: absolute !important; // stylelint-disable-line  declaration-no-important
-    top: 40px;
+    top: 30px;
     right: 40px;
   }
 
@@ -117,9 +118,32 @@
       }
     }
   }
+
+  &--form-msg {
+    #{$block-name}__dialog {
+      width: 476px;
+    }
+  }
+
+  &--form-msg-success {
+    #{$block-name}__inner {
+      background-color: #66cc33;
+    }
+  }
+
+  &--form-msg-error {
+    #{$block-name}__inner {
+      background-color: #cc3333;
+    }
+  }
+
+  &--form-msg-error {
+    #{$block-name}__inner {
+      background-color: #f8fbf7;
+    }
+  }
+
 }
-
-
 
 @keyframes modal-backdrop-show {
 

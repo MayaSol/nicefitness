@@ -1,0 +1,26 @@
+//- Все примеси в этом файле должны начинаться c имени блока (programm)
+
+mixin expand(mods)
+
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' expand--' + modsList[i].trim();
+      }
+    }
+
+  section.expand(class=allMods)&attributes(attributes)
+    .expand__inner
+      .expand__title.section-title Описание программ Nicefitness
+      ul.expand__list
+        block
+
+
+mixin expand-item(props)
+  li.expand__item
+    +btn()(class="expand__btn expand__btn--closed")
+      span !{props.title}
+    .expand__content
+      block

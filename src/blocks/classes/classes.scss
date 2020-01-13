@@ -1,0 +1,114 @@
+// В этом файле должны быть стили для БЭМ-блока classes, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.classes {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    @media (min-width: $screen-lg) {
+      flex-wrap: nowrap;
+    }
+  }
+
+
+  &__title {
+    padding-bottom: 5px;
+    padding-left: 45px;
+    margin-bottom: 1em;
+    margin-right: 2em;
+    font-family: $font-family--monospace;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @media (min-width: $screen-md) {
+      padding-left: 60px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 0;
+      padding-left: 167px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.8em;
+      width: 30px;
+      height: 1px;
+      background-color: #fff;
+
+      @media (min-width: $screen-md) {
+        width: 40px;
+      }
+
+      @media (min-width: $screen-lg) {
+        width: 102px;
+        // margin-right: 65px;
+      }
+    }
+
+    span {
+      display: block;
+      border-bottom: 10px solid #d5d220;
+
+      @media (min-width: $screen-lg) {
+        border-bottom-width: 20px;
+      }
+    }
+  }
+
+  &__text {
+    width: 320px;
+    margin-left: auto;
+    font-family: $font-family;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  &--programms {
+    margin-top: 60px;
+
+    @media (min-width: $screen-lg) {
+      margin-top: 110px;
+      margin-right: 38px;
+    }
+
+    #{$block-name}__item {
+      margin-bottom: 65px;
+
+      &:nth-child(2n-1) {
+        #{$block-name}__title {
+          span {
+            border-color: #d5d220;
+          }
+        }
+      }
+
+      &:nth-child(2n) {
+        #{$block-name}__title {
+          span {
+            border-color: #e5e479;
+          }
+        }
+      }
+
+    }
+  }
+
+}

@@ -16,7 +16,7 @@ mixin off-top(mods)
       .off-top__top
         +logo('/','off-top')
           img(src='img/logo-black.png', alt='Logo', width='216', height='29')
-        +btn('Закрыть','common')(class="off-top__close" data-toggle="off-canvas")
+        +btn('Закрыть','common,close')(class="off-top__close" data-toggle="off-canvas")
       .off-top__menu
         +main-nav-side('10')
       +caption-large('nicefitness','off-top')(class="off-top__title")

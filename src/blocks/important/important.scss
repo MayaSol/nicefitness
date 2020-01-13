@@ -1,0 +1,43 @@
+// В этом файле должны быть стили для БЭМ-блока important, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.important {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__text {
+    position: relative;
+    padding-top: 148px;
+    color: #999999;
+    font-family: $font-family;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+
+    @media (min-width: $screen-md) {
+      width: 330px + 148px;
+      padding-left: 148px;
+      padding-top: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      @include sprite($important);
+      left: 0;
+      top: 0;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &--schedule {
+
+    #{$block-name}__inner {
+      @include container;
+    }
+  }
+}

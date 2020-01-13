@@ -1,0 +1,28 @@
+// В этом файле должны быть стили для БЭМ-блока schedule-widget, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.schedule-widget {
+
+  $block-name:                &; // #{$block-name}__element
+
+  @include container;
+
+  &__inner {
+    background-color: #fff;
+    padding: 10px;
+
+    @media (min-width: $screen-xl) {
+      width: 1044px;
+      padding: 64px 40px 55px;
+    }
+  }
+
+  &__header {
+    margin-bottom: 35px;
+  }
+
+  &__content {
+    background-image: url('../img/schedule-widget.jpg');
+  }
+}

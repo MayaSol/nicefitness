@@ -123,19 +123,7 @@
     }
 
     &--info {
-      padding-bottom: 63px;
 
-      @media (min-width: $screen-md) {
-        padding-bottom: 50px;
-      }
-
-      @media (min-width: $screen-lg) {
-        padding-bottom: 75px;
-      }
-
-      @media (min-width: $screen-xl) {
-        padding-bottom: 60px;
-      }
     }
 
     &--services {
@@ -160,6 +148,18 @@
       @media (min-width: $screen-xl) {
         padding-bottom: 148px;
       }
+    }
+
+    &--schedule {
+      padding-bottom: 80px;
+      z-index: 110;
+
+      @media (min-width: $screen-xl) {
+        padding-bottom: 138px;
+      }
+    }
+
+    &--programms {
     }
   }
 
@@ -418,11 +418,11 @@ figure {
 
 p {
   // http://clagnut.com/blog/2395
-  hyphens: auto;
-  hyphenate-limit-chars: 6 3 3;
-  hyphenate-limit-lines: 2;
-  hyphenate-limit-last: always;
-  hyphenate-limit-zone: 8%;
+  // hyphens: auto;
+  // hyphenate-limit-chars: 6 3 3;
+  // hyphenate-limit-lines: 2;
+  // hyphenate-limit-last: always;
+  // hyphenate-limit-zone: 8%;
 }
 
 address {

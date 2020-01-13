@@ -6,7 +6,7 @@
   width: 100%;
   min-height: calc(#{$line-height}em + #{$field-padding-vertical} + #{$field-padding-vertical} + 2px); // Привет, IE
   margin: 0;
-  padding: 14px 13px;
+  padding: 0px 13px 22px 0px;
   border: none;
   border-bottom: 1px solid #0f0c0c;;
   border-radius: 0;
@@ -71,7 +71,7 @@
 
 @mixin field-name {
   display: block;
-  margin-bottom: 0.4em;
+  // margin-bottom: 0.4em;
   line-height: $line-height;
   font-size: 11px;
   font-weight: 600;

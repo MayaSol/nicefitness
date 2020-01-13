@@ -28,7 +28,7 @@ mixin modal(id, title, mods)
         .modal__inner
           .modal__header
             //-span.close.modal__close(data-dismiss='modal', aria-label='Закрыть') #[span]
-            +btn('Закрыть','common')(class="modal__close" data-dismiss="modal" aria-label='Закрыть')
+            +btn('Закрыть','common, close')(class="modal__close" data-dismiss="modal" aria-label='Закрыть')
             h4.modal__title !{title}
           .modal__content
             block
@@ -37,9 +37,9 @@ mixin modal(id, title, mods)
 mixin modal-test-drive(id, title, mods)
 
   +modal(id, title, mods)&attributes(attributes)
-    form(class="test-drive")
-      .test-drive__field.test-drive__field--name
-        .test-drive__field-inner
+    form(class="test-drive form")
+      .form__field.form__field--name
+        .form__field-inner
           +field-text({
             title: 'Ваше имя',
             mods: 'test-drive,form',
@@ -49,8 +49,8 @@ mixin modal-test-drive(id, title, mods)
               placeholder: '',
             }
           })
-      .test-drive__field.test-drive__field--phone
-        .test-drive__field-inner
+      .form__field.form__field--phone
+        .form__field-inner
           +field-text({
             title: 'Контактный телефон',
             mods: 'test-drive,form',
@@ -60,8 +60,8 @@ mixin modal-test-drive(id, title, mods)
               placeholder: '',
             }
           })
-      .test-drive__field.test-drive__field--user-content
-        .test-drive__field-inner
+      .form__field.form__field--user-content
+        .form__field-inner
           +field-checkbox([
             {
               title: 'Я соглашаюсь с условиями <a class="privacy-link" href="/">обработки персональных данных</a>',
@@ -71,4 +71,4 @@ mixin modal-test-drive(id, title, mods)
                 checked: false,
               }
             }])
-      +btn('Отправить сообщение','submit')(class="test-drive__btn-submit")
+      +btn('Отправить сообщение','submit')(class="form__btn-submit" type="submit")

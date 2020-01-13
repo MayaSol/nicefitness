@@ -28,7 +28,12 @@
   }
 
   &--schedule {
-    margin-top: -17px;
+
+    margin-top: 60px;
+
+    @media (min-width: $screen-xl) {
+      margin-top: -17px;
+    }
   }
 
   &__inner {

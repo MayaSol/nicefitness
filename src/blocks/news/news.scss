@@ -67,7 +67,6 @@
       width: auto;
       margin-right: 0;
       margin-left: 48px;
-      margin-top: -126px;
     }
   }
 
@@ -196,6 +195,13 @@
     @media (min-width: $screen-lg) {
       bottom: -58%;
       left: 125px;
+    }
+  }
+
+  &--schedule {
+
+    #{$block-name}__header{
+      margin-top: 155px;
     }
   }
 

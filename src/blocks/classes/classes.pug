@@ -1,0 +1,24 @@
+//- Все примеси в этом файле должны начинаться c имени блока (programm)
+
+mixin classes(mods)
+
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' classes--' + modsList[i].trim();
+      }
+    }
+
+  section.classes(class=allMods)&attributes(attributes)
+    ul.classes__list
+      block
+
+
+mixin classes-item(props)
+  li.classes__item
+    .classes__title
+      span !{props.title}
+    .classes__text
+      block
