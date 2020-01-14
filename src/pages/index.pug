@@ -9,7 +9,7 @@ block meta
 
 block vars
   -
-    var pageName = 'schedule';
+    var pageName = 'service';
 
 
 block off-canvas
@@ -22,13 +22,13 @@ block page-header-add
     .page-header__content-row.page-header__content-row--breadcrumbs
       +breadcrumbs()
         +breadcrumbs-item('Главная ', '/home')
-        +breadcrumbs-item('Расписание')
+        +breadcrumbs-item('О клубе')
     .page-header__content-row.page-header__content-row--title
-      h1.page-title.page-title--schedule Расписание
+      h1.page-title.page-title--schedule О клубе
 
 block content
     +caption-large('nicefitness','schedule')(class="page__section page__section--caption")
-    +info-schedule('schedule')(class="page__section page__section--info")
+    +info-short('schedule')(class="page__section page__section--info")
     +schedule-widget(class="page__section page__section--schedule")
     +expand('programms')(class="page__section page__section--programms")
       +expand-item({title: 'MIND BODY'})
@@ -38,19 +38,33 @@ block content
           +classes-item({title: 'PILATES'})
             p Pilates — силовая тренировка низкой и средней интенсивности с использованием упражнений направленных на проработку всех мышц в статике и медленной динамике, так же их растяжка. Включены упражнения на балансировку в статике и динамике. Профилактирующая тренировка для позвоночника, крупных и мелких суставов.утренние энергетические потоки, гармонизировать жизнь
       +expand-item({title: 'Аэробные классы'})
-        p content
+        +classes('programms')
+          +classes-item({title: 'HATHA YOGA'})
+            p Hatha YOGA — начальная ступень в практиках йоги, позволяющая узнать собственные возможности, научиться контролировать внутренние энергетические потоки, гармонизировать жизнь
       +expand-item({title: 'Боевые классы'})
-        p content
+        +classes('programms')
+          +classes-item({title: 'HATHA YOGA'})
+            p Hatha YOGA — начальная ступень в практиках йоги, позволяющая узнать собственные возможности, научиться контролировать внутренние энергетические потоки, гармонизировать жизнь
       +expand-item({title: 'Мероприятия'})
-        p content
+        +classes('programms')
+          +classes-item({title: 'HATHA YOGA'})
+            p Hatha YOGA — начальная ступень в практиках йоги, позволяющая узнать собственные возможности, научиться контролировать внутренние энергетические потоки, гармонизировать жизнь
       +expand-item({title: 'ОФП'})
-        p content
+        +classes('programms')
+          +classes-item({title: 'HATHA YOGA'})
+            p Hatha YOGA — начальная ступень в практиках йоги, позволяющая узнать собственные возможности, научиться контролировать внутренние энергетические потоки, гармонизировать жизнь
       +expand-item({title: 'Силовые классы'})
-        p content
+        +classes('programms')
+          +classes-item({title: 'HATHA YOGA'})
+            p Hatha YOGA — начальная ступень в практиках йоги, позволяющая узнать собственные возможности, научиться контролировать внутренние энергетические потоки, гармонизировать жизнь
       +expand-item({title: 'Танцевальные классы'})
-        p content
+        +classes('programms')
+          +classes-item({title: 'HATHA YOGA'})
+            p Hatha YOGA — начальная ступень в практиках йоги, позволяющая узнать собственные возможности, научиться контролировать внутренние энергетические потоки, гармонизировать жизнь
       +expand-item({title: 'Функциональные тренировки'})
-        p content
+        +classes('programms')
+          +classes-item({title: 'HATHA YOGA'})
+            p Hatha YOGA — начальная ступень в практиках йоги, позволяющая узнать собственные возможности, научиться контролировать внутренние энергетические потоки, гармонизировать жизнь
     +important('schedule')
       p Особенностью нашего фитнес-клуба является многофункциональность и огромный выбор групповых программ, нацеленных на оздоровление и общее укреплении организма.
       p К вашим услугам различные виды аэробных программ, стрейчинг, йога, пилатес, танцы, а также силовые тренировки в оборудованных всем необходимым для этого залах.

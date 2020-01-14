@@ -1,0 +1,81 @@
+extends ../pug/layout.pug
+
+block meta
+  title Главная
+  meta(name='description', content='')
+
+//- block append head
+//-   link(rel='stylesheet', href='css/some.css')
+
+block vars
+  -
+    var pageName = 'schedule';
+
+
+block off-canvas
+  +off-top()
+
+block nav
+  +main-nav-top('10')
+block page-header-add
+  .page-header__content.page-header__content--schedule
+    .page-header__content-row.page-header__content-row--breadcrumbs
+      +breadcrumbs()
+        +breadcrumbs-item('Главная ', '/home')
+        +breadcrumbs-item('Расписание')
+    .page-header__content-row.page-header__content-row--title
+      h1.page-title.page-title--schedule Расписание
+
+block content
+    +caption-large('nicefitness','schedule')(class="page__section page__section--caption")
+    +info-short('schedule')(class="page__section page__section--info")
+    +schedule-widget(class="page__section page__section--schedule")
+    +expand('programms')(class="page__section page__section--programms")
+      +expand-item({title: 'MIND BODY'})
+        +classes('programms')
+          +classes-item({title: 'HATHA YOGA'})
+            p Hatha YOGA — начальная ступень в практиках йоги, позволяющая узнать собственные возможности, научиться контролировать внутренние энергетические потоки, гармонизировать жизнь
+          +classes-item({title: 'PILATES'})
+            p Pilates — силовая тренировка низкой и средней интенсивности с использованием упражнений направленных на проработку всех мышц в статике и медленной динамике, так же их растяжка. Включены упражнения на балансировку в статике и динамике. Профилактирующая тренировка для позвоночника, крупных и мелких суставов.утренние энергетические потоки, гармонизировать жизнь
+      +expand-item({title: 'Аэробные классы'})
+        +classes('programms')
+          +classes-item({title: 'HATHA YOGA'})
+            p Hatha YOGA — начальная ступень в практиках йоги, позволяющая узнать собственные возможности, научиться контролировать внутренние энергетические потоки, гармонизировать жизнь
+      +expand-item({title: 'Боевые классы'})
+        +classes('programms')
+          +classes-item({title: 'HATHA YOGA'})
+            p Hatha YOGA — начальная ступень в практиках йоги, позволяющая узнать собственные возможности, научиться контролировать внутренние энергетические потоки, гармонизировать жизнь
+      +expand-item({title: 'Мероприятия'})
+        +classes('programms')
+          +classes-item({title: 'HATHA YOGA'})
+            p Hatha YOGA — начальная ступень в практиках йоги, позволяющая узнать собственные возможности, научиться контролировать внутренние энергетические потоки, гармонизировать жизнь
+      +expand-item({title: 'ОФП'})
+        +classes('programms')
+          +classes-item({title: 'HATHA YOGA'})
+            p Hatha YOGA — начальная ступень в практиках йоги, позволяющая узнать собственные возможности, научиться контролировать внутренние энергетические потоки, гармонизировать жизнь
+      +expand-item({title: 'Силовые классы'})
+        +classes('programms')
+          +classes-item({title: 'HATHA YOGA'})
+            p Hatha YOGA — начальная ступень в практиках йоги, позволяющая узнать собственные возможности, научиться контролировать внутренние энергетические потоки, гармонизировать жизнь
+      +expand-item({title: 'Танцевальные классы'})
+        +classes('programms')
+          +classes-item({title: 'HATHA YOGA'})
+            p Hatha YOGA — начальная ступень в практиках йоги, позволяющая узнать собственные возможности, научиться контролировать внутренние энергетические потоки, гармонизировать жизнь
+      +expand-item({title: 'Функциональные тренировки'})
+        +classes('programms')
+          +classes-item({title: 'HATHA YOGA'})
+            p Hatha YOGA — начальная ступень в практиках йоги, позволяющая узнать собственные возможности, научиться контролировать внутренние энергетические потоки, гармонизировать жизнь
+    +important('schedule')
+      p Особенностью нашего фитнес-клуба является многофункциональность и огромный выбор групповых программ, нацеленных на оздоровление и общее укреплении организма.
+      p К вашим услугам различные виды аэробных программ, стрейчинг, йога, пилатес, танцы, а также силовые тренировки в оборудованных всем необходимым для этого залах.
+    +news('schedule')(class="page__section page__section--news")
+    +mobile('schedule')(class="page__section page__section--mobile")
+
+block footer
+  +page-footer()
+
+//- block footer
+//-   p footer
+
+//- block append page-bottom
+//-   script(src='js/some.js')
