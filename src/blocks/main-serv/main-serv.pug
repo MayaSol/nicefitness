@@ -1,0 +1,48 @@
+//- Все примеси в этом файле должны начинаться c имени блока (main-serv)
+
+mixin main-serv(mods)
+
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' main-serv--' + modsList[i].trim();
+      }
+    }
+
+  section.main-serv(class=allMods)&attributes(attributes)
+    .main-serv__inner
+      h2.section-title.main-serv__title Основные услуги
+      +desc-list('main-services')
+        +desc-list-item({
+          name: 'Кардио',
+          icon: 'cardio-white-large',
+          text: 'Просторная кардио-зона фитнес клуба Nicefitness оснащена самым современным оборудованием'},
+          'cardio')
+        +desc-list-item({
+          name: 'Единоборства',
+          icon: 'combat-white-large',
+          text: 'В студии проходят групповые и персональные занятия по боксу, карате, кикбоксингу'},
+          'active','combat')
+        +desc-list-item({
+          name: 'Тренажерка',
+          icon: 'gym-white-large',
+          text: 'Более 400 м2. разнообразного современного силового и кардио оборудования'},
+          'gym')
+        +desc-list-item({
+          name: 'Групповые',
+          icon: 'group-white-large',
+          text: 'Залы групповых программ с широким выбором разнообразных  групповых уроков'},
+          'group')
+        +desc-list-item({
+          name: 'Фитнесс',
+          icon: 'fitness-white-large',
+          text: 'KeepFIT – это автоматизированный программный комплекс для определения профиля физических качеств фитнес контингента.'},
+          'fitness')
+        +desc-list-item({
+          name: 'Сауна',
+          icon: 'sauna-white-large',
+          text: 'Финские сауны, которые помогут Вам улучшить состояние организма.'},
+          'sauna')
+

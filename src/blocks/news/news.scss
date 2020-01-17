@@ -36,6 +36,10 @@
       margin-left: 0;
       margin-right: 0;
     }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
+    }
   }
 
   &__content {
@@ -196,12 +200,30 @@
       bottom: -58%;
       left: 125px;
     }
+
+    @media (min-width: $screen-xl) {
+      left: 205px;
+    }
+  }
+
+  .section-title {
+    margin-bottom: 0;
   }
 
   &--schedule {
 
     #{$block-name}__header{
       margin-top: 155px;
+    }
+  }
+
+  &--service {
+
+    #{$block-name}__header {
+
+      @media (min-width: $screen-xl) {
+        margin-top: 180px;
+      }
     }
   }
 

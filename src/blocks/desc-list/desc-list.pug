@@ -1,0 +1,41 @@
+//- Все примеси в этом файле должны начинаться c имени блока (desc-list)
+
+mixin desc-list(mods)
+
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' desc-list--' + modsList[i].trim();
+      }
+    }
+
+  .desc-list(class=allMods)&attributes(attributes)
+    .desc-list__inner
+      ul.desc-list__list
+        block
+
+
+mixin desc-list-item(props,mods)
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' desc-list__item--' + modsList[i].trim();
+      }
+    }
+
+    var iconClass = "desc-list__icon icon icon--" + props.icon;
+
+  li.desc-list__item(class=allMods)&attributes(attributes)
+    a.desc-list__link(href="/")
+      .desc-list__name
+        span !{props.name}
+      span.desc-list__text
+        i(class=iconClass)
+        p !{props.text}
+      .desc-list__img
+        img(src="img/content/main-services.jpg")
+

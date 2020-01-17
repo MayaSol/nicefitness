@@ -38,8 +38,18 @@
 
 // }
 
-// .info__bg {
-//   outline: 1px solid red;
+// .info {
+//   &__bg {
+//     outline: 1px solid red;
+//   }
+
+//   &__img {
+//     outline: 1px solid red;
+
+//     img {
+//       opacity: 0;
+//     }
+//   }
 // }
 
 // .mobile {
@@ -65,13 +75,16 @@
 //     &::before {
 //       z-index: -1;
 //       position: absolute;
-//       left: 0;
-//       // top: -20px;
+//       //left: -10px;
+//       //top: -195px;
+//       //left: -10px;
 //       // top: -3108px;
 //       // top: -3254px;
 //      // content: url('../img/temp/index.png');
-//           content: url('../img/temp/shedulle.jpg');
+//        //   content: url('../img/temp/services.jpg');
 //       // content: url('../img/temp/ui.jpg');
+//        content: url('../img/temp/service-page.jpg');
+//        top: 17px;
 //       opacity: 0.4;
 //     }
 
@@ -162,4 +175,17 @@
 //     outline: 1px solid red;
 //   }
 
+// }
+
+// .persona-list {
+
+
+//   &__img {
+
+//     outline: 1px solid red;
+
+//     img {
+//       opacity: 0;
+//     }
+//   }
 // }

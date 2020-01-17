@@ -1,0 +1,153 @@
+// В этом файле должны быть стили для БЭМ-блока main-serv, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.desc-list {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__item {
+    margin-bottom: 70px;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 110px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+
+      &:hover {
+        margin-bottom: 0;
+      }
+    }
+
+    &:hover {
+
+      @media (min-width: $screen-xl) {
+        margin-bottom: 280px;
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    color: currentColor;
+    text-decoration: none;
+
+    @media (min-width: $screen-md) {
+      flex-wrap: nowrap;
+    }
+
+    &:visited,
+    &:focus,
+    &:hover,
+    &:active {
+      color: currentColor;
+      text-decoration: none;
+    }
+
+    &:hover {
+
+      #{$block-name}__img {
+        display: block;
+      }
+
+      #{$block-name}__name {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 20px;
+      }
+    }
+  }
+
+  &__icon {
+    min-height: 121px;
+    margin-bottom: 37px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__name {
+    position: relative;
+    min-width: 213px;
+    margin-right: 97px;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    color: currentColor;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
+    }
+
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   left: 0;
+    //   bottom: 0;
+    //   width: 213px;
+    //   height: 1px;
+    //   background-color: #fff;
+    // }
+  }
+
+  &__text {
+    width: 355px;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 700;
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  &__img {
+    display: none;
+    position: absolute;
+    width: 475px;
+    height: 318px;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    opacity: 0.48;
+    z-index: -1;
+
+    @media (min-width: $screen-md) {
+      left: 171px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 732px;
+      height: 488px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: scale-down;
+      object-position: left center;
+    }
+  }
+
+  &--main-serv {
+    margin-top: 120px;
+
+    @media (min-width: $screen-xl) {
+      margin-top: 270px;
+    }
+  }
+
+
+}

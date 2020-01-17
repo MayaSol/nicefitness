@@ -60,21 +60,33 @@
 
   &__header {
     flex-shrink: 0;
-    padding: 0 40px 0 80px;
+    padding: 0 40px;
+
+    @media (min-width: $screen-lg) {
+      padding: 0 40px 0 80px;
+    }
   }
 
   &__content {
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-bottom: 80px;
+    padding: 0 40px 40px;
+
+    @media (min-width: $screen-xl) {
+      padding-left: 80px;
+      padding-right: 80px;
+      padding-bottom: 80px;
+    }
   }
 
   &__title {
     margin-top: 80px;
     margin-bottom: 65px;
-    font-size: 60px;
+    font-size: 30px;
     font-weight: 600;
     color: currentColor;
+
+    @media (min-width: $screen-lg) {
+      font-size: 60px;
+    }
   }
 
   &__close {
@@ -141,6 +153,10 @@
     #{$block-name}__inner {
       background-color: #f8fbf7;
     }
+  }
+
+  .field-text__input {
+    font-size: 24px;
   }
 
 }

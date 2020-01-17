@@ -106,17 +106,16 @@
       hyphens: none;
 
       @media (min-width: $screen-md) {
+        padding-right: get-width(3,1,md) - $screen-padding-md - 2px;
         font-size: 30px;
       }
 
       @media (min-width: $screen-lg) {
-        // width: auto;
-        // padding-right: 176px;
-        // line-height: 1.15;
+        padding-right: 176px;
       }
 
       @media (min-width: $screen-xl) {
-        // padding-right: 0;
+        padding-right: 292px;
       }
 
       &::after {
@@ -146,6 +145,7 @@
   }
 
   &__text {
+    position: relative;
     padding-left: 0;
     flex-basis: 100%;
 
@@ -153,6 +153,44 @@
       flex-basis: auto;
     }
   }
+
+  .icon {
+    display: block;
+    margin-left: 40px;
+    margin-bottom: 70px;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 140px;
+    }
+  }
+
+
+  &__img {
+
+    display: none;
+    position: absolute;
+    top: -124px;
+    left: 153px;
+    opacity: 0.48;
+    z-index: -1;
+
+    @media (min-width: $screen-lg) {
+      display: block;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 1110px;
+      height: 740px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: scale-down;
+      object-position: left center;
+    }
+  }
+
 
   &--main {
     padding-bottom: 63px;
@@ -206,6 +244,10 @@
   &--schedule {
     margin-top: 80px;
     padding-bottom: 80px;
+  }
+
+  &--schedule,
+  &--short {
 
     @media (min-width: $screen-xl) {
       margin-top: 112px;
@@ -251,6 +293,43 @@
         }
 
         @media (min-width: $screen-xl) {
+          padding-right: 292px;
+        }
+      }
+    }
+  }
+
+  &--services {
+    // padding-bottom: 0;
+
+    // @media (min-width: $screen-md) {
+    //   padding-bottom: 0;
+    // }
+
+    // @media (min-width: $screen-lg) {
+    //   padding-bottom: 0;
+    // }
+
+    // @media (min-width: $screen-xl) {
+    //   padding-bottom: 0;
+    // }
+  }
+
+  &--service {
+
+
+    p {
+      @at-root &#{$block-name}__lead {
+        // @media (min-width: $screen-md) {
+        //   padding-right: get-width(3,1,md) - $screen-padding-md - 2px;
+        // }
+
+        @media (min-width: $screen-lg) {
+          padding-right: 176px;
+        }
+
+        @media (min-width: $screen-xl) {
+          width: get-width(1, 2, xl) - 2 * $screen-padding-xl;
           padding-right: 292px;
         }
       }

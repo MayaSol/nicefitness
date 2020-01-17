@@ -1,0 +1,39 @@
+//- Все примеси в этом файле должны начинаться c имени блока (persona-list)
+
+mixin persona-list(mods)
+
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' persona-list--' + modsList[i].trim();
+      }
+    }
+
+  .persona-list(class=allMods)&attributes(attributes)
+    .persona-list__inner
+      ul.persona-list__list
+        block
+
+
+mixin persona-list-item(props,mods)
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' persona-list__item--' + modsList[i].trim();
+      }
+    }
+
+    var iconClass = "persona-list__icon icon icon--" + props.icon;
+
+  li.persona-list__item(class=allMods)&attributes(attributes)
+    .persona-list__item-inner
+      .persona-list__img
+        img(src= props.src)
+        .persona-list__name
+          span !{props.name}
+      .persona-list__text
+        p !{props.text}

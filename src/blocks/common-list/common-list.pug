@@ -1,0 +1,32 @@
+//- Все примеси в этом файле должны начинаться c имени блока (common-list)
+
+mixin common-list(mods)
+
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' common-list--' + modsList[i].trim();
+      }
+    }
+
+  .common-list(class=allMods)&attributes(attributes)
+    .common-list__inner
+      ul.common-list__list
+        block
+
+
+mixin common-list-item(props,mods)
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' common-list__item--' + modsList[i].trim();
+      }
+    }
+
+  li.common-list__item(class=allMods)&attributes(attributes)
+    span !{props.name}
+

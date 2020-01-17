@@ -31,6 +31,14 @@
   &__content {
     @include container;
 
+    &--inner-page {
+      margin-top: 2em;
+
+      @media (min-width: $screen-xl) {
+        margin-top: 65px;
+      }
+    }
+
     &--schedule {
 
       margin-top: 2em;

@@ -1,0 +1,77 @@
+extends ../pug/layout.pug
+
+block meta
+  title Главная
+  meta(name='description', content='')
+
+//- block append head
+//-   link(rel='stylesheet', href='css/some.css')
+
+block vars
+  -
+    var pageName = 'services';
+
+
+block off-canvas
+  +off-top()
+
+block nav
+  +main-nav-top('10')
+block page-header-add
+  .page-header__content.page-header__content--inner-page
+    .page-header__content-row.page-header__content-row--breadcrumbs
+      +breadcrumbs()
+        +breadcrumbs-item('Главная ', '/home')
+        +breadcrumbs-item('Кардио зона')
+    .page-header__content-row.page-header__content-row--title
+      h1.page-title.page-title--services Кардио
+
+block content
+    +caption-large('nicefitness','services')(class="page__section page__section--caption")
+    .page__section.page__section--main-serv
+      .page__section-inner
+        +info-service('service')
+    //- +social-section-narrow('narrow, services')(class="page__section page__section--services-social")
+    .page__section.page__section--service-desc
+      .page__section-inner
+        .page__section-content
+          h2.section-title Что дает кардио-зона?
+          +common-list('service-desc,service')
+            +common-list-item({name: 'Набор мышечной массы'})
+            +common-list-item({name: 'Повышение силовых показателей'})
+            +common-list-item({name: 'Снижение веса'})
+            +common-list-item({name: 'Персональный тренинг с профессиональным тренером'})
+            +common-list-item({name: 'Увеличение гибкости'})
+        +card('large,highlight',{price: '2 000 ₽'})
+    .page__section.page__section--coaches
+      .page__section-inner
+        h2.section-title Вы в надежных руках
+        .page__section-content
+          +persona-list('coaches')
+            +persona-list-item({src: 'img/content/coach-01.jpg', name: 'Ковалев Михаил', text: 'Персональный тренер тренажерного зала.'})
+            +persona-list-item({src: 'img/content/coach-02.jpg', name: 'Денисенко Юлия', text: 'Персональный тренер.'})
+            +persona-list-item({src: 'img/content/coach-03.jpg', name: 'Хомченко Александр', text: 'Персональный тренер тренажерного зала.'})
+          +social-section-narrow('service')
+    .page__section.page__section--sign-up
+      .page__section-inner
+        .caption-medium
+          span Записаться
+        .page__section-row
+          span 7 дней бесплатного посещения
+          +btn('Получить 7 дней тест драйва','accent')(data-toggle="modal" data-target="#test-drive")
+        .page__section-img
+          img(src="img/sign-up.jpg" width="1060" height="596")
+    +news('service')(class="page__section page__section--news")
+    +mobile('short')(class="page__section page__section--mobile")
+
+
+block footer
+  +page-footer()
+  +modal-test-drive("test-drive","Закажите бесплатно 7&nbsp;дней фитнес тест-драйва")
+  +form-messages()
+
+//- block footer
+//-   p footer
+
+//- block append page-bottom
+//-   script(src='js/some.js')

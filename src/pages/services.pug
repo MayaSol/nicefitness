@@ -1,0 +1,102 @@
+extends ../pug/layout.pug
+
+block meta
+  title Главная
+  meta(name='description', content='')
+
+//- block append head
+//-   link(rel='stylesheet', href='css/some.css')
+
+block vars
+  -
+    var pageName = 'services';
+
+
+block off-canvas
+  +off-top()
+
+block nav
+  +main-nav-top('10')
+block page-header-add
+  .page-header__content.page-header__content--inner-page
+    .page-header__content-row.page-header__content-row--breadcrumbs
+      +breadcrumbs()
+        +breadcrumbs-item('Главная ', '/home')
+        +breadcrumbs-item('Услуги')
+    .page-header__content-row.page-header__content-row--title
+      h1.page-title.page-title--services Услуги
+
+block content
+    +caption-large('nicefitness','services')(class="page__section page__section--caption")
+    +info-short('services,short')(class="page__section page__section--info")
+    .page__section.page__section--main-serv
+      .page__section-inner
+          h2.section-title Основные услуги
+          +desc-list('main-serv')
+            +desc-list-item({
+              name: 'Кардио',
+              icon: 'cardio-white-large',
+              text: 'Просторная кардио-зона фитнес клуба Nicefitness оснащена самым современным оборудованием'},
+              'cardio')
+            +desc-list-item({
+              name: 'Единоборства',
+              icon: 'combat-white-large',
+              text: 'В студии проходят групповые и персональные занятия по боксу, карате, кикбоксингу'},
+              'active','combat')
+            +desc-list-item({
+              name: 'Тренажерка',
+              icon: 'gym-white-large',
+              text: 'Более 400 м2. разнообразного современного силового и кардио оборудования'},
+              'gym')
+            +desc-list-item({
+              name: 'Групповые',
+              icon: 'group-white-large',
+              text: 'Залы групповых программ с широким выбором разнообразных  групповых уроков'},
+              'group')
+            +desc-list-item({
+              name: 'Фитнесс',
+              icon: 'fitness-white-large',
+              text: 'KeepFIT – это автоматизированный программный комплекс для определения профиля физических качеств фитнес контингента.'},
+              'fitness')
+            +desc-list-item({
+              name: 'Сауна',
+              icon: 'sauna-white-large',
+              text: 'Финские сауны, которые помогут Вам улучшить состояние организма.'},
+              'sauna')
+    +social-section-narrow('right, services')(class="page__section page__section--services-social")
+    .page__section.page__section--add-serv
+      .page__section-inner
+        h2.section-title Дополнительные услуги
+        +common-list('add-serv,services')
+          +common-list-item({name: 'Солярий'})
+          +common-list-item({name: 'Фитнес-бар'})
+          +common-list-item({name: 'Салон красоты'})
+          +common-list-item({name: 'Персональный тренинг с профессиональным тренером'})
+          +common-list-item({name: 'Лаборатория массажа'})
+          +common-list-item({name: 'Определение лактата капилярной крови при нагрузке'})
+          +common-list-item({name: 'Диетологическое сопровождение'})
+          +common-list-item({name: 'Тренировка для профилактики гипертонии'})
+          +common-list-item({name: 'Проектирование и строительство фитнесс-клубов под ключ'})
+    .page__section.page__section--sign-up
+      .page__section-inner
+        .caption-medium
+          span Записаться
+        .page__section-row
+          span 7 дней бесплатного посещения
+          +btn('Получить 7 дней тест драйва','accent')(data-toggle="modal" data-target="#test-drive")
+        .page__section-img
+          img(src="img/sign-up.jpg" width="1060" height="596")
+    +news('services')(class="page__section page__section--news")
+    +mobile('short')(class="page__section page__section--mobile")
+
+
+block footer
+  +page-footer()
+  +modal-test-drive("test-drive","Закажите бесплатно 7&nbsp;дней фитнес тест-драйва")
+  +form-messages()
+
+//- block footer
+//-   p footer
+
+//- block append page-bottom
+//-   script(src='js/some.js')

@@ -96,73 +96,6 @@
     flex-shrink: 0;
   }
 
-  &__section {
-    position: relative;
-    z-index: 1;
-
-    &--mobile {
-      z-index: 2;
-    }
-
-    &--social {
-      padding-top: 110px;
-      margin-bottom: 110px;
-
-      @media (min-width: $screen-md) {
-        padding-top: 95px;
-      }
-
-      @media (min-width: $screen-lg) {
-        margin-bottom: 0;
-        padding-top: 102px;
-      }
-
-      @media (min-width: $screen-xl) {
-        padding-top: 92px;
-      }
-    }
-
-    &--info {
-
-    }
-
-    &--services {
-      padding-bottom: 95px;
-
-      @media (min-width: $screen-md) {
-        padding-bottom: 100px;
-      }
-
-      @media (min-width: $screen-lg) {
-        padding-bottom: 230px;
-      }
-
-      @media (min-width: $screen-xl) {
-        padding-bottom: 226px;
-      }
-    }
-
-    &--news {
-      padding-bottom: 123px;
-
-      @media (min-width: $screen-xl) {
-        padding-bottom: 148px;
-      }
-    }
-
-    &--schedule {
-      padding-bottom: 80px;
-      z-index: 110;
-
-      @media (min-width: $screen-xl) {
-        padding-bottom: 138px;
-      }
-    }
-
-    &--programms {
-    }
-  }
-
 }
 
 
@@ -556,8 +489,11 @@ pre {
 }
 
 .section-title {
-  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-size: 30px;
   font-weight: 600;
+  word-break: keep-all;
 
   @media (min-width: $screen-md) {
     font-size: 60px;
@@ -581,6 +517,8 @@ pre {
 
 
 .icon {
+  font-size: 0;
+  line-height: 0;
 
   &::before {
     content: '';
@@ -592,10 +530,30 @@ pre {
       @include sprite($cardio-white);
     }
   }
+  &--cardio-white-large {
+    &::before {
+      @include sprite($cardio-white-large);
+    }
+  }
+  &--cardio-white-xl {
+    &::before {
+      @include sprite($cardio-white-xl);
+    }
+  }
 
   &--combat-white {
     &::before {
       @include sprite($combat-white);
+    }
+  }
+  &--combat-white-large {
+    &::before {
+      @include sprite($combat-white-large);
+    }
+  }
+  &--combat-white-xl {
+    &::before {
+      @include sprite($combat-white-xl);
     }
   }
 
@@ -604,10 +562,30 @@ pre {
       @include sprite($gym-white);
     }
   }
+  &--gym-white-large {
+    &::before {
+      @include sprite($gym-white-large);
+    }
+  }
+  &--gym-white-xl {
+    &::before {
+      @include sprite($gym-white-xl);
+    }
+  }
 
   &--group-white {
     &::before {
       @include sprite($group-white);
+    }
+  }
+  &--group-white-large {
+    &::before {
+      @include sprite($group-white-large);
+    }
+  }
+  &--group-white-xl {
+    &::before {
+      @include sprite($group-white-large);
     }
   }
 
@@ -616,12 +594,33 @@ pre {
       @include sprite($sauna-white);
     }
   }
+  &--sauna-white-large {
+    &::before {
+      @include sprite($sauna-white-large);
+    }
+  }
+  &--sauna-white-xl {
+    &::before {
+      @include sprite($sauna-white-xl);
+    }
+  }
 
   &--fitness-white {
     &::before {
       @include sprite($fitness-white);
     }
   }
+  &--fitness-white-large {
+    &::before {
+      @include sprite($fitness-white-large);
+    }
+  }
+  &--fitness-white-xl {
+    &::before {
+      @include sprite($fitness-white-xl);
+    }
+  }
+
 
 }
 
@@ -649,5 +648,214 @@ pre {
 
 .w100 {
   flex-basis: 100%;
+}
+
+.page {
+  &__section {
+    position: relative;
+    z-index: 10;
+
+    &--mobile {
+      z-index: 20;
+    }
+
+    &--social {
+      padding-top: 110px;
+      margin-bottom: 110px;
+
+      @media (min-width: $screen-md) {
+        padding-top: 95px;
+      }
+
+      @media (min-width: $screen-lg) {
+        margin-bottom: 0;
+        padding-top: 102px;
+      }
+
+      @media (min-width: $screen-xl) {
+        padding-top: 92px;
+      }
+    }
+
+    &--info {
+
+    }
+
+    &--services {
+      padding-bottom: 95px;
+
+      @media (min-width: $screen-md) {
+        padding-bottom: 100px;
+      }
+
+      @media (min-width: $screen-lg) {
+        padding-bottom: 230px;
+      }
+
+      @media (min-width: $screen-xl) {
+        padding-bottom: 226px;
+      }
+    }
+
+    &--service-desc {
+
+      margin-bottom: 70px;
+
+      @media (min-width: $screen-xl) {
+        margin-bottom: 155px;
+      }
+
+      .page__section-inner {
+
+        @media (min-width: $screen-lg) {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      .section-title {
+        margin-bottom: 70px;
+
+        @media (min-width: $screen-lg) {
+          width: 445px;
+          margin-bottom: 115px;
+        }
+      }
+
+      .page__section-content {
+        @media (min-width: $screen-xl) {
+          width: get-width(1,2,xl) - $screen-padding-xl;
+        }
+      }
+    }
+
+    &--news {
+      padding-bottom: 123px;
+
+      @media (min-width: $screen-xl) {
+        padding-bottom: 148px;
+      }
+    }
+
+    &--schedule {
+      padding-bottom: 80px;
+      z-index: 110;
+
+      @media (min-width: $screen-xl) {
+        padding-bottom: 138px;
+      }
+    }
+
+    &--programms {
+    }
+
+    &--main-serv {
+      margin-top: 70px;
+      margin-bottom: 90px;
+
+      @media (min-width: $screen-lg) {
+        margin-top: 248px;
+        margin-bottom: 120px;
+      }
+
+      .section-title {
+        width: 350px;
+      }
+    }
+
+    &--add-serv {
+      z-index: 20;
+
+      .section-title {
+        margin-bottom: 75px;
+
+        @media (min-width: $screen-lg) {
+          width: 565px;
+        }
+      }
+    }
+
+    &--sign-up {
+      z-index: 8;
+
+      .caption-medium {
+        margin-bottom: 40px;
+        margin-top: 60px;
+
+        @media (min-width: $screen-xl) {
+          margin-top: 205px;
+          margin-bottom: 40px;
+        }
+
+      }
+
+      .page__section-row span {
+        display: inline-block;
+        margin-right: 32px;
+        margin-bottom: 30px;
+        font-size: 11px;
+        font-weight: 600;
+
+        @media (min-width: $screen-xl) {
+          margin-bottom: 0;
+        }
+      }
+
+      .page__section-img {
+        display: none;
+
+        @media (min-width: $screen-lg) {
+          display: block;
+          position: absolute;
+          left: 50%;
+          bottom: -24px;
+          z-index: -1;
+          height: 596px;
+
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: none;
+            object-position: left top;
+          }
+        }
+      }
+
+    }
+
+    &--services-social {
+      margin-bottom: 90px;
+    }
+
+    &--coaches {
+
+      .page__section-inner {
+        @include container;
+      }
+
+      .section-title {
+        margin-bottom: 70px;
+
+        @media (min-width: $screen-lg) {
+          width: 500px;
+        }
+      }
+
+      .page__section-content {
+        // @include container;
+        display: flex;
+        flex-wrap: wrap;
+
+        @media (min-width: $screen-lg) {
+          flex-wrap: nowrap;
+        }
+      }
+    }
+  }
+
+  &__section-inner {
+    @include container;
+  }
+
 }
 
