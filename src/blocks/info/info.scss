@@ -336,5 +336,23 @@
     }
   }
 
+  &--card {
+    margin-top: 10px;
+    padding-bottom: 60px;
+
+    @media (min-width: $screen-md) {
+      margin-top: 10px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-top: 10px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-top: 10px;
+      padding-bottom: 60px;
+    }
+  }
+
 
 }

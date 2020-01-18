@@ -227,5 +227,15 @@
     }
   }
 
+  &--card {
+
+    #{$block-name}__header {
+
+      @media (min-width: $screen-xl) {
+        margin-top: 180px;
+      }
+    }
+  }
+
 
 }

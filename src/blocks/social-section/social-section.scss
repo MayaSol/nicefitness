@@ -170,7 +170,7 @@
 
   &--full {
 
-    &__inner {
+    #{$block-name}__inner {
       @include container;
     }
 

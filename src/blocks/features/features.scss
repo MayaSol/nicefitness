@@ -1,0 +1,97 @@
+// В этом файле должны быть стили для БЭМ-блока features, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.features {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+  }
+
+  &__list {
+    padding: 0;
+    list-style: none;
+    counter-reset: counter;
+  }
+
+  &__item {
+    counter-increment: counter;
+    margin-bottom: 44px;
+  }
+
+  &__number {
+    display: flex;
+    align-items: center;
+    margin-bottom: 45px;
+
+    &::before {
+      content: counters(counter, ".", decimal-leading-zero);
+      display: block;
+      font-family: $font-family--monospace;
+      font-size: 116px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      margin-left: 50px;
+      width: 102px;
+      height: 1px;
+      background-color: currentColor;
+    }
+  }
+
+  &__text {
+    min-height: 5*1.2em;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.2;
+
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &--cols-3 {
+
+    #{$block-name}__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    #{$block-name}__item {
+
+      &:nth-child(3n-2) {
+
+        @media (min-width: $screen-xl) {
+            width: get-width(1,1,xl) - $screen-padding-xl;
+            padding-right: 90px;
+            outline: 1px solid red;
+        }
+      }
+      &:nth-child(3n-1) {
+
+        @media (min-width: $screen-xl) {
+          width: get-width(2,1,xl);
+          padding-left: 50px;
+          padding-right: 100px;
+          outline: 1px solid green;
+        }
+      }
+      &:nth-child(3n) {
+
+        @media (min-width: $screen-xl) {
+            width: get-width(3,1,xl) - $screen-padding-xl -1px;
+            padding-left: 50px;
+            padding-right: 50px;
+            outline: 1px solid orange;
+        }
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,56 @@
+//- Все примеси в этом файле должны начинаться c имени блока (pass)
+
+mixin pass(mods)
+
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' pass--' + modsList[i].trim();
+      }
+    }
+
+  .pass(class=allMods)&attributes(attributes)
+    .pass__inner
+      .pass__top
+        .pass__left.pass__left--top.col-left-2
+          +schedule()
+          .pass__period
+            span.pass__period-num 1&nbsp;
+            span месяц
+        .pass__right
+          .pass__period
+            span.pass__period-num 12&nbsp;
+            span месяцев
+      ul.pass__content
+        block
+
+mixin pass-item(props,mods)
+
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' pass__item--' + modsList[i].trim();
+      }
+    }
+
+  li.pass__item(class=allMods)&attributes(attributes)
+    .pass__left.pass__left--item.col-left-2
+      .pass__item-name
+        .pass__item-icon
+        span !{props.name}
+      .pass__option-wrapper
+        if (props.month)
+          .pass__option.pass__option--yes
+        else
+          .pass__option.pass__option--no
+    .pass__right
+      .pass__option-wrapper
+        if (props.year)
+          .pass__option.pass__option--yes
+        else
+          .pass__option.pass__option--no
+

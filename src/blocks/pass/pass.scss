@@ -1,0 +1,202 @@
+// В этом файле должны быть стили для БЭМ-блока pass, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.pass {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 105px;
+
+    @media (min-width: $screen-lg) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__left {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 80px;
+
+    #{$block-name}__period,
+    #{$block-name}__option-wrapper {
+      width: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    &--top {
+      //flex-wrap: wrap;
+      align-items: flex-end;
+
+      @media (min-width: $screen-lg) {
+        flex-wrap: nowrap;
+      }
+    }
+
+    &--item {
+      align-items: center;
+    }
+  }
+
+  &__right {
+
+    @media (min-width: $screen-lg) {
+      padding-left: 45px;
+    }
+
+    #{$block-name}__period,
+    #{$block-name}__option-wrapper {
+      width: 145px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+  }
+
+  &__period {
+    font-family: $font-family--monospace;
+    font-size: 21.5px;
+    font-weight: 700;
+  }
+
+  &__period-num {
+    font-size: 51px;
+    line-height: 1;
+  }
+
+  &__content {
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 57px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--cardio {
+      #{$block-name}__item-icon {
+        &::before {
+          @include sprite($cardio-white);
+        }
+      }
+    }
+
+    &--combat {
+      #{$block-name}__item-icon {
+        &::before {
+          @include sprite($combat-white);
+        }
+      }
+    }
+
+    &--gym {
+      #{$block-name}__item-icon {
+        &::before {
+          @include sprite($gym-white);
+        }
+      }
+    }
+
+    &--group {
+      #{$block-name}__item-icon {
+        &::before {
+          @include sprite($group-white);
+        }
+      }
+    }
+
+    &--fitness {
+      #{$block-name}__item-icon {
+        &::before {
+          @include sprite($fitness-white);
+        }
+      }
+    }
+
+    &--sauna {
+      #{$block-name}__item-icon {
+        &::before {
+          @include sprite($sauna-white);
+        }
+      }
+    }
+  }
+
+  &__item-icon {
+    display: flex;
+    justify-content: center;
+    width: 62px;
+    margin-right: 18px;
+
+    &::before {
+      content: '';
+      display: inline-block;
+    }
+  }
+
+  &__item-name {
+    display: flex;
+    align-items: center;
+    width: 515px;
+    font-size: 15px;
+    font-weight: 600;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      margin-left: auto;
+      width: 244px;
+      height: 1px;
+      background-color: #fff;
+    }
+  }
+
+  &__option {
+    position: relative;
+    width: 58px;
+    height: 58px;
+
+    &--yes {
+      border: 1px solid #fff;
+      border-radius: 50%;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 18px;
+        left: 14px;
+        width: 22px;
+        height: 12px;
+        border-left: 2px solid currentColor;
+        border-bottom: 2px solid currentColor;
+        transform: rotate(-45deg);
+        transition: opacity $transition-time;
+        //box-shadow: 1px 2px 0 #fff, inset 0 -2px 0 #fff;
+      }
+    }
+
+    &--no {
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 1px;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%);
+        background-color: #fff;
+      }
+    }
+  }
+
+}

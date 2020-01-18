@@ -18,6 +18,17 @@
 // .card {
 //   border: 1px solid red;
 //   color: red;
+//   //background-color: transparent;
+
+//   &::before {
+//     outline: 1px solid red;
+//     background-color: transparent;
+//   }
+
+//   &::after {
+//     outline: 1px solid red;
+//     background-color: transparent;
+//   }
 // }
 
 // .main-slider__card-link {
@@ -83,8 +94,9 @@
 //      // content: url('../img/temp/index.png');
 //        //   content: url('../img/temp/services.jpg');
 //       // content: url('../img/temp/ui.jpg');
-//        content: url('../img/temp/service-page.jpg');
+//        content: url('../img/temp/card.jpg');
 //        top: 17px;
+//        //left: 10px;
 //       opacity: 0.4;
 //     }
 
@@ -186,6 +198,16 @@
 
 //     img {
 //       opacity: 0;
+//     }
+//   }
+// }
+
+
+// .features {
+
+//   &__number {
+//     &::after {
+//       //background-color: red;
 //     }
 //   }
 // }

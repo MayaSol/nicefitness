@@ -1,0 +1,34 @@
+//- Все примеси в этом файле должны начинаться c имени блока (features)
+
+mixin features(mods)
+
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' features--' + modsList[i].trim();
+      }
+    }
+
+  .features(class=allMods)&attributes(attributes)
+    .features__inner
+      ul.features__list
+        block
+
+
+mixin features-item(props,mods)
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' features__item--' + modsList[i].trim();
+      }
+    }
+
+  li.features__item(class=allMods)&attributes(attributes)
+    .features__number
+    .features__text
+      block
+
