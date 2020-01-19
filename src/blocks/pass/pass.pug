@@ -14,15 +14,15 @@ mixin pass(mods)
   .pass(class=allMods)&attributes(attributes)
     .pass__inner
       .pass__top
-        .pass__left.pass__left--top.col-left-2
-          +schedule()
-          .pass__period
-            span.pass__period-num 1&nbsp;
-            span месяц
-        .pass__right
-          .pass__period
-            span.pass__period-num 12&nbsp;
-            span месяцев
+        //- .pass__left.pass__left--top.col-left-2
+        +schedule(class="pass__schedule").col-left-1
+        .pass__period.pass__period--month.col-middle-1
+          span.pass__period-num 1&nbsp;
+          span месяц
+        //- .pass__right
+        .pass__period.pass__period--year.col-right-1
+          span.pass__period-num 12&nbsp;
+          span месяцев
       ul.pass__content
         block
 

@@ -32,15 +32,21 @@
       font-size: 116px;
       font-weight: 700;
       line-height: 1;
+      flex-shrink: 0;
     }
 
     &::after {
       content: '';
       display: block;
-      margin-left: 50px;
-      width: 102px;
+      margin-left: 20px;
+      width: 40px;
       height: 1px;
       background-color: currentColor;
+
+      @media (min-width: $screen-lg) {
+        margin-left: 50px;
+        width: 102px;
+      }
     }
   }
 
@@ -66,6 +72,15 @@
 
       &:nth-child(3n-2) {
 
+        @media (min-width: $screen-md) {
+          width: get-width(1,1,md) - $screen-padding-md;
+          padding-right: 20px;
+        }
+
+        @media (min-width: $screen-lg) {
+          width: get-width(1,1,lg) - $screen-padding-lg;
+        }
+
         @media (min-width: $screen-xl) {
             width: get-width(1,1,xl) - $screen-padding-xl;
             padding-right: 90px;
@@ -73,6 +88,16 @@
         }
       }
       &:nth-child(3n-1) {
+
+        @media (min-width: $screen-md) {
+          width: get-width(2,1,md);
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+        @media (min-width: $screen-lg) {
+          width: get-width(2,1,lg);
+        }
 
         @media (min-width: $screen-xl) {
           width: get-width(2,1,xl);
@@ -82,6 +107,15 @@
         }
       }
       &:nth-child(3n) {
+
+        @media (min-width: $screen-md) {
+          width: get-width(3,1,md) - $screen-padding-md;
+          padding-left: 20px;
+        }
+
+        @media (min-width: $screen-lg) {
+          width: get-width(3,1,lg) - $screen-padding-lg;
+        }
 
         @media (min-width: $screen-xl) {
             width: get-width(3,1,xl) - $screen-padding-xl -1px;

@@ -24,17 +24,27 @@
 
       @media (min-width: $screen-lg) {
         margin-left: get-width(1,2,lg) - $screen-padding-lg;
-        padding-left: 40px;
+        padding-left: 20px;
+        font-size: 90px;
       }
 
       @media (min-width: $screen-xl) {
         margin-left: get-width(1,2,xl) - $screen-padding-xl;
         padding-left: 48px;
+        font-size: 104.5px;
       }
     }
 
     #{$block-name}__inner {
       @include container;
+    }
+  }
+
+  &--card {
+    margin-bottom: 60px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
     }
   }
 }

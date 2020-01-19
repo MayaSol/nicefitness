@@ -51,4 +51,12 @@
   &--off-top {
   }
 
+  &--card {
+    margin-bottom: 60px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+  }
+
 }

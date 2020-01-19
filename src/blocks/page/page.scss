@@ -773,6 +773,14 @@ pre {
           // width: 565px;
         }
       }
+
+      .page__section-row {
+        flex-wrap: wrap;
+
+        @media (min-width: $screen-lg) {
+          flex-wrap: nowrap;
+        }
+      }
     }
 
     &--sign-up {
@@ -791,6 +799,11 @@ pre {
 
       .page__section-row {
         align-items: center;
+        flex-wrap: wrap;
+
+        @media (min-width: $screen-md) {
+          flex-wrap: nowrap;
+        }
       }
 
       .page__section-row span {
@@ -858,7 +871,11 @@ pre {
 
     &--card {
       padding-bottom: 1px;
-      margin-bottom: 150px;
+      margin-bottom: 90px;
+
+      @media (min-width: $screen-lg) {
+        margin-bottom: 150px;
+      }
     }
 
     &--card-features {
@@ -887,7 +904,12 @@ pre {
     }
 
     &--sign-up-pass {
-      margin-top: 400px;
+
+      margin-top: 90px;
+
+      @media (min-width: $screen-lg) {
+        margin-top: 400px;
+      }
     }
   }
 
@@ -899,7 +921,58 @@ pre {
     display: flex;
   }
 
+}
+
+  .col-left-1 {
+
+    @media (min-width: $screen-md) {
+      width: get-width(1,1,md) - $screen-padding-md;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: get-width(1,1,lg) - $screen-padding-lg;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: get-width(1,1,xl) - $screen-padding-xl;
+    }
+  }
+
+  .col-middle-1 {
+
+    @media (min-width: $screen-md) {
+      width: get-width(2,1,md);
+    }
+
+    @media (min-width: $screen-lg) {
+      width: get-width(2,1,lg);
+    }
+
+    @media (min-width: $screen-xl) {
+      width: get-width(2,1,xl);
+    }
+  }
+
+  .col-right-1 {
+
+    @media (min-width: $screen-md) {
+      width: get-width(3,1,md) - $screen-padding-md;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: get-width(3,1,lg) - $screen-padding-lg;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: get-width(3,1,xl) - $screen-padding-xl;
+    }
+  }
+
   .col-left-2 {
+
+    @media (min-width: $screen-md) {
+      width: get-width(1,2,md) - $screen-padding-md;
+    }
 
     @media (min-width: $screen-lg) {
       width: get-width(1,2,lg) - $screen-padding-lg;
@@ -909,6 +982,4 @@ pre {
       width: get-width(1,2,xl) - $screen-padding-xl;
     }
   }
-
-}
 

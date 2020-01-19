@@ -11,7 +11,7 @@
     flex-wrap: wrap;
     margin-bottom: 105px;
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-md) {
       flex-wrap: nowrap;
     }
   }
@@ -19,21 +19,35 @@
   &__left {
     display: flex;
     justify-content: space-between;
-    padding-right: 80px;
+    flex-grow: 1;
+    margin-right: 15px;
+
+    @media (min-width: $screen-md) {
+      flex-grow: 0;
+      margin-right: 0;
+      padding-right: 40px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-right: 80px;
+    }
 
     #{$block-name}__period,
     #{$block-name}__option-wrapper {
-      width: 100px;
       display: flex;
       justify-content: center;
       align-items: flex-end;
+
+      @media (min-width: $screen-md) {
+        width: 100px;
+      }
     }
 
     &--top {
       //flex-wrap: wrap;
       align-items: flex-end;
 
-      @media (min-width: $screen-lg) {
+      @media (min-width: $screen-md) {
         flex-wrap: nowrap;
       }
     }
@@ -45,28 +59,113 @@
 
   &__right {
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-md) {
       padding-left: 45px;
     }
 
     #{$block-name}__period,
     #{$block-name}__option-wrapper {
-      width: 145px;
       display: flex;
       justify-content: center;
       align-items: flex-end;
+
+      @media (min-width: $screen-md) {
+        width: 145px;
+      }
+    }
+  }
+
+  &__schedule {
+
+    @media (min-width: $screen-md) {
+      flex-basis: 100%;
+    }
+
+    .schedule__inner {
+      flex-wrap: wrap;
+
+      @media (min-width: $screen-md) {
+        flex-wrap: nowrap;
+      }
+    }
+
+    .schedule__col--workdays {
+      margin-right: 0;
+      flex-basis: 100%;
+      margin-bottom: 10px;
+
+      @media (min-width: $screen-md) {
+        margin-right: 38px;
+        flex-basis: auto;
+        margin-bottom: 0;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      flex-basis: auto;
+      width: get-width(1,1,md) - $screen-padding-md;
+    }
+    @media (min-width: $screen-xl) {
+      width: get-width(1,1,xl) - $screen-padding-xl;
     }
   }
 
   &__period {
+    display: flex;
+    flex-direction: column;
     font-family: $font-family--monospace;
-    font-size: 21.5px;
+    font-size: 16px;
     font-weight: 700;
+
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+      align-items: baseline;
+      font-size: 21.5px;
+    }
+
+    &--month {
+        //margin-left: auto;
+      margin-right: 10px;
+
+      @media (min-width: $screen-md) {
+        margin-right: 0;
+        padding-right: 40px;
+      }
+
+      @media (min-width: $screen-lg) {
+        padding-right: 80px;
+      }
+
+      @media (min-width: $screen-xl) {
+      }
+
+      #{$block-name}__period-num {
+
+        @media (min-width: $screen-md) {
+          margin-left: auto;
+        }
+      }
+    }
+
+    &--year {
+
+      @media (min-width: $screen-md) {
+        padding-left: 45px;
+      }
+
+      @media (min-width: $screen-xl) {
+      }
+    }
+
   }
 
   &__period-num {
-    font-size: 51px;
+    font-size: 30px;
     line-height: 1;
+
+    @media (min-width: $screen-md) {
+      font-size: 51px;
+    }
   }
 
   &__content {
@@ -77,6 +176,11 @@
   &__item {
     display: flex;
     margin-bottom: 57px;
+    margin-right: 50px;
+
+    @media (min-width: $screen-md) {
+      margin-right: 0;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -132,10 +236,14 @@
   }
 
   &__item-icon {
-    display: flex;
+    display: none;
     justify-content: center;
     width: 62px;
     margin-right: 18px;
+
+    @media (min-width: $screen-md) {
+      display: flex;
+    }
 
     &::before {
       content: '';
@@ -146,24 +254,44 @@
   &__item-name {
     display: flex;
     align-items: center;
-    width: 515px;
+    width: 80px;
     font-size: 15px;
     font-weight: 600;
+    white-space: nowrap;
+
+    @media (min-width: $screen-md) {
+      width: 515px;
+    }
 
     &::after {
       content: '';
-      display: inline-block;
+      display: none;
       margin-left: auto;
-      width: 244px;
       height: 1px;
       background-color: #fff;
+
+      @media (min-width: $screen-md) {
+        display: inline-block;
+        width: 90px;
+        margin-right: 40px;
+      }
+
+      @media (min-width: $screen-xl) {
+        width: 244px;
+        margin-right: 0;
+      }
     }
   }
 
   &__option {
     position: relative;
-    width: 58px;
-    height: 58px;
+    width: 38px;
+    height: 38px;
+
+    @media (min-width: $screen-md) {
+      width: 58px;
+      height: 58px;
+    }
 
     &--yes {
       border: 1px solid #fff;
@@ -172,8 +300,8 @@
       &::after {
         content: '';
         position: absolute;
-        top: 18px;
-        left: 14px;
+        top: 8px;
+        left: 10px;
         width: 22px;
         height: 12px;
         border-left: 2px solid currentColor;
@@ -181,6 +309,11 @@
         transform: rotate(-45deg);
         transition: opacity $transition-time;
         //box-shadow: 1px 2px 0 #fff, inset 0 -2px 0 #fff;
+
+        @media (min-width: $screen-md) {
+          top: 18px;
+          left: 14px;
+        }
       }
     }
 
