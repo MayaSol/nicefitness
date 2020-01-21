@@ -36,3 +36,9 @@ mixin card-tour(mods,props)
       .card__big-figure 360
         span &ocy;
 
+
+mixin card-photo-tour(mods, props)
+  +card(mods,props)
+    .card__bottom
+      +btn('Начать','common,photo-tour')(href="/")
+      .icon.icon--photo-tour

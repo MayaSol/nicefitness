@@ -28,8 +28,10 @@ block page-header-add
 
 block content
     +caption-large('nicefitness','services')(class="page__section page__section--caption")
-    +info-short('services,short')(class="page__section page__section--info")
-      +card('large, highlight', {price: '2 000 ₽'})
+    section.page__section.page__section--services-info
+      .page__section-inner
+        +info-short('services,short')(class="page__section page__section--info")
+          +card('large, highlight', {price: '2 000 ₽'})
     .page__section.page__section--main-serv
       .page__section-inner
           h2.section-title Основные услуги

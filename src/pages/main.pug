@@ -37,7 +37,9 @@ block page-header-bg
 block content
     +main-slider()
     +services(class="page__section page__section--services")
-    +info-main('main')(class="page__section page__section--info")
+    section.page__section.page__section--info
+      .page__section-inner
+        +info-main('main')
     +caption-large('nicefitness')(class="page__section page__section--caption")
     +social-section(class="page__section page__section--social")
     +mobile(class="page__section page__section--mobile")

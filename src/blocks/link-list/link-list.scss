@@ -128,7 +128,8 @@
     &:hover {
       z-index: 9;
       flex-shrink: 0;
-      color: currentColor;
+      color: $link-color--hover;
+
       span span {
         padding-left: 48px;
         position: relative;

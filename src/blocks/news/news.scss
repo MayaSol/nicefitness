@@ -177,7 +177,10 @@
     }
 
     &:focus,
-    &:hover,
+    &:hover {
+      color: $link-color--hover;
+    }
+
     &:active {
       color: currentColor;
     }
@@ -228,6 +231,16 @@
   }
 
   &--card {
+
+    #{$block-name}__header {
+
+      @media (min-width: $screen-xl) {
+        margin-top: 180px;
+      }
+    }
+  }
+
+  &--about {
 
     #{$block-name}__header {
 

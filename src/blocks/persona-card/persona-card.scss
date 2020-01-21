@@ -1,0 +1,154 @@
+// В этом файле должны быть стили для БЭМ-блока persona-card, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.persona-card {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @media (min-width: $screen-lg) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__img {
+    width: 320px;
+    height: 462px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: left center;
+    }
+  }
+
+  &__desc {
+    width: 290px;
+    margin-top: 70px;
+
+    @media (min-width: $screen-lg) {
+      margin-left: -118px;
+      margin-right: auto;
+    }
+
+    p {
+      margin-bottom: 35px;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+  }
+
+  &__name {
+    width: 140px;
+    margin-bottom: 45px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    word-break: keep-all;
+  }
+
+  &__position {
+    width: 180px;
+    font-size: 13px;
+    line-height: 1.2;
+    margin-bottom: 64px;
+  }
+
+  &__skills-title {
+    margin-bottom: 35px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  &__skills-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__show-less {
+    display: none;
+  }
+
+
+  &__skills-item {
+    position: relative;
+    margin-bottom: 35px;
+    font-size: 15px;
+    font-weight: 400;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.7em;
+      height: 1px;
+      margin-right: 15px;
+      width: 20px;
+      background-color: #fff;
+
+      @media (min-width: $screen-lg) {
+        margin-right: 38px;
+        width: 57px;
+      }
+    }
+
+    &:nth-child(n + 5) {
+      display: none;
+    }
+
+    span {
+      display: inline-block;
+      padding-left: 20px + 15px;
+
+      @media (min-width: $screen-lg) {
+        width: 340px;
+        padding-left: 57px + 38px;
+      }
+    }
+
+  }
+
+  &__show-less {
+    display: none;
+  }
+
+  &__skills {
+    flex-basis: 100%;
+    margin-top: 70px;
+
+    @media (min-width: $screen-lg) {
+      flex-basis: auto;
+    }
+
+    &--show-all {
+
+      #{$block-name}__skills-item {
+          &:nth-child(n + 5) {
+            display: block;
+          }
+        }
+
+      #{$block-name} {
+        &__show-more {
+          display: none;
+        }
+
+        &__show-less {
+          display: block;
+        }
+      }
+    }
+
+  }
+
+
+}

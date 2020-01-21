@@ -14,6 +14,17 @@
   user-select: none;
   cursor: pointer;
 
+  &:hover {
+    span {
+      background: $green;
+
+      &::before,
+      &:after {
+        background: $green;
+      }
+    }
+  }
+
   > span { // stylelint-disable-line  selector-combinator-blacklist
     display: inline-block;
     position: relative;

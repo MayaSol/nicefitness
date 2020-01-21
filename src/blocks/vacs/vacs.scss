@@ -1,0 +1,164 @@
+// В этом файле должны быть стили для БЭМ-блока vacs, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.vacs {
+
+  $block-name:                &; // #{$block-name}__element
+
+
+  &--about {
+    margin-top: 100px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__desc {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media (min-width: $screen-md) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 60px;
+    line-height: 1.2;
+
+    @media (min-width: $screen-lg) {
+      padding-left: 102px + 65px;
+      margin-bottom: 150px;
+    }
+
+    &::before {
+      content: '';
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0.7em;
+      width: 30px;
+      height: 1px;
+      background-color: #fff;
+
+      @media (min-width: $screen-md) {
+        display: block;
+      }
+
+      @media (min-width: $screen-lg) {
+        width: 102px;
+      }
+    }
+  }
+
+  &__name {
+    margin-bottom: 68px;
+    font-family: $font-family--monospace;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 700;
+
+    @media (min-width: $screen-md) {
+      width: 375px;
+    }
+  }
+
+  &__sub {
+    margin-bottom: 60px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+
+    &--duty {
+      #{$block-name}__sub-item {
+        @media (min-width: $screen-md) {
+          width: 230px + 57px + 38px;
+        }
+      }
+    }
+
+    &--spec {
+      #{$block-name}__sub-item {
+        @media (min-width: $screen-md) {
+          width: 252px + 57px + 38px;
+        }
+      }
+    }
+
+    &--show-all {
+
+      #{$block-name}__sub-item {
+
+        &:nth-child(n+4) {
+          display: block;
+        }
+      }
+
+      #{$block-name}__sub-show-more {
+        display: none;
+      }
+
+      #{$block-name}__sub-show-less {
+        display: block;
+      }
+    }
+  }
+
+  &__sub-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__sub-title {
+    margin-bottom: 40px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  &__sub-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 40px;
+
+    @media (min-width: $screen-md) {
+      padding-left: 57px + 38px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.6em;
+      width: 30px;
+      height: 1px;
+      background-color: #fff;
+
+      @media (min-width: $screen-md) {
+        width: 57px;
+      }
+    }
+
+    &:nth-child(n + 4) {
+      display: none;
+    }
+  }
+
+  &__sub-name {
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+
+  &__sub-show-less {
+    display: none;
+  }
+
+}

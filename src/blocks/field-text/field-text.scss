@@ -2,6 +2,9 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
+
+
+
 .field-text {
 
   $block-name:                &; // #{$block-name}__element
@@ -47,5 +50,81 @@
       border-color: $color-danger;
       background-color: lighten($color-danger, 35%);
     }
+  }
+
+    @mixin subscrie-placholder {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 1.2;
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.14);
+    }
+
+    @mixin subscrie-placholder-md {
+      font-size: 60px;
+      margin-bottom: 0;
+      letter-spacing: -0.02em;
+    }
+
+
+
+  &--subscribe {
+    width: 100%;
+    margin-bottom: 0;
+
+    #{$block-name}__name {
+      display: none;
+      font-family: $font-family--monospace;
+      font-size: 24px;
+      font-weight: 700;
+      color: rgba(0, 0, 0, 0.14);
+      text-transform: uppercase;
+
+      &.show {
+        display: block;
+      }
+    }
+
+    #{$block-name}__input {
+      width: 100%;
+      min-height: 0;
+      font-size: 40px;
+      line-height: 1.2;
+      padding-bottom: 0;
+      border: 0;
+      text-transform: uppercase;
+
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        @include subscrie-placholder;
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+        @include subscrie-placholder;
+      }
+      &::-ms-input-placeholder { /* IE 10+ */
+        @include subscrie-placholder;
+      }
+      &::-moz-placeholder { /* Firefox 18- */
+        @include subscrie-placholder;
+      }
+
+      @media (min-width: $screen-md) {
+
+        font-size: 60px;
+
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+          @include subscrie-placholder-md;
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+          @include subscrie-placholder-md;
+        }
+        &::-ms-input-placeholder { /* IE 10+ */
+          @include subscrie-placholder-md;
+        }
+        &::-moz-placeholder { /* Firefox 18- */
+          @include subscrie-placholder-md;
+        }
+      }
+    }
+
   }
 }

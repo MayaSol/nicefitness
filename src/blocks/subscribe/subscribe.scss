@@ -7,6 +7,9 @@
   $block-name:                &; // #{$block-name}__element
 
   &__inner {
+  }
+
+  &__form {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;

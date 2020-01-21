@@ -7,10 +7,6 @@
   $block-name:                &; // #{$block-name}__element
 
 
-  &__inner {
-    @include container;
-  }
-
   &__title {
     margin-bottom: 53px;
     line-height: 1.2;
@@ -97,7 +93,29 @@
     }
   }
 
-  &--programms {
-    padding-bottom: 65px;
+  &__content-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__item {
+
+    &--team {
+
+      #{$block-name}__content-list {
+        padding-top: 80px;
+      }
+
+      #{$block-name}__content-item {
+        min-height: 502px;
+        margin-bottom: 40px;
+        padding-right: 20px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 }

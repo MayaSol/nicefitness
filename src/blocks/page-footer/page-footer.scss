@@ -295,13 +295,19 @@
       font-weight: 400;
       letter-spacing: 0.55px;
     }
+
     &::after {
       content: '';
       display: block;
       @include sprite($lab01);
     }
+
     &:hover {
       color: currentColor;
+
+      &::after {
+        @include sprite($lab01-hover);
+      }
     }
   }
 

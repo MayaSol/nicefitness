@@ -1,0 +1,86 @@
+// В этом файле должны быть стили для БЭМ-блока partners, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.partners {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__list {
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    min-height: 200px;
+    margin-bottom: 30px;
+  }
+
+  &__item-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (min-width: $screen-md) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__name {
+    position: relative;
+    width: 240px + 212px + 98px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    padding-left: 40px;
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-md) {
+      padding-left: get-width(1,1,md) - $screen-padding-md;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-left: 212px + 98px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.5em;
+      width: 30px;
+      height: 1px;
+      background-color: #fff;
+
+      @media (min-width: $screen-md) {
+        width: get-width(1,1,md) - $screen-padding-md - 30px;
+      }
+
+      @media (min-width: $screen-lg) {
+        width: 212px;
+        top: 0.7em;
+      }
+    }
+  }
+
+  &__logo {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: $screen-md) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &--about {
+    margin-top: 60px;
+
+    @media (min-width: $screen-lg) {
+      margin-top: 150px;
+    }
+  }
+}

@@ -301,4 +301,21 @@
     }
   }
 
+  &--about-social {
+    #{$block-name}__content {
+
+      @media (min-width: $screen-lg) {
+        top: -405px;
+      }
+
+    }
+
+    #{$block-name}__list {
+
+      @media (min-width: $screen-lg) {
+        margin-top: 60px;
+      }
+    }
+  }
+
 }

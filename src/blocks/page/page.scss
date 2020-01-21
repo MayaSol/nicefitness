@@ -529,6 +529,12 @@ pre {
     &::before {
       @include sprite($cardio-white);
     }
+
+    &:hover {
+      &::before {
+        @include sprite($cardio-hover);
+      }
+    }
   }
   &--cardio-white-large {
     &::before {
@@ -544,6 +550,12 @@ pre {
   &--combat-white {
     &::before {
       @include sprite($combat-white);
+    }
+
+    &:hover {
+      &::before {
+        @include sprite($combat-hover);
+      }
     }
   }
   &--combat-white-large {
@@ -561,6 +573,12 @@ pre {
     &::before {
       @include sprite($gym-white);
     }
+
+    &:hover {
+      &::before {
+        @include sprite($gym-hover);
+      }
+    }
   }
   &--gym-white-large {
     &::before {
@@ -577,7 +595,13 @@ pre {
     &::before {
       @include sprite($group-white);
     }
-  }
+
+    &:hover {
+      &::before {
+        @include sprite($group-hover);
+      }
+    }
+}
   &--group-white-large {
     &::before {
       @include sprite($group-white-large);
@@ -592,6 +616,12 @@ pre {
   &--sauna-white {
     &::before {
       @include sprite($sauna-white);
+    }
+
+    &:hover {
+      &::before {
+        @include sprite($sauna-hover);
+      }
     }
   }
   &--sauna-white-large {
@@ -609,6 +639,12 @@ pre {
     &::before {
       @include sprite($fitness-white);
     }
+
+    &:hover {
+      &::before {
+        @include sprite($fitness-hover);
+      }
+    }
   }
   &--fitness-white-large {
     &::before {
@@ -621,8 +657,57 @@ pre {
     }
   }
 
+  &--photo-tour {
+    &::before {
+      @include sprite($photo-tour);
+    }
+  }
+
 
 }
+
+a:hover {
+
+  color: $green;
+
+  .icon--cardio-white {
+    &::before {
+      @include sprite($cardio-hover);
+    }
+  }
+
+  .icon--combat-white {
+    &::before {
+      @include sprite($combat-hover);
+    }
+  }
+
+  .icon--gym-white {
+    &::before {
+      @include sprite($gym-hover);
+    }
+  }
+
+  .icon--group-white {
+    &::before {
+      @include sprite($group-hover);
+    }
+  }
+
+  .icon--fintess-white {
+    &::before {
+      @include sprite($fitness-hover);
+    }
+  }
+
+  .icon--sauna-white {
+    &::before {
+      @include sprite($sauna-hover);
+    }
+  }
+}
+
+
 
 .icon-quotes {
     // &::after {
@@ -651,6 +736,76 @@ pre {
 }
 
 .page {
+
+  &__section-inner {
+    @include container;
+  }
+
+  &__section-row {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (min-width: $screen-lg) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__section-img {
+    position: absolute;
+    z-index: -1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      // opacity: 0;
+    }
+
+    &--left {
+      display: none;
+      width: 1180px;
+      height: 789px;
+      top: -511px;
+      left: 50%;
+      transform: translateX(-100%);
+      margin-left: -740px;
+
+      @media (min-width: $screen-xl) {
+        display: block;
+      }
+    }
+
+    &--middle {
+      display: none;
+      width: 900px;
+      height: 600px;
+      left: 50%;
+      top: -342px;
+      transform: translateX(-50%);
+      margin-left: -70px;
+
+      @media (min-width: $screen-lg) {
+        display: block;
+      }
+    }
+
+    &--right {
+      display: none;
+      width: 810px;
+      height: 1215px;
+      top: -759px;
+      left: 50%;
+      transform: translateX(100%);
+      margin-left: -330px;
+
+      @media (min-width: $screen-xl) {
+        display: block;
+      }
+    }
+  }
+
+
   &__section {
     position: relative;
     z-index: 10;
@@ -786,12 +941,15 @@ pre {
     &--sign-up {
       z-index: 8;
 
+      @media (min-width: $screen-xl) {
+        margin-top: 205px;
+      }
+
       .caption-medium {
         margin-bottom: 40px;
         margin-top: 60px;
 
         @media (min-width: $screen-xl) {
-          margin-top: 205px;
           margin-bottom: 40px;
         }
 
@@ -813,7 +971,7 @@ pre {
         font-size: 11px;
         font-weight: 600;
 
-        @media (min-width: $screen-xl) {
+        @media (min-width: $screen-md) {
           margin-bottom: 0;
         }
       }
@@ -838,6 +996,12 @@ pre {
         }
       }
 
+    }
+
+    &--sign-up-about {
+      @media (min-width: $screen-xl) {
+        margin-top: 50px;
+      }
     }
 
     &--services-social {
@@ -911,23 +1075,78 @@ pre {
         margin-top: 400px;
       }
     }
+
+    &--programms {
+      margin-bottom: 65px;
+    }
+
+    &--about-info-top {
+      margin-top: 100px;
+      margin-bottom: 60px;
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 0;
+      }
+    }
+
+    &--about-info {
+      position: relative;
+      margin-top: 60px;
+
+      .page__section-inner {
+        position: relative;
+      }
+
+      @media (min-width: $screen-lg) {
+        margin-top: 540px;
+      }
+
+      // .page__section-col--photo-tour {
+
+      //   @media (min-width: $screen-md) {
+      //     width: get-width(3,1,md) - $screen-padding-md;
+      //   }
+      // }
+
+      .card--photo-tour {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 150px;
+
+        @media (min-width: $screen-md) {
+          margin-right: 48px;
+        }
+      }
+
+      .card--photo-tour {
+        margin-top: 150px;
+      }
+    }
+
+    &--about-social {
+      margin-bottom: 110px;
+    }
+
+    &--about-features {
+
+      .section-title {
+        @media (min-width: $screen-lg) {
+          width: 500px;
+          margin-bottom: 80px;
+        }
+      }
+
+    }
   }
 
-  &__section-inner {
-    @include container;
-  }
-
-  &__section-row {
-    display: flex;
-  }
 
 }
 
   .col-left-1 {
 
-    @media (min-width: $screen-md) {
-      width: get-width(1,1,md) - $screen-padding-md;
-    }
+    // @media (min-width: $screen-md) {
+    //   width: get-width(1,1,md) - $screen-padding-md;
+    // }
 
     @media (min-width: $screen-lg) {
       width: get-width(1,1,lg) - $screen-padding-lg;
@@ -940,9 +1159,9 @@ pre {
 
   .col-middle-1 {
 
-    @media (min-width: $screen-md) {
-      width: get-width(2,1,md);
-    }
+    // @media (min-width: $screen-md) {
+    //   width: get-width(2,1,md);
+    // }
 
     @media (min-width: $screen-lg) {
       width: get-width(2,1,lg);
@@ -955,9 +1174,9 @@ pre {
 
   .col-right-1 {
 
-    @media (min-width: $screen-md) {
-      width: get-width(3,1,md) - $screen-padding-md;
-    }
+    // @media (min-width: $screen-md) {
+    //   width: get-width(3,1,md) - $screen-padding-md;
+    // }
 
     @media (min-width: $screen-lg) {
       width: get-width(3,1,lg) - $screen-padding-lg;

@@ -205,6 +205,10 @@
 
     #{$block-name}__link {
       padding-top: 1em;
+
+      &:hover {
+        color: $link-color--hover;
+      }
     }
 
   }

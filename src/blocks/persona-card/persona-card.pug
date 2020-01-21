@@ -1,0 +1,61 @@
+//- Все примеси в этом файле должны начинаться c имени блока (programm)
+
+mixin persona-card(mods,props)
+
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' persona-card--' + modsList[i].trim();
+      }
+    }
+
+  article.persona-card(class=allMods)&attributes(attributes)
+    .persona-card__inner
+      .persona-card__img
+        img(src= props.src)
+      block
+      //- .persona-card__skills-title !{props.skills_title}
+      //- ul.persona-card__skills-list
+      //-   li.person-card__skills-item
+
+mixin persona-card-desc(mods,props)
+
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' persona-card__desc--' + modsList[i].trim();
+      }
+    }
+
+
+  .persona-card__desc(class=allMods)&attributes(attributes)
+    .persona-card__name !{props.name}
+    .persona-card__position !{props.position}
+    block
+
+
+mixin persona-card-skills(mods,props)
+
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' persona-card__desc--' + modsList[i].trim();
+      }
+    }
+
+  .persona-card__skills
+    .persona-card__skills-title !{props.title}
+    ul.persona-card__skills-list
+      block
+
+
+mixin persona-card-skills-item(props)
+
+  li.persona-card__skills-item
+    span !{props.name}

@@ -1,0 +1,54 @@
+//- Все примеси в этом файле должны начинаться c имени блока (vacs)
+
+mixin vacs(mods)
+
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' vacs--' + modsList[i].trim();
+      }
+    }
+
+  .vacs(class=allMods)&attributes(attributes)
+    .vacs__inner
+      ul.vacs__list
+        block
+
+
+mixin vacs-item(mods,props)
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' vacs__item--' + modsList[i].trim();
+      }
+    }
+
+  li.vacs__item(class=allMods)&attributes(attributes)
+    .vacs__name !{props.name}
+    .vacs__desc
+      block
+
+mixin vacs-sublist(mods, props)
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' vacs__sub--' + modsList[i].trim();
+      }
+    }
+
+  .vacs__sub(class=allMods)&attributes(attributes)
+    .vacs__sub-title.vacs__sub-title !{props.name}
+    ul.vacs__sub-list
+      block
+
+
+mixin vacs-subitem(props)
+
+ li.vacs__sub-item&attributes(attributes)
+  .vacs__sub-name !{props.name}
