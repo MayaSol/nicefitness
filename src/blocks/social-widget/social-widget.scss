@@ -9,7 +9,7 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    width: 100px;
+    width: 96px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -23,8 +23,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 48px;
-    height: 48px;
+    width: 46px;
+    height: 46px;
     line-height: 0;
     color: currentColor;
 
@@ -36,6 +36,7 @@
   }
 
   &--article {
+    margin-top: 7px;
     padding-left: 48px;
   }
 }

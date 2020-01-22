@@ -279,6 +279,13 @@
   }
 
   &--news {
+      margin-bottom: 30px;
+
+      @media (min-width: $screen-lg) {
+        margin-bottom: 0;
+      }
+
+
     #{$block-name}__content {
 
       @media (min-width: $screen-lg) {

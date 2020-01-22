@@ -18,6 +18,10 @@
     object-position: center;
   }
 
+  &__list {
+    margin-bottom: 0;
+  }
+
   &__item {
     transition: 1s;
   }
@@ -28,6 +32,10 @@
 
   &__arrows {
     margin-bottom: 60px;
+
+    @media (min-width: $screen-md) {
+      margin-left: 40px;
+    }
 
     @media (min-width: $screen-lg) {
       margin-bottom: 110px;

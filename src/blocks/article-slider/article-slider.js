@@ -16,7 +16,13 @@ ready(function(){
   var containerWidth = document.querySelector('.page__section-inner').offsetWidth;
   console.log('containerWidth: ' + containerWidth);
 
-  var peekValue = (screenWidth - containerWidth)/2;
+  var gap = 0;
+
+  if (containerWidth > 767) {
+    var gap = 40;
+  }
+
+  var peekValue = (screenWidth - containerWidth)/2 + gap;
   console.log(peekValue);
 
 

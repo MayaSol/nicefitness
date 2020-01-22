@@ -44,18 +44,26 @@
     &--active,
     &:hover {
       position: relative;
-      padding-right: 20px + 54px;
+      padding-right: 10px + 24px;
       margin-right: 20px;
       font-size: 24px;
+
+      @media (min-width: $screen-md) {
+        padding-right: 20px + 54px;
+      }
 
       &::after {
         content: '';
         position: absolute;
-        width: 54px;
         height: 1px;
+        width: 24px;
         background-color: currentColor;
         bottom: 0.6em;
         right: 0;
+
+        @media (min-width: $screen-md) {
+          width: 54px;
+        }
       }
     }
 
@@ -66,6 +74,11 @@
 
   &--news {
     margin-top: 150px;
+    width: 100%;
+
+    @media (min-width: $screen-md) {
+      width: auto;
+    }
 
     #{$block-name}__item {
 

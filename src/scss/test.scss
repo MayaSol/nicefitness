@@ -94,8 +94,10 @@
 //      // content: url('../img/temp/index.png');
 //        //   content: url('../img/temp/services.jpg');
 //       // content: url('../img/temp/ui.jpg');
-//        content: url('../img/temp/about.jpg');
+//        // content: url('../img/temp/about.jpg');
 //        top: 14px;
+//        content: url('../img/temp/article.jpg');
+//       top: -150px;
 //        //left: 10px;
 //       opacity: 0.4;
 //     }
@@ -210,4 +212,16 @@
 //       //background-color: red;
 //     }
 //   }
+// }
+
+// .article__img {
+//   outline: 1px solid red;
+// }
+
+// img {
+//   opacity: 0;
+// }
+
+// .article-slider__item {
+//   outline: 1px solid red;
 // }

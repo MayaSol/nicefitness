@@ -14,9 +14,13 @@
     flex-direction: column;
     align-items: flex-start;
     margin: 0;
-    margin-bottom: 270px;
+    margin-bottom: 90px;
     padding: 0;
     list-style: none;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 230px;
+    }
 
     &:after {
       content: '';
@@ -36,10 +40,9 @@
 
   &__link-wrap {
     position: relative;
+    min-height: 3em;
 
     @media (min-width: $screen-md) {
-      margin: 0;
-
       &:not(:last-child) {
         border-right: none;
       }
@@ -60,7 +63,7 @@
           content: '';
           position: absolute;
           right: 0;
-          top: 1em;
+          top: 0.6em;
           width: 80px;
           height: 1px;
           background-color: currentColor;
@@ -75,7 +78,7 @@
     text-decoration: none;
     font-size: 13px;
     font-weight: 700;
-    line-height: 2;
+    line-height: 1.2;
 
     &:hover,
     &:focus {
@@ -110,6 +113,13 @@
       .js & {
         display: block;
       }
+    }
+  }
+
+  &--news {
+
+    #{$block-name}__links {
+      margin-top: 115px;
     }
   }
 }

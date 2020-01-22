@@ -328,29 +328,49 @@ h6 {
 }
 
 h1 {
-  font-size: $font-size-h1;
+  font-size: 60px;
   font-weight: 600;
   line-height: 1.1;
+
+  @media (min-width: $screen-md) {
+    font-size: $font-size-h1;
+  }
 } // stylelint-disable-line
 h2 {
-  font-size: $font-size-h2;
+  font-size: 40px;
   font-weight: 600;
   line-height: 1.2;
+
+  @media (min-width: $screen-md) {
+    font-size: $font-size-h2;
+  }
 } // stylelint-disable-line
 h3 {
-  font-size: $font-size-h3;
+  font-size: 24px;
   font-weight: 600;
   line-height: 1.2;
+
+  @media (min-width: $screen-md) {
+    font-size: $font-size-h3;
+  }
 } // stylelint-disable-line
 h4 {
-  font-size: $font-size-h4;
+  font-size: 24px;
   font-weight: 400;
   line-height: 1.2;
+
+  @media (min-width: $screen-md) {
+    font-size: $font-size-h4;
+  }
 } // stylelint-disable-line
 h5 {
   font-size: $font-size-h5;
   font-weight: 600;
   line-height: 1.2;
+
+  @media (min-width: $screen-md) {
+    font-weight: 400;
+  }
 } // stylelint-disable-line
 h6 {
   font-size: $font-size-h6;
@@ -486,7 +506,7 @@ pre {
 }
 
 .page-title {
-
+    font-size: 48px;
     margin-top: 0;
     margin-bottom: 0;
     font-family: $font-family;
@@ -494,6 +514,10 @@ pre {
 
     @media (min-width: $screen-md) {
       font-size: 80px;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 760px;
     }
 
    &--main {
@@ -926,10 +950,20 @@ a:hover {
     }
 
     &--news {
-      padding-bottom: 123px;
+      padding-bottom: 60px;
+
+      @media (min-width: $screen-md) {
+        padding-bottom: 123px;
+      }
+
+      @media (min-width: $screen-lg) {
+        padding-bottom: 148px;
+        margin-bottom: 150px;
+      }
 
       @media (min-width: $screen-xl) {
-        padding-bottom: 148px;
+        margin-top: 115px;
+        margin-bottom: 0;
       }
     }
 
@@ -1046,7 +1080,15 @@ a:hover {
     }
 
     &--sign-up-news {
-      margin-bottom: 166px;
+      margin-bottom: 60px;
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 166px;
+      }
+
+      @media (min-width: $screen-xl) {
+        margin-top: 360px;
+      }
     }
 
     &--services-social {
