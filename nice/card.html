@@ -63,7 +63,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
     </aside>
     <div class="off-canvas__overlay" data-toggle="off-canvas"></div>
   </div>
-  <div class="page__inner page-main">
+  <div class="page__inner page-card">
     <div class="page__content">
       <div class="page-bg">
         <div class="page-bg__inner">
@@ -73,7 +73,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
           <div class="page-bg__line page-bg__line--right"></div>
         </div>
       </div>
-      <header class="page-header  page-header--main" role="banner">
+      <header class="page-header  page-header--card" role="banner">
         <div class="page-header__inner">
           <div class="page-header__top"><a class="logo" href="/"><img src="img/logo.png" alt="Logo" width="216" height="29"></a>
             <nav class="main-nav main-nav--top" id="nav-top">
@@ -98,181 +98,346 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
               <div class="phone__inner"><a href="tel:+74991102131">+7 (499) 110-21-31</a></div>
             </div><button class="burger burger--off-canvas-top" aria-label="Открыть меню" data-toggle="off-canvas"><span>Открыть меню</span></button>
           </div>
-          <div class="page-header__bottom page-header__bottom--main">
-            <div class="page-header__bottom-inner">
-              <h1 class="page-title page-title--main">Правильный фитнес клуб в Чертаново</h1>
-              <div class="page-header__links">
-                <div class="page-header__links-row"><button class="btn  btn--accent" data-toggle="modal" data-target="#test-drive">Получить 7 дней тест драйва</button><button class="btn  btn--play page-header__btn-play paused"></button></div>
-                <div class="page-header__links-row"><a class="btn  btn--common page-header__card-link" href="/">Как получить клубную карту?</a></div>
-              </div>
+          <div class="page-header__content page-header__content--inner-page">
+            <div class="page-header__content-row page-header__content-row--breadcrumbs">
+              <ul class="breadcrumbs" aria-label="Breadcrumb" role="navigation">
+                <li class="breadcrumbs__item"><a href="/home">Главная </a></li>
+                <li class="breadcrumbs__item"><span>Клубная карта</span></li>
+              </ul>
+            </div>
+            <div class="page-header__content-row page-header__content-row--title">
+              <h1 class="page-title page-title--services">Клубная карта</h1>
             </div>
           </div>
         </div>
-        <div class="page-header__bg"><video class="page-header-video" id="page-header-video" width="100%">
-            <source src="video/nicefit.mp4" type="video/mp4"></video></div>
       </header>
-      <section class="main-slider">
-        <div class="main-slider__inner">
-          <div class="main-slider__primary">
-            <div class="glide main-slider__primary-slider primary-slider">
-              <div class="glide__track primary-slider__track" data-glide-el="track">
-                <ul class="primary-slider__list glide__slides">
-                  <li class="primary-slider__item glide__slide" data-index="1">
-                    <div class="primary-slider__item-inner">
-                      <div class="primary-slider__desc">
-                        <div class="primary-slider__item-title">Зона Кроссфит, TRX, Twisterbag, RIP, Flowin, Bosu – все для полноценных функциональных тренировок</div>
-                        <div class="primary-slider__number">01</div>
-                        <div class="primary-slider__item-text">Для современного человека, живущего в мегаполисе, помимо ежедневной рутины и работы над собой, отдых является неотъемлемой частью жизни. Именно поэтому на территории нашего клуба мы разработали уникальную Recovery-зону и роскошный SPA-комплекс.</div>
-                      </div>
-                      <div class="primary-slider__img"><img src="img/content/card-02.jpg" /></div>
-                    </div>
-                  </li>
-                  <li class="primary-slider__item glide__slide" data-index="2">
-                    <div class="primary-slider__item-inner">
-                      <div class="primary-slider__desc">
-                        <div class="primary-slider__item-title">Зона Кроссфит, TRX, Twisterbag, RIP, Flowin, Bosu – все для полноценных функциональных тренировок</div>
-                        <div class="primary-slider__number">02</div>
-                        <div class="primary-slider__item-text">Для современного человека, живущего в мегаполисе, помимо ежедневной рутины и работы над собой, отдых является неотъемлемой частью жизни. Именно поэтому на территории нашего клуба мы разработали уникальную Recovery-зону и роскошный SPA-комплекс.</div>
-                      </div>
-                      <div class="primary-slider__img"><img src="img/content/card-03.jpg" /></div>
-                    </div>
-                  </li>
-                  <li class="primary-slider__item glide__slide" data-index="3">
-                    <div class="primary-slider__item-inner">
-                      <div class="primary-slider__desc">
-                        <div class="primary-slider__item-title">Зона Кроссфит, TRX, Twisterbag, RIP, Flowin, Bosu – все для полноценных функциональных тренировок</div>
-                        <div class="primary-slider__number">03</div>
-                        <div class="primary-slider__item-text">Для современного человека, живущего в мегаполисе, помимо ежедневной рутины и работы над собой, отдых является неотъемлемой частью жизни. Именно поэтому на территории нашего клуба мы разработали уникальную Recovery-зону и роскошный SPA-комплекс.</div>
-                      </div>
-                      <div class="primary-slider__img"><img src="img/content/card-02.jpg" /></div>
-                    </div>
-                  </li>
-                </ul>
+      <div class="caption-large  caption-large--card page__section page__section--caption">
+        <div class="caption-large__inner">
+          <div class="caption-large__text">nicefitness</div>
+        </div>
+      </div>
+      <div class="page__section">
+        <div class="price price--right price--card">
+          <div class="price__inner"><span>2 000 ₽</span></div>
+        </div>
+      </div>
+      <section class="page__section page__section--info-card">
+        <div class="page__section-inner">
+          <section class="info  info--short info--card">
+            <div class="info__inner">
+              <div class="info__text">
+                <p class="info__lead">Nicefitness – это правильный клуб для реализации Ваших планов по улучшению внешности, укреплению здоровья, созданию красивой и стройной фигуры.</p>
+                <p>Добиться максимального расслабления после занятий поможет уникальный термальный комплекс, включающий в себя: паровую баню и традиционный хаммам, снежную комнату, биосауну, соляную баню, финскую сауну, душ впечатлений, дорожку Кнайпа и лаундж-зону с массажными креслами Yamaguchi. Главной особенностью комплекса является необычная соляная баня. Помещение парной расположено в центре комплекса и выполнено в виде большого стеклянного прямоугольника, что создает ощущение невесомости окружающего пространства. Ультрасовременное пространство занимает общую площадь в 3900 кв.м и представляет собой новое поколение клубов премиум-класса.</p>
               </div>
             </div>
-            <div class="card  card--large card--main-slider main-slider__card-link">
-              <div class="card__inner">
-                <div class="card__price">2 000 ₽</div><a class="card__link" href="/">
-                  <div class="card__text">Клубная карта</div>
-                  <div class="card__title"><span>nicefitness</span></div>
-                </a>
-              </div>
-            </div>
-            <div class="main-slider__arrows"><button class="btn  btn--arrow-left btn--slider-prev main-slider__prev"></button><button class="btn  btn--arrow-right btn--slider-next main-slider__next"></button></div>
-          </div>
-          <div class="main-slider__second">
-            <div class="glide main-slider__second-slider second-slider">
-              <div class="glide__track second-slider__track" data-glide-el="track">
-                <ul class="second-slider__list glide__slides">
-                  <li class="second-slider__item glide__slide" data-index="1">
-                    <div class="second-slider__item-inner">
-                      <div class="second-slider__img"><img src="img/content/card-02.jpg" /></div>
-                      <div class="second-slider__number"><svg width="300" height="220"><text fill="white" fill-opacity="0" x="150" y="180" text-anchor="middle" stroke="#fff">01</text></svg></div>
-                    </div>
-                  </li>
-                  <li class="second-slider__item glide__slide" data-index="2">
-                    <div class="second-slider__item-inner">
-                      <div class="second-slider__img"><img src="img/content/card-03.jpg" /></div>
-                      <div class="second-slider__number"><svg width="300" height="220"><text fill="white" fill-opacity="0" x="150" y="180" text-anchor="middle" stroke="#fff">02</text></svg></div>
-                    </div>
-                  </li>
-                  <li class="second-slider__item glide__slide" data-index="3">
-                    <div class="second-slider__item-inner">
-                      <div class="second-slider__img"><img src="img/content/card-02.jpg" /></div>
-                      <div class="second-slider__number"><svg width="300" height="220"><text fill="white" fill-opacity="0" x="150" y="180" text-anchor="middle" stroke="#fff">03</text></svg></div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          </section>
+        </div>
+      </section>
+      <section class="page__section page__section--card">
+        <div class="page__section-inner">
+          <div class="card  card--xl">
+            <div class="card__inner"><a class="card__link" href="/">
+                <div class="card__text">Клубная карта</div>
+                <div class="card__title"><span>nicefitness</span></div>
+              </a></div>
           </div>
         </div>
       </section>
-      <section class="services page__section page__section--services">
-        <div class="services__inner">
-          <h2 class="section-title services__title">Услуги</h2>
-          <div class="link-list  link-list--services services__list">
-            <div class="link-list__inner">
-              <ul class="link-list__list">
-                <li class="link-list__item  link-list__item--cardio"><a class="link-list__link" href="/"><span class="link-list__name"><i class="link-list__icon icon icon--cardio-white"></i><span>Кардио</span></span>
-                    <div class="link-list__img"><img src="img/content/services.jpg" /></div>
-                  </a></li>
-                <li class="link-list__item  link-list__item--active"><a class="link-list__link" href="/"><span class="link-list__name"><i class="link-list__icon icon icon--combat-white"></i><span>Единоборства</span></span>
-                    <div class="link-list__img"><img src="img/content/services.jpg" /></div>
-                  </a></li>
-                <li class="link-list__item  link-list__item--gym"><a class="link-list__link" href="/"><span class="link-list__name"><i class="link-list__icon icon icon--gym-white"></i><span>Тренажерка</span></span>
-                    <div class="link-list__img"><img src="img/content/services.jpg" /></div>
-                  </a></li>
-                <div class="w100"></div>
-                <li class="link-list__item  link-list__item--group"><a class="link-list__link" href="/"><span class="link-list__name"><i class="link-list__icon icon icon--group-white"></i><span>Групповые</span></span>
-                    <div class="link-list__img"><img src="img/content/services.jpg" /></div>
-                  </a></li>
-                <li class="link-list__item  link-list__item--fitness"><a class="link-list__link" href="/"><span class="link-list__name"><i class="link-list__icon icon icon--fitness-white"></i><span>Фитнесс</span></span>
-                    <div class="link-list__img"><img src="img/content/services.jpg" /></div>
-                  </a></li>
-                <li class="link-list__item  link-list__item--sauna"><a class="link-list__link" href="/"><span class="link-list__name"><i class="link-list__icon icon icon--sauna-white"></i><span>Сауна</span></span>
-                    <div class="link-list__img"><img src="img/content/services.jpg" /></div>
-                  </a></li>
+      <section class="page__section page__section--card-features">
+        <div class="page__section-inner">
+          <h2 class="section-title">Клубная карта включает</h2>
+          <div class="features  features--cols-3">
+            <div class="features__inner">
+              <ul class="features__list">
+                <li class="features__item">
+                  <div class="features__number"></div>
+                  <div class="features__text">
+                    <p>Неограниченное посещение клуба в будни с 07:00 до 00:00, в выходные и праздники - с 08:00 утра до 23:00</p>
+                  </div>
+                </li>
+                <li class="features__item">
+                  <div class="features__number"></div>
+                  <div class="features__text">
+                    <p>Тренажерный зал c кардио-зоной</p>
+                  </div>
+                </li>
+                <li class="features__item">
+                  <div class="features__number"></div>
+                  <div class="features__text">
+                    <p>Фитнес-тестирование</p>
+                  </div>
+                </li>
+                <li class="features__item">
+                  <div class="features__number"></div>
+                  <div class="features__text">
+                    <p>Финская сауна</p>
+                  </div>
+                </li>
+                <li class="features__item">
+                  <div class="features__number"></div>
+                  <div class="features__text">
+                    <p>Посещение зала групповых программ (более 30 классов - силовые, танцевальные, йога, здоровительные и др.)</p>
+                  </div>
+                </li>
+                <li class="features__item">
+                  <div class="features__number"></div>
+                  <div class="features__text">
+                    <p>Студия единоборств</p>
+                  </div>
+                </li>
+                <li class="features__item">
+                  <div class="features__number"></div>
+                  <div class="features__text">
+                    <p>«Приостановка членства» - возможность приостановить действие клубной карты на срок 45 дней (в зависимости от вида членства)</p>
+                  </div>
+                </li>
+                <li class="features__item">
+                  <div class="features__number"></div>
+                  <div class="features__text">
+                    <p>При каждом визите выдается полотенце</p>
+                  </div>
+                </li>
+                <li class="features__item">
+                  <div class="features__number"></div>
+                  <div class="features__text">
+                    <p>Пользование сейфовой ячейкой на время нахождения в клубе</p>
+                  </div>
+                </li>
+                <li class="features__item">
+                  <div class="features__number"></div>
+                  <div class="features__text">
+                    <p>Бесплатная парковка</p>
+                  </div>
+                </li>
+                <li class="features__item">
+                  <div class="features__number"></div>
+                  <div class="features__text">
+                    <p>Один гостевой визит в течении контракта</p>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </section>
-      <section class="page__section page__section--info">
+      <section class="page__section page__section--pass">
         <div class="page__section-inner">
-          <section class="info  info--main">
-            <div class="info__inner">
-              <div class="info__figures">
-                <div class="figures info__figure">
-                  <div class="figures__inner">
-                    <div class="figures__value">3</div>
-                    <div class="figures__caption">3 года успешной<br> работы</div>
+          <h2 class="section-title">Абонементы Nicefitness</h2>
+          <div class="pass">
+            <div class="pass__inner">
+              <div class="pass__top">
+                <div class="schedule pass__schedule col-left-1">
+                  <div class="schedule__inner">
+                    <div class="schedule__col schedule__col--workdays">
+                      <div class="schedule__name">Будни</div>
+                      <div class="schedule__hours">7:00 - 24:00</div>
+                    </div>
+                    <div class="schedule__col schedule__col--weekend">
+                      <div class="schedule__name">Выходные</div>
+                      <div class="schedule__hours">8:00 - 23:00</div>
                     </div>
                   </div>
-                  <div class="figures info__figure">
-                    <div class="figures__inner">
-                      <div class="figures__value">800</div>
-                      <div class="figures__caption">Клиентов<br> ежемесячно</div>
+                </div>
+                <div class="pass__period pass__period--month col-middle-1"><span class="pass__period-num">1&nbsp;</span><span>месяц</span></div>
+                <div class="pass__period pass__period--year col-right-1"><span class="pass__period-num">12&nbsp;</span><span>месяцев</span></div>
+              </div>
+              <ul class="pass__content">
+                <li class="pass__item  pass__item--cardio">
+                  <div class="pass__left pass__left--item col-left-2">
+                    <div class="pass__item-name">
+                      <div class="pass__item-icon"></div><span>Кардио</span>
+                    </div>
+                    <div class="pass__option-wrapper">
+                      <div class="pass__option pass__option--yes"></div>
+                    </div>
+                  </div>
+                  <div class="pass__right">
+                    <div class="pass__option-wrapper">
+                      <div class="pass__option pass__option--yes"></div>
+                    </div>
+                  </div>
+                </li>
+                <li class="pass__item  pass__item--combat">
+                  <div class="pass__left pass__left--item col-left-2">
+                    <div class="pass__item-name">
+                      <div class="pass__item-icon"></div><span>Единоборства</span>
+                    </div>
+                    <div class="pass__option-wrapper">
+                      <div class="pass__option pass__option--yes"></div>
+                    </div>
+                  </div>
+                  <div class="pass__right">
+                    <div class="pass__option-wrapper">
+                      <div class="pass__option pass__option--yes"></div>
+                    </div>
+                  </div>
+                </li>
+                <li class="pass__item  pass__item--gym">
+                  <div class="pass__left pass__left--item col-left-2">
+                    <div class="pass__item-name">
+                      <div class="pass__item-icon"></div><span>Тренажерка</span>
+                    </div>
+                    <div class="pass__option-wrapper">
+                      <div class="pass__option pass__option--yes"></div>
+                    </div>
+                  </div>
+                  <div class="pass__right">
+                    <div class="pass__option-wrapper">
+                      <div class="pass__option pass__option--yes"></div>
+                    </div>
+                  </div>
+                </li>
+                <li class="pass__item  pass__item--group">
+                  <div class="pass__left pass__left--item col-left-2">
+                    <div class="pass__item-name">
+                      <div class="pass__item-icon"></div><span>Групповые</span>
+                    </div>
+                    <div class="pass__option-wrapper">
+                      <div class="pass__option pass__option--yes"></div>
+                    </div>
+                  </div>
+                  <div class="pass__right">
+                    <div class="pass__option-wrapper">
+                      <div class="pass__option pass__option--yes"></div>
+                    </div>
+                  </div>
+                </li>
+                <li class="pass__item  pass__item--fitness">
+                  <div class="pass__left pass__left--item col-left-2">
+                    <div class="pass__item-name">
+                      <div class="pass__item-icon"></div><span>Фитнес</span>
+                    </div>
+                    <div class="pass__option-wrapper">
+                      <div class="pass__option pass__option--no"></div>
+                    </div>
+                  </div>
+                  <div class="pass__right">
+                    <div class="pass__option-wrapper">
+                      <div class="pass__option pass__option--yes"></div>
+                    </div>
+                  </div>
+                </li>
+                <li class="pass__item  pass__item--sauna">
+                  <div class="pass__left pass__left--item col-left-2">
+                    <div class="pass__item-name">
+                      <div class="pass__item-icon"></div><span>Сауна</span>
+                    </div>
+                    <div class="pass__option-wrapper">
+                      <div class="pass__option pass__option--no"></div>
+                    </div>
+                  </div>
+                  <div class="pass__right">
+                    <div class="pass__option-wrapper">
+                      <div class="pass__option pass__option--yes"></div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page__section page__section--add-serv">
+        <div class="page__section-inner">
+          <div class="page__section-row">
+            <div class="page__section-col col-left-2">
+              <h2 class="section-title">Услуги за дополнительную плату</h2>
+              <div class="common-list  common-list--add-serv common-list--card">
+                <div class="common-list__inner">
+                  <ul class="common-list__list">
+                    <li class="common-list__item"><span>Солярий</span></li>
+                    <li class="common-list__item"><span>Фитнес-бар</span></li>
+                    <li class="common-list__item"><span>Салон красоты</span></li>
+                    <li class="common-list__item"><span>Персональный тренинг с профессиональным тренером</span></li>
+                    <li class="common-list__item"><span>Лаборатория массажа</span></li>
+                    <li class="common-list__item"><span>Определение лактата капилярной крови при нагрузке</span></li>
+                    <li class="common-list__item"><span>Диетологическое сопровождение</span></li>
+                    <li class="common-list__item"><span>Тренировка для профилактики гипертонии</span></li>
+                    <li class="common-list__item"><span>Проектирование и строительство фитнесс-клубов под ключ</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="page__section-col">
+              <section class="social-section social-section--narrow">
+                <div class="social-section__inner">
+                  <div class="social-section__content">
+                    <div class="icon-quotes"></div>
+                    <div class="social-section__list">
+                      <div class="social-section__item social-section__item--fb">
+                        <div class="social-section__item-inner">
+                          <div class="fb-page" data-href="https://www.facebook.com/nicefitness.ru" data-width="252" data-height="304" data-hide-cover="false" data-show-facepile="false" data-show-faces="true" data-stream="false" data-header="true"></div>
+                        </div>
+                      </div>
+                      <div class="social-section__item social-section__item--vk">
+                        <div class="social-section__item-inner">
+                          <div id="vk_groups"></div><script>VK.Widgets.Group("vk_groups", {mode: 0, width: "252", height: "320", color1:"FFFFFF", color2: "2B587A", color3:"5B7FA6"}, 51360900);</script>
+                        </div>
+                      </div>
+                      <div class="social-section__item social-section__item--insta">
+                        <div class="social-section__item-inner"><iframe src="https://averin.pro/widget.php?l=nicefitness_ru&style=1&width=252&gallery=1&s=80&icc=3&icr=3&t=0&tt=Мы в Инстаграм&h=1&ttcolor=FFFFFF&th=c3c3c3&bw=f9f9f9&bscolor=FFFFFF&bs=FF0000&ts=Подписаться" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:252px; height: 350px"></iframe></div>
                       </div>
                     </div>
                   </div>
-                  <div class="info__text">
-                    <p class="info__lead">Nicefitness – это правильный клуб для реализации Ваших планов по улучшению внешности, укреплению здоровья, созданию красивой и стройной фигуры.</p>
-                    <p>Добиться максимального расслабления после занятий поможет уникальный термальный комплекс, включающий в себя: паровую баню и традиционный хаммам, снежную комнату, биосауну, соляную баню, финскую сауну, душ впечатлений, дорожку Кнайпа и лаундж-зону с массажными креслами Yamaguchi. Главной особенностью комплекса является необычная соляная баня. Помещение парной расположено в центре комплекса и выполнено в виде большого стеклянного прямоугольника, что создает ощущение невесомости окружающего пространства.</p>
-                  </div>
-                  <div class="info__bg"><img src="img/man-big.png" /></div>
                 </div>
-          </section>
-        </div>
-      </section>
-      <div class="caption-large page__section page__section--caption">
-        <div class="caption-large__inner">
-          <div class="caption-large__text">nicefitness</div>
-        </div>
-      </div>
-      <section class="social-section social-section--full page__section page__section--social">
-        <div class="social-section__inner">
-          <div class="social-section__header icon-quotes">
-            <h2 class="section-title social-section__title">Nicefitness<br> в социальных сетях</h2>
-          </div>
-          <div class="social-section__list">
-            <div class="social-section__item social-section__item--fb">
-              <div class="social-section__item-inner">
-                <div class="fb-page" data-href="https://www.facebook.com/nicefitness.ru" data-width="252" data-height="304" data-hide-cover="false" data-show-facepile="false" data-show-faces="true" data-stream="false" data-header="true"></div>
-              </div>
-            </div>
-            <div class="social-section__item social-section__item--vk">
-              <div class="social-section__item-inner">
-                <div id="vk_groups"></div><script>VK.Widgets.Group("vk_groups", {mode: 0, width: "252", height: "320", color1:"FFFFFF", color2: "2B587A", color3:"5B7FA6"}, 51360900);</script>
-              </div>
-            </div>
-            <div class="social-section__item social-section__item--insta">
-              <div class="social-section__item-inner"><iframe src="https://averin.pro/widget.php?l=nicefitness_ru&style=1&width=252&gallery=1&s=80&icc=3&icr=3&t=0&tt=Мы в Инстаграм&h=1&ttcolor=FFFFFF&th=c3c3c3&bw=f9f9f9&bscolor=FFFFFF&bs=FF0000&ts=Подписаться" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:252px; height: 350px"></iframe></div>
+              </section>
             </div>
           </div>
         </div>
       </section>
-      <section class="mobile page__section page__section--mobile">
+      <section class="page__section page__section--sign-up page__section--sign-up-pass">
+        <div class="page__section-inner">
+          <div class="sign-up">
+            <div class="caption-medium"><a href="/">Записаться</a></div>
+            <div class="page__section-row"><span>7 дней бесплатного посещения</span><button class="btn  btn--accent" data-toggle="modal" data-target="#test-drive">Получить 7 дней тест драйва</button></div>
+            <div class="page__section-img"><img src="img/sign-up.jpg" width="1060" height="596" /></div>
+          </div>
+        </div>
+      </section>
+      <section class="news  news--card page__section page__section--news">
+        <div class="news__inner">
+          <div class="news__header">
+            <h2 class="section-title news__title">Клубные новости<br> и акции</h2>
+          </div>
+          <div class="news__content">
+            <div class="news__main"><a class="news__excerpt" href="/">
+                <div class="news__date">
+                  <div class="news__day">26</div>
+                  <div class="news__month">октября</div>
+                </div>
+                <div class="news__text">Установили новый, суперкрутой и эффективный тренажёр Foreman FS-404 жим от плеч</div>
+                <div class="news__img"><img src="img/content/legs.jpg" /></div>
+              </a></div>
+            <div class="news__col-right">
+              <ul class="news__list">
+                <li class="news__item"><a class="news__excerpt" href="/">
+                    <div class="news__date">
+                      <div class="news__day">20</div>
+                      <div class="news__month">октября</div>
+                    </div>
+                    <div class="news__text">Объявляется набор в группу триатлон для начинающих и продолжающих после летнего перерыва!</div>
+                  </a></li>
+                <li class="news__item"><a class="news__excerpt" href="/">
+                    <div class="news__date">
+                      <div class="news__day">17</div>
+                      <div class="news__month">октября</div>
+                    </div>
+                    <div class="news__text">Презентация новых площадей в фитнес-бутике на Земляном валу</div>
+                  </a></li>
+                <li class="news__item"><a class="news__excerpt" href="/">
+                    <div class="news__date">
+                      <div class="news__day">09</div>
+                      <div class="news__month">октября</div>
+                    </div>
+                    <div class="news__text">Соревнования за звание самого подготовленного фитнес-атлета клуба Nicefitness</div>
+                  </a></li>
+              </ul>
+              <div class="news__btn"><a class="btn  btn--common" href="/">Все новости и акции</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mobile  mobile--short page__section page__section--mobile">
         <div class="mobile__inner">
           <div class="mobile__desc">
             <div class="mobile__tagline page-tagline">Мобильное приложение Nicefitness для эффективного достижения ваших спортивных целей</div>
@@ -317,66 +482,6 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                 <li class="mobile__item"><span>Тренеры</span></li>
                 <li class="mobile__item"><span>Рейтинг</span></li>
               </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div class="tour page__section page__section--tour">
-        <div class="tour__inner">
-          <div class="card  card--large card--tour">
-            <div class="card__inner"><a class="card__link" href="/">
-                <div class="card__text">Виртуальный тур</div>
-                <div class="card__title"><span>nicefitness</span></div>
-              </a>
-              <div class="card__bottom"><a class="btn  btn--common btn--tour" href="/">Начать</a>
-                <div class="card__big-figure">360<span>&ocy;</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="tour__bottom">
-            <div class="tour__title">Ультрасовременное новое пространство занимает общую площадь в 3900 кв.м</div>
-          </div>
-        </div>
-      </div>
-      <section class="news page__section page__section--news">
-        <div class="news__inner">
-          <div class="news__header">
-            <h2 class="section-title news__title">Клубные новости<br> и акции</h2>
-          </div>
-          <div class="news__content">
-            <div class="news__main"><a class="news__excerpt" href="/">
-                <div class="news__date">
-                  <div class="news__day">26</div>
-                  <div class="news__month">октября</div>
-                </div>
-                <div class="news__text">Установили новый, суперкрутой и эффективный тренажёр Foreman FS-404 жим от плеч</div>
-                <div class="news__img"><img src="img/content/legs.jpg" /></div>
-              </a></div>
-            <div class="news__col-right">
-              <ul class="news__list">
-                <li class="news__item"><a class="news__excerpt" href="/">
-                    <div class="news__date">
-                      <div class="news__day">20</div>
-                      <div class="news__month">октября</div>
-                    </div>
-                    <div class="news__text">Объявляется набор в группу триатлон для начинающих и продолжающих после летнего перерыва!</div>
-                  </a></li>
-                <li class="news__item"><a class="news__excerpt" href="/">
-                    <div class="news__date">
-                      <div class="news__day">17</div>
-                      <div class="news__month">октября</div>
-                    </div>
-                    <div class="news__text">Презентация новых площадей в фитнес-бутике на Земляном валу</div>
-                  </a></li>
-                <li class="news__item"><a class="news__excerpt" href="/">
-                    <div class="news__date">
-                      <div class="news__day">09</div>
-                      <div class="news__month">октября</div>
-                    </div>
-                    <div class="news__text">Соревнования за звание самого подготовленного фитнес-атлета клуба Nicefitness</div>
-                  </a></li>
-              </ul>
-              <div class="news__btn"><a class="btn  btn--common" href="/">Все новости и акции</a></div>
             </div>
           </div>
         </div>

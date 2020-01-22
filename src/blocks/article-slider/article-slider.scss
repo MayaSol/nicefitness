@@ -28,6 +28,7 @@
 
   &__item:not(.glide__slide--active) {
     transform: scale(0.74);
+    opacity: 0.48;
   }
 
   &__arrows {

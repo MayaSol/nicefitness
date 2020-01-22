@@ -9,7 +9,7 @@ block meta
 
 block vars
   -
-    var pageName = 'contacts';
+    var pageName = 'main';
 
 
 block off-canvas
@@ -18,51 +18,34 @@ block off-canvas
 block nav
   +main-nav-top('10')
 block page-header-add
-  .page-header__content.page-header__content--inner-page
-    .page-header__content-row.page-header__content-row--breadcrumbs
-      +breadcrumbs('article')
-        +breadcrumbs-item('Главная ', '/home')
-        +breadcrumbs-item('Объявляется набор в группу триатлон для начинающих и продолжающих после летнего перерыва!')
-    //- .page-header__content-row.page-header__content-row--title
-    //-   h1.page-title.page-title--contacts Контакты
+  .page-header__bottom.page-header__bottom--main
+    .page-header__bottom-inner
+      h1.page-title.page-title--main Правильный фитнес клуб в Чертаново
+      .page-header__links
+        .page-header__links-row
+          +btn('Получить 7 дней тест драйва','accent')(data-toggle="modal" data-target="#test-drive")
+          +btn('','play')(class="page-header__btn-play paused")
+        .page-header__links-row
+          +btn('Как получить клубную карту?','common')(href="/" class="page-header__card-link")
+block page-header-bg
+  .page-header__bg
+    //- <iframe  id="page-header-video" class="video" width="100%" height="auto" src="https://www.youtube.com/embed/bp76QUMUVVk?enablejsapi=1&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    video#page-header-video.page-header-video(width="100%")
+      source(src="video/nicefit.mp4" type="video/mp4")
 
 block content
-    section.page__section.page__section--article
+    +main-slider()
+    +services(class="page__section page__section--services")
+    section.page__section.page__section--info
       .page__section-inner
-        +article('news',{day: '26', month: 'октября',
-          title: 'Объявляется набор в группу триатлон для начинающих и продолжающих после летнего перерыва!',
-          src: 'https://placekitten.com/1200/802'})
-          .article__text
-            p.article__lead Nicefitness реализует программы спортивной подготовки по многочисленным направлениям. В зале Nicefitness был установлен новый тренажёр Foreman "FS-404
-            p Особенностью нашего фитнес-клуба является многофункциональность и огромный выбор групповых программ, нацеленных на оздоровление и общее укреплении организма. К вашим услугам различные виды аэробных программ, стрейчинг, йога, пилатес, танцы, а также силовые тренировки в оборудованных всем необходимым для этого залах.Персональные инструктора тренажерного зала постоянно повышают свою квалификацию, посещая лектории и семинары, тем самым внедряя в тренировочный процесс новейшие методики. Что позволяет за короткий промежуток времени достичь поставленных целей. Особенностью нашего фитнес-клуба является многофункциональность и огромный выбор групповых программ, нацеленных на оздоровление и общее укреплении организма.
-            p Персональные инструктора тренажерного зала постоянно повышают свою квалификацию, посещая лектории и семинары, тем самым внедряя в тренировочный процесс новейшие методики. Что позволяет за короткий промежуток времени достичь поставленных целей. Для каждого клиента мы разрабатываем персональную программу с учетом его целей и задач, будь то желание предать объем мышцам или просто обрести стройную фигуру, которая всегда будет выглядеть красиво.
-            h3 Nicefitness программы
-            p Особенностью нашего фитнес-клуба является многофункциональность и огромный выбор групповых программ, нацеленных на оздоровление и общее укреплении организма. К вашим услугам различные виды аэробных программ, стрейчинг, йога, пилатес, танцы, а также силовые тренировки в оборудованных всем необходимым для этого залах.
-          .article__aside
-            +social-widget('article')
-      .article-slider(class=allMods)&attributes(attributes)
-        .article-slider__inner
-            .glide.article-slider__slider
-              .glide__track.article-slider__track(data-glide-el="track")
-                ul.article-slider__list.glide__slides
-                  .article-slider__item
-                    img(src="https://placekitten.com/1201/803")
-                  .article-slider__item
-                    img(src="https://placekitten.com/1201/803")
-                  .article-slider__item
-                    img(src="https://placekitten.com/1201/803")
-      .page__section-inner
-        .article-slider__arrows
-          +btn('','arrow-left,slider-prev')(class="article-slider__prev")
-          +btn('','arrow-right,slider-next')(class="article-slider__next")
-        .article__text.article__text--col-2
-          p Особенностью нашего фитнес-клуба является многофункциональность и огромный выбор групповых программ, нацеленных на оздоровление и общее укреплении организма. К вашим услугам различные виды аэробных программ, стрейчинг, йога, пилатес, танцы, а также силовые тренировки в оборудованных всем необходимым для этого залах.Персональные инструктора тренажерного зала постоянно повышают свою квалификацию, посещая лектории и семинары, тем самым внедряя в тренировочный процесс новейшие методики. Что позволяет за короткий промежуток времени достичь поставленных целей. Особенностью нашего фитнес-клуба является многофункциональность и огромный выбор групповых программ, нацеленных на оздоровление и общее укреплении организма.Персональные инструктора тренажерного зала постоянно повышают свою квалификацию, посещая лектории и семинары, тем самым внедряя в тренировочный процесс новейшие методики. Что позволяет за короткий промежуток времени достичь поставленных целей. Для каждого клиента мы разрабатываем персональную программу с учетом его целей и задач, будь то желание предать объем мышцам или просто обрести стройную фигуру, которая всегда будет выглядеть красиво.
-          p Особенностью нашего фитнес-клуба является многофункциональность и огромный выбор групповых программ, нацеленных на оздоровление и общее укреплении организма. К вашим услугам различные виды аэробных программ, стрейчинг, йога, пилатес, танцы,а также силовые тренировки в оборудованных всем необходимым для этого залах.
-          +btn('Вернуться к списку','common, article-back')
-
+        +info-main('main')
+    +caption-large('nicefitness')(class="page__section page__section--caption")
+    +social-section(class="page__section page__section--social")
+    +mobile(class="page__section page__section--mobile")
+    +tour(class="page__section page__section--tour")
+      +card-tour('large,tour', {text: 'Виртуальный тур'})
     +news(class="page__section page__section--news")
-    +mobile('short')(class="page__section page__section--mobile")
-
 
 block footer
   +page-footer()
@@ -72,5 +55,5 @@ block footer
 //- block footer
 //-   p footer
 
-block append page-bottom
-  script(src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A18eb1a9e672202a960b32be8cd2cc0e8268e94c919b969a21c5b2713d9edc969&amp;width=100%25&amp;height=800&amp;lang=ru_RU&amp;scroll=true&amp;id=map" type="text/javascript" charset="utf-8" async)
+//- block append page-bottom
+//-   script(src='js/some.js')

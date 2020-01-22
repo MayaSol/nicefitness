@@ -81,11 +81,14 @@
 //   &__content {
 
 //     color: red;
+//     position: relative;
 //     outline: 1px solid red;
 
 //     &::before {
 //       z-index: -1;
 //       position: absolute;
+//       left: 0;
+//       top: 0;
 //       //left: -10px;
 //       //top: -195px;
 //       //left: -10px;
@@ -95,9 +98,11 @@
 //        //   content: url('../img/temp/services.jpg');
 //       // content: url('../img/temp/ui.jpg');
 //        // content: url('../img/temp/about.jpg');
-//        top: 14px;
-//        content: url('../img/temp/article.jpg');
-//       top: -150px;
+//        // top: 14px;
+//        // content: url('../img/temp/article.jpg');
+//        content: url('../img/temp/contacts.jpg');
+//        top: 10px;
+//       // top: -150px;
 //        //left: 10px;
 //       opacity: 0.4;
 //     }

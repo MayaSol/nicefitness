@@ -63,7 +63,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
     </aside>
     <div class="off-canvas__overlay" data-toggle="off-canvas"></div>
   </div>
-  <div class="page__inner page-schedule">
+  <div class="page__inner page-contacts">
     <div class="page__content">
       <div class="page-bg">
         <div class="page-bg__inner">
@@ -73,7 +73,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
           <div class="page-bg__line page-bg__line--right"></div>
         </div>
       </div>
-      <header class="page-header  page-header--schedule" role="banner">
+      <header class="page-header  page-header--contacts" role="banner">
         <div class="page-header__inner">
           <div class="page-header__top"><a class="logo" href="/"><img src="img/logo.png" alt="Logo" width="216" height="29"></a>
             <nav class="main-nav main-nav--top" id="nav-top">
@@ -98,228 +98,101 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
               <div class="phone__inner"><a href="tel:+74991102131">+7 (499) 110-21-31</a></div>
             </div><button class="burger burger--off-canvas-top" aria-label="Открыть меню" data-toggle="off-canvas"><span>Открыть меню</span></button>
           </div>
-          <div class="page-header__content page-header__content--schedule">
+          <div class="page-header__content page-header__content--inner-page">
             <div class="page-header__content-row page-header__content-row--breadcrumbs">
               <ul class="breadcrumbs" aria-label="Breadcrumb" role="navigation">
                 <li class="breadcrumbs__item"><a href="/home">Главная </a></li>
-                <li class="breadcrumbs__item"><span>Расписание</span></li>
+                <li class="breadcrumbs__item"><span>Контакты</span></li>
               </ul>
             </div>
             <div class="page-header__content-row page-header__content-row--title">
-              <h1 class="page-title page-title--schedule">Расписание</h1>
+              <h1 class="page-title page-title--contacts">Контакты</h1>
             </div>
           </div>
         </div>
       </header>
-      <div class="caption-large  caption-large--schedule page__section page__section--caption">
+      <div class="caption-large  caption-large--contacts page__section page__section--caption">
         <div class="caption-large__inner">
           <div class="caption-large__text">nicefitness</div>
         </div>
       </div>
-      <div class="page__section page__section--info">
+      <section class="page__section page__section--contacts-info">
         <div class="page__section-inner">
-          <section class="info  info--schedule">
+          <section class="info  info--contacts info--short page__section page__section--info">
             <div class="info__inner">
               <div class="info__text">
-                <p class="info__lead">Nicefitness – это правильный клуб для реализации Ваших планов по улучшению внешности, укреплению здоровья, созданию красивой и стройной фигуры.</p>
-              </div>
-              <div class="card  card--large card--highlight">
-                <div class="card__inner">
-                  <div class="card__price">2 000 ₽</div><a class="card__link" href="/">
-                    <div class="card__text">Клубная карта</div>
-                    <div class="card__title"><span>nicefitness</span></div>
-                  </a>
+                <p class="info__lead info__lead--large">Правильный фитнес-клуб в&nbsp;Чертаново</p>
+                <div class="page__section-row page__section-row--contacts page__section-row-col-left-2">
+                  <div class="contacts  contacts--contacts-address col-left-1">
+                    <div class="contacts__title">Адрес</div>
+                    <div class="contacts__item">г. Москва, мкр. Северное Чертаново, 1А</div>
+                  </div>
+                  <div class="contacts  contacts--contacts-info col-middle-1">
+                    <div class="contacts__title">Контактная информация</div>
+                    <div class="contacts__item">nice-fitness@yandex.ru</div>
+                    <div class="contacts__item">Skype: nice_fitness</div>
+                    <div class="contacts__item">+7 (499) 110-21-31</div>
+                  </div>
                 </div>
+                <p class="info__large">Ультрасовременное новое пространство занимает общую площадь в 3900 кв.м</p>
               </div>
             </div>
           </section>
         </div>
-      </div>
-      <section class="schedule-widget page__section page__section--schedule">
-        <div class="schedule-widget__inner">
-          <div class="schedule-widget__header"><a class="logo" href="/"><img src="img/logo-green-black.png" alt="Logo" width="216" height="29" /></a></div>
-          <div class="schedule-widget__content"><img src="img/content/schedule-widget.jpg" /></div>
+      </section>
+      <section class="page__section page__section--map">
+        <div id="map"></div>
+        <div class="card  card--contacts card--large">
+          <div class="card__inner"><a class="card__link" href="/">
+              <div class="card__title"><span>nicefitness</span></div>
+            </a>
+            <div class="schedule  schedule--contacts">
+              <div class="schedule__inner">
+                <div class="schedule__col schedule__col--workdays">
+                  <div class="schedule__name">Будни</div>
+                  <div class="schedule__hours">7:00 - 24:00</div>
+                </div>
+                <div class="schedule__col schedule__col--weekend">
+                  <div class="schedule__name">Выходные</div>
+                  <div class="schedule__hours">8:00 - 23:00</div>
+                </div>
+              </div>
+            </div>
+            <div class="card__bottom"><a class="btn  btn--common btn--map" href="/">Показать на карте</a></div>
+          </div>
         </div>
       </section>
-      <div class="page__section page__section--programms">
+      <section class="page__section page__section--feedback">
         <div class="page__section-inner">
-          <h2 class="section-title">Описание программ Nicefitness</h2>
-          <section class="expand  expand--programms">
-            <ul class="expand__list">
-              <li class="expand__item"><button class="btn expand__btn expand__btn--closed"><span>MIND BODY</span></button>
-                <div class="expand__content">
-                  <section class="classes  classes--programms">
-                    <ul class="classes__list">
-                      <li class="classes__item">
-                        <div class="classes__title"><span>HATHA YOGA</span></div>
-                        <div class="classes__text">
-                          <p>Hatha YOGA — начальная ступень в практиках йоги, позволяющая узнать собственные возможности, научиться контролировать внутренние энергетические потоки, гармонизировать жизнь</p>
-                        </div>
-                      </li>
-                      <li class="classes__item">
-                        <div class="classes__title"><span>PILATES</span></div>
-                        <div class="classes__text">
-                          <p>Pilates — силовая тренировка низкой и средней интенсивности с использованием упражнений направленных на проработку всех мышц в статике и медленной динамике, так же их растяжка. Включены упражнения на балансировку в статике и динамике. Профилактирующая тренировка для позвоночника, крупных и мелких суставов.утренние энергетические потоки, гармонизировать жизнь</p>
-                        </div>
-                      </li>
-                    </ul>
-                  </section>
-                </div>
-              </li>
-              <li class="expand__item"><button class="btn expand__btn expand__btn--closed"><span>Аэробные классы</span></button>
-                <div class="expand__content">
-                  <section class="classes  classes--programms">
-                    <ul class="classes__list">
-                      <li class="classes__item">
-                        <div class="classes__title"><span>HATHA YOGA</span></div>
-                        <div class="classes__text">
-                          <p>Hatha YOGA — начальная ступень в практиках йоги, позволяющая узнать собственные возможности, научиться контролировать внутренние энергетические потоки, гармонизировать жизнь</p>
-                        </div>
-                      </li>
-                    </ul>
-                  </section>
-                </div>
-              </li>
-              <li class="expand__item"><button class="btn expand__btn expand__btn--closed"><span>Боевые классы</span></button>
-                <div class="expand__content">
-                  <section class="classes  classes--programms">
-                    <ul class="classes__list">
-                      <li class="classes__item">
-                        <div class="classes__title"><span>HATHA YOGA</span></div>
-                        <div class="classes__text">
-                          <p>Hatha YOGA — начальная ступень в практиках йоги, позволяющая узнать собственные возможности, научиться контролировать внутренние энергетические потоки, гармонизировать жизнь</p>
-                        </div>
-                      </li>
-                    </ul>
-                  </section>
-                </div>
-              </li>
-              <li class="expand__item"><button class="btn expand__btn expand__btn--closed"><span>Мероприятия</span></button>
-                <div class="expand__content">
-                  <section class="classes  classes--programms">
-                    <ul class="classes__list">
-                      <li class="classes__item">
-                        <div class="classes__title"><span>HATHA YOGA</span></div>
-                        <div class="classes__text">
-                          <p>Hatha YOGA — начальная ступень в практиках йоги, позволяющая узнать собственные возможности, научиться контролировать внутренние энергетические потоки, гармонизировать жизнь</p>
-                        </div>
-                      </li>
-                    </ul>
-                  </section>
-                </div>
-              </li>
-              <li class="expand__item"><button class="btn expand__btn expand__btn--closed"><span>ОФП</span></button>
-                <div class="expand__content">
-                  <section class="classes  classes--programms">
-                    <ul class="classes__list">
-                      <li class="classes__item">
-                        <div class="classes__title"><span>HATHA YOGA</span></div>
-                        <div class="classes__text">
-                          <p>Hatha YOGA — начальная ступень в практиках йоги, позволяющая узнать собственные возможности, научиться контролировать внутренние энергетические потоки, гармонизировать жизнь</p>
-                        </div>
-                      </li>
-                    </ul>
-                  </section>
-                </div>
-              </li>
-              <li class="expand__item"><button class="btn expand__btn expand__btn--closed"><span>Силовые классы</span></button>
-                <div class="expand__content">
-                  <section class="classes  classes--programms">
-                    <ul class="classes__list">
-                      <li class="classes__item">
-                        <div class="classes__title"><span>HATHA YOGA</span></div>
-                        <div class="classes__text">
-                          <p>Hatha YOGA — начальная ступень в практиках йоги, позволяющая узнать собственные возможности, научиться контролировать внутренние энергетические потоки, гармонизировать жизнь</p>
-                        </div>
-                      </li>
-                    </ul>
-                  </section>
-                </div>
-              </li>
-              <li class="expand__item"><button class="btn expand__btn expand__btn--closed"><span>Танцевальные классы</span></button>
-                <div class="expand__content">
-                  <section class="classes  classes--programms">
-                    <ul class="classes__list">
-                      <li class="classes__item">
-                        <div class="classes__title"><span>HATHA YOGA</span></div>
-                        <div class="classes__text">
-                          <p>Hatha YOGA — начальная ступень в практиках йоги, позволяющая узнать собственные возможности, научиться контролировать внутренние энергетические потоки, гармонизировать жизнь</p>
-                        </div>
-                      </li>
-                    </ul>
-                  </section>
-                </div>
-              </li>
-              <li class="expand__item"><button class="btn expand__btn expand__btn--closed"><span>Функциональные тренировки</span></button>
-                <div class="expand__content">
-                  <section class="classes  classes--programms">
-                    <ul class="classes__list">
-                      <li class="classes__item">
-                        <div class="classes__title"><span>HATHA YOGA</span></div>
-                        <div class="classes__text">
-                          <p>Hatha YOGA — начальная ступень в практиках йоги, позволяющая узнать собственные возможности, научиться контролировать внутренние энергетические потоки, гармонизировать жизнь</p>
-                        </div>
-                      </li>
-                    </ul>
-                  </section>
-                </div>
-              </li>
-            </ul>
-          </section>
-        </div>
-      </div>
-      <div class="important  important--schedule">
-        <div class="important__inner">
-          <div class="important__text">
-            <p>Особенностью нашего фитнес-клуба является многофункциональность и огромный выбор групповых программ, нацеленных на оздоровление и общее укреплении организма.</p>
-            <p>К вашим услугам различные виды аэробных программ, стрейчинг, йога, пилатес, танцы, а также силовые тренировки в оборудованных всем необходимым для этого залах.</p>
-          </div>
-        </div>
-      </div>
-      <section class="news  news--schedule page__section page__section--news">
-        <div class="news__inner">
-          <div class="news__header">
-            <h2 class="section-title news__title">Клубные новости<br> и акции</h2>
-          </div>
-          <div class="news__content">
-            <div class="news__main"><a class="news__excerpt" href="/">
-                <div class="news__date">
-                  <div class="news__day">26</div>
-                  <div class="news__month">октября</div>
-                </div>
-                <div class="news__text">Установили новый, суперкрутой и эффективный тренажёр Foreman FS-404 жим от плеч</div>
-                <div class="news__img"><img src="img/content/legs.jpg" /></div>
-              </a></div>
-            <div class="news__col-right">
-              <ul class="news__list">
-                <li class="news__item"><a class="news__excerpt" href="/">
-                    <div class="news__date">
-                      <div class="news__day">20</div>
-                      <div class="news__month">октября</div>
+          <div class="feedback  feedback--contacts">
+            <div class="feedback__inner">
+              <div class="feedback__title">Обратная<br> связь с Nicefitness</div>
+                <div class="feedback__content">
+                  <form class="feedback__form">
+                    <div class="form__field form__field--name">
+                      <div class="form__field-inner"><label class="field-text  field-text--feedback field-text--form field-text--name"><span class="field-text__name">Ваше имя</span><span class="field-text__input-wrap"><input class="field-text__input" type="text" value="" name="name" placeholder=""/></span></label></div>
                     </div>
-                    <div class="news__text">Объявляется набор в группу триатлон для начинающих и продолжающих после летнего перерыва!</div>
-                  </a></li>
-                <li class="news__item"><a class="news__excerpt" href="/">
-                    <div class="news__date">
-                      <div class="news__day">17</div>
-                      <div class="news__month">октября</div>
+                    <div class="form__field form__field--phone">
+                      <div class="form__field-inner"><label class="field-text  field-text--feedback field-text--form field-text--phone"><span class="field-text__name">Контактный телефон</span><span class="field-text__input-wrap"><input class="field-text__input" type="text" value="" name="phone" placeholder=""/></span></label></div>
                     </div>
-                    <div class="news__text">Презентация новых площадей в фитнес-бутике на Земляном валу</div>
-                  </a></li>
-                <li class="news__item"><a class="news__excerpt" href="/">
-                    <div class="news__date">
-                      <div class="news__day">09</div>
-                      <div class="news__month">октября</div>
+                    <div class="form__field form__field--text">
+                      <div class="form__field-inner"><label class="field-text  field-text--feedback field-text--form field-text--msg"><span class="field-text__name">Сообщение</span><span class="field-text__input-wrap"><textarea class="field-text__input" name="msg" placeholder="" rows="1"></textarea></span></label></div>
                     </div>
-                    <div class="news__text">Соревнования за звание самого подготовленного фитнес-атлета клуба Nicefitness</div>
-                  </a></li>
-              </ul>
-              <div class="news__btn"><a class="btn  btn--common" href="/">Все новости и акции</a></div>
+                    <div class="form__field form__field--user-content">
+                      <div class="form__field-inner">
+                        <div class="field-checkbox">
+                          <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--user-content field-checkbox__input-wrap--feedback"><label class="field-checkbox__name"><input class="field-checkbox__input" type="checkbox" name="user-content" /><span class="field-checkbox__name-text"><span>Я соглашаюсь с условиями <a class="privacy-link" href="/">обработки персональных данных</a></span></span></label></div>
+                        </div>
+                      </div>
+                    </div><button class="btn  btn--submit form__btn-submit" type="submit">Отправить сообщение</button>
+                  </form>
+                  <div class="feedback__note">ООО "Терминал А" ИНН 5009065770 / ОГРН 1115009002954, Юридический адрес: 142000, Московская обл., г. Домодедово, мкр. Центральный, Каширское шоссе, д. 49, оф. 38 Тел. 8(499)110-21-31</div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
       </section>
-      <section class="mobile  mobile--schedule page__section page__section--mobile">
+      <section class="mobile  mobile--short page__section page__section--mobile">
         <div class="mobile__inner">
           <div class="mobile__desc">
             <div class="mobile__tagline page-tagline">Мобильное приложение Nicefitness для эффективного достижения ваших спортивных целей</div>
@@ -458,9 +331,80 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
           </div>
         </div>
       </footer>
+      <div class="modal" id="test-drive" tabindex="-1" role="dialog">
+        <div class="modal__dialog" role="document">
+          <div class="modal__inner">
+            <div class="modal__header"><button class="btn  btn--common btn--close modal__close" data-dismiss="modal" aria-label="Закрыть">Закрыть</button>
+              <h4 class="modal__title">Закажите бесплатно 7&nbsp;дней фитнес тест-драйва</h4>
+            </div>
+            <div class="modal__content">
+              <form class="test-drive form">
+                <div class="form__field form__field--name">
+                  <div class="form__field-inner"><label class="field-text  field-text--test-drive field-text--form field-text--name"><span class="field-text__name">Ваше имя</span><span class="field-text__input-wrap"><input class="field-text__input" type="text" value="" name="name" placeholder=""/></span></label></div>
+                </div>
+                <div class="form__field form__field--phone">
+                  <div class="form__field-inner"><label class="field-text  field-text--test-drive field-text--form field-text--phone"><span class="field-text__name">Контактный телефон</span><span class="field-text__input-wrap"><input class="field-text__input" type="text" value="" name="phone" placeholder=""/></span></label></div>
+                </div>
+                <div class="form__field form__field--user-content">
+                  <div class="form__field-inner">
+                    <div class="field-checkbox">
+                      <div class="field-checkbox__input-wrap  field-checkbox__input-wrap--user-content"><label class="field-checkbox__name"><input class="field-checkbox__input" type="checkbox" name="user-content, modal" /><span class="field-checkbox__name-text"><span>Я соглашаюсь с условиями <a class="privacy-link" href="/">обработки персональных данных</a></span></span></label></div>
+                    </div>
+                  </div>
+                </div><button class="btn  btn--submit btn--modal form__btn-submit" type="submit">Отправить сообщение</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal  modal--form-msg modal--form-msg-success" id="form-msg-success" tabindex="-1" role="dialog">
+        <div class="modal__dialog" role="document">
+          <div class="modal__inner">
+            <div class="modal__header"><button class="btn  btn--common btn--close modal__close" data-dismiss="modal" aria-label="Закрыть">Закрыть</button>
+              <h4 class="modal__title"></h4>
+            </div>
+            <div class="modal__content">
+              <div class="form-msg  form-msg--success">
+                <div class="form-msg__title">Сообщение отправлено!</div>
+                <div class="form-msg__text">Наш менеджер свяжется с вами в ближайшее время.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal  modal--form-msg modal--form-msg-error" id="form-msg-error" tabindex="-1" role="dialog">
+        <div class="modal__dialog" role="document">
+          <div class="modal__inner">
+            <div class="modal__header"><button class="btn  btn--common btn--close modal__close" data-dismiss="modal" aria-label="Закрыть">Закрыть</button>
+              <h4 class="modal__title"></h4>
+            </div>
+            <div class="modal__content">
+              <div class="form-msg  form-msg--error">
+                <div class="form-msg__title">Упсс... ошибка</div>
+                <div class="form-msg__text">Наш менеджер свяжется с вами в ближайшее время.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal  modal--form-msg modal--form-msg-wait" id="form-msg-wait" tabindex="-1" role="dialog">
+        <div class="modal__dialog" role="document">
+          <div class="modal__inner">
+            <div class="modal__header"><button class="btn  btn--common btn--close modal__close" data-dismiss="modal" aria-label="Закрыть">Закрыть</button>
+              <h4 class="modal__title"></h4>
+            </div>
+            <div class="modal__content">
+              <div class="form-msg  form-msg--wait">
+                <div class="form-msg__title">Минутку...</div>
+                <div class="form-msg__text">Наш менеджер свяжется с вами в ближайшее время.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <script src="js/bundle.js"></script>
+  <script src="js/bundle.js"></script><script src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A18eb1a9e672202a960b32be8cd2cc0e8268e94c919b969a21c5b2713d9edc969&amp;amp;width=100%25&amp;amp;height=800&amp;amp;lang=ru_RU&amp;amp;scroll=true&amp;amp;id=map" type="text/javascript" charset="utf-8" async></script>
 
 </body>
 

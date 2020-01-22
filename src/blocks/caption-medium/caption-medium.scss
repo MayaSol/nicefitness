@@ -12,6 +12,17 @@
   line-height: 1;
   text-transform: lowercase;
 
+  a {
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus,
+  a:active {
+    color: $link-color--hover;
+  }
+
   @media (min-width: $screen-md) {
     font-size: 120px;
   }
@@ -20,7 +31,8 @@
     font-size: 184px;
   }
 
-  span {
+  span,
+  a {
     display: inline-block;
     line-height: 0.9;
     border-bottom: 2px solid currentColor;

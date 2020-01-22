@@ -477,6 +477,18 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!function(
 
 /***/ }),
 
+/***/ "./src/blocks/article-slider/article-slider.js":
+/*!*****************************************************!*\
+  !*** ./src/blocks/article-slider/article-slider.js ***!
+  \*****************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @glidejs/glide */ \"./node_modules/@glidejs/glide/dist/glide.esm.js\");\n\n\nvar ready = __webpack_require__(/*! ../../js/utils/documentReady.js */ \"./src/js/utils/documentReady.js\");\n\nvar closest = __webpack_require__(/*! closest */ \"./node_modules/closest/index.js\");\n\nready(function () {\n  console.log(document.documentElement.clientWidth);\n  var articleSlider = document.querySelector('.article-slider__slider');\n\n  if (!articleSlider) {\n    return;\n  }\n\n  var screenWidth = document.documentElement.clientWidth;\n  console.log('screenWidth: ' + screenWidth);\n  var containerWidth = document.querySelector('.page__section-inner').offsetWidth;\n  console.log('containerWidth: ' + containerWidth);\n  var gap = 0;\n\n  if (containerWidth > 767) {\n    var gap = 40;\n  }\n\n  var peekValue = (screenWidth - containerWidth) / 2 + gap;\n  console.log(peekValue);\n  var articleSlider = new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('.article-slider__slider', {\n    type: 'carousel',\n    perView: 1,\n    //gap: 40,\n    peek: {\n      before: peekValue,\n      after: peekValue\n    },\n    // animationTimingFunc: 'linear',\n    //peek: {before: '0', arter: '428'},\n    breakpoints: {\n      1279: {}\n    }\n  });\n  articleSlider.mount();\n  var arrows = document.querySelector('.article-slider__arrows');\n  sliderArrows(arrows, [articleSlider]); // Стрелки слайдера навигации по моделям\n\n  function sliderArrows(arrowsElem, sliders) {\n    arrowsElem.querySelector('.btn--slider-next').addEventListener(\"click\", function (event) {\n      for (var i = 0; i < sliders.length; i++) {\n        sliders[i].go('>');\n      }\n    });\n    arrowsElem.querySelector('.btn--slider-prev').addEventListener(\"click\", function (event) {\n      for (var i = 0; i < sliders.length; i++) {\n        sliders[i].go('<');\n      }\n    });\n  }\n});\n\n//# sourceURL=webpack:///./src/blocks/article-slider/article-slider.js?");
+
+/***/ }),
+
 /***/ "./src/blocks/burger/burger.js":
 /*!*************************************!*\
   !*** ./src/blocks/burger/burger.js ***!
@@ -589,6 +601,17 @@ eval("var ready = __webpack_require__(/*! ../../js/utils/documentReady.js */ \".
 
 /***/ }),
 
+/***/ "./src/blocks/persona-card/persona-card.js":
+/*!*************************************************!*\
+  !*** ./src/blocks/persona-card/persona-card.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var ready = __webpack_require__(/*! ../../js/utils/documentReady.js */ \"./src/js/utils/documentReady.js\");\n\nvar closest = __webpack_require__(/*! closest */ \"./node_modules/closest/index.js\");\n\nready(function () {\n  showMoreBtns = document.querySelectorAll('.persona-card__show-more');\n\n  for (var i = 0; i < showMoreBtns.length; i++) {\n    showMoreBtns[i].addEventListener('click', function () {\n      var list = this.closest('.persona-card__skills');\n      console.log(list);\n\n      if (!list.classList.contains('persona-card__skills--show-all')) {\n        list.classList.add('persona-card__skills--show-all');\n      }\n    });\n  }\n\n  showLessBtns = document.querySelectorAll('.persona-card__show-less');\n\n  for (var _i = 0; _i < showLessBtns.length; _i++) {\n    showLessBtns[_i].addEventListener('click', function () {\n      var list = this.closest('.persona-card__skills');\n      console.log(list);\n\n      if (list.classList.contains('persona-card__skills--show-all')) {\n        list.classList.remove('persona-card__skills--show-all');\n      }\n    });\n  }\n});\n\n//# sourceURL=webpack:///./src/blocks/persona-card/persona-card.js?");
+
+/***/ }),
+
 /***/ "./src/blocks/sprite-svg/sprite-svg.js":
 /*!*********************************************!*\
   !*** ./src/blocks/sprite-svg/sprite-svg.js ***!
@@ -600,6 +623,39 @@ eval("var svg4everybody = __webpack_require__(/*! svg4everybody */ \"./node_modu
 
 /***/ }),
 
+/***/ "./src/blocks/subscribe/subscribe.js":
+/*!*******************************************!*\
+  !*** ./src/blocks/subscribe/subscribe.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var ready = __webpack_require__(/*! ../../js/utils/documentReady.js */ \"./src/js/utils/documentReady.js\");\n\nvar closest = __webpack_require__(/*! closest */ \"./node_modules/closest/index.js\");\n\nready(function () {\n  var subscribeFields = document.querySelectorAll('.field-text--subscribe');\n\n  for (var i = 0; i < subscribeFields.length; i++) {\n    var input = subscribeFields[i].querySelector('.field-text__input');\n    var name = subscribeFields[i].querySelector('.field-text__name');\n    input.addEventListener('focus', function () {\n      name.classList.add('show');\n    });\n    input.addEventListener('blur', function () {\n      name.classList.remove('show');\n    });\n  }\n\n  if (document.documentElement.clientWidth > 1023) {\n    var subscribeInputs = document.querySelectorAll('.field-text--subscribe .field-text__input');\n    console.log(subscribeInputs);\n\n    for (var _i = 0; _i < subscribeInputs.length; _i++) {\n      subscribeInputs[_i].setAttribute('rows', 1);\n\n      subscribeInputs[_i].style.height = \"1.2em\";\n    }\n  }\n});\n\n//# sourceURL=webpack:///./src/blocks/subscribe/subscribe.js?");
+
+/***/ }),
+
+/***/ "./src/blocks/tabs/tabs.js":
+/*!*********************************!*\
+  !*** ./src/blocks/tabs/tabs.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("/* global document window history location Element */\ndocument.addEventListener('DOMContentLoaded', function () {\n  if (location.hash) {\n    showTab(location.hash);\n  } // Следим за поднимающимися кликами\n\n\n  document.addEventListener('click', function (event) {\n    if (event.target.dataset.toggle === 'tab') {\n      event.preventDefault();\n      var target = event.target.hash === undefined ? event.target.dataset.target : event.target.hash;\n\n      if (target !== undefined) {\n        showTab(target);\n\n        if (history && history.pushState && history.replaceState) {\n          var stateObject = {\n            'url': target\n          };\n\n          if (window.location.hash && stateObject.url !== window.location.hash) {\n            window.history.pushState(stateObject, document.title, window.location.pathname + target);\n          } else {\n            window.history.replaceState(stateObject, document.title, window.location.pathname + target);\n          }\n        }\n      }\n    }\n  });\n  /**\n   * Показывает таб\n   * @param  {string} tabId ID таба, который нужно показать\n   */\n\n  function showTab(tabId) {\n    var element = document.querySelector(tabId);\n\n    if (element && element.classList.contains('tabs__content-item')) {\n      var tabsParent = document.querySelector(tabId).closest('.tabs');\n      var activeTabClassName = 'tabs__link-wrap--active';\n      var activeTabContentClassName = 'tabs__content-item--active'; // таб\n\n      tabsParent.querySelectorAll('.' + activeTabClassName).forEach(function (item) {\n        item.classList.remove(activeTabClassName);\n      });\n      var activeTab = tabsParent.querySelector('[href=\"' + tabId + '\"]') ? tabsParent.querySelector('[href=\"' + tabId + '\"]') : tabsParent.querySelector('[data-target=\"' + tabId + '\"]');\n      activeTab.closest('.tabs__link-wrap').classList.add(activeTabClassName); // контент таба\n\n      tabsParent.querySelectorAll('.' + activeTabContentClassName).forEach(function (item) {\n        item.classList.remove(activeTabContentClassName);\n      });\n      tabsParent.querySelector(tabId).classList.add(activeTabContentClassName);\n    }\n  } // Добавление метода .closest() (полифил, собственно)\n\n\n  (function (e) {\n    e.closest = e.closest || function (css) {\n      var node = this;\n\n      while (node) {\n        if (node.matches(css)) return node;else node = node.parentElement;\n      }\n\n      return null;\n    };\n  })(Element.prototype);\n});\n\n//# sourceURL=webpack:///./src/blocks/tabs/tabs.js?");
+
+/***/ }),
+
+/***/ "./src/blocks/vacs/vacs.js":
+/*!*********************************!*\
+  !*** ./src/blocks/vacs/vacs.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var ready = __webpack_require__(/*! ../../js/utils/documentReady.js */ \"./src/js/utils/documentReady.js\");\n\nvar closest = __webpack_require__(/*! closest */ \"./node_modules/closest/index.js\");\n\nready(function () {\n  showMoreBtns = document.querySelectorAll('.vacs__sub-show-more');\n\n  for (var i = 0; i < showMoreBtns.length; i++) {\n    showMoreBtns[i].addEventListener('click', function () {\n      var list = this.closest('.vacs__sub');\n\n      if (!list.classList.contains('vacs__sub--show-all')) {\n        list.classList.add('vacs__sub--show-all');\n      }\n    });\n  }\n\n  showLessBtns = document.querySelectorAll('.vacs__sub-show-less');\n\n  for (var _i = 0; _i < showLessBtns.length; _i++) {\n    showLessBtns[_i].addEventListener('click', function () {\n      var list = this.closest('.vacs__sub');\n\n      if (list.classList.contains('vacs__sub--show-all')) {\n        list.classList.remove('vacs__sub--show-all');\n      }\n    });\n  }\n});\n\n//# sourceURL=webpack:///./src/blocks/vacs/vacs.js?");
+
+/***/ }),
+
 /***/ "./src/js/entry.js":
 /*!*************************!*\
   !*** ./src/js/entry.js ***!
@@ -607,7 +663,7 @@ eval("var svg4everybody = __webpack_require__(/*! svg4everybody */ \"./node_modu
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("/*!*\n * ВНИМАНИЕ! Этот файл генерируется автоматически.\n * Любые изменения этого файла будут потеряны при следующей компиляции.\n * Любое изменение проекта без возможности компиляции ДОЛЬШЕ И ДОРОЖЕ в 2-5 раз.\n */\n\n/* global require */\n__webpack_require__(/*! ../blocks/object-fit-polyfill/object-fit-polyfill.js */ \"./src/blocks/object-fit-polyfill/object-fit-polyfill.js\");\n\n__webpack_require__(/*! ../blocks/sprite-svg/sprite-svg.js */ \"./src/blocks/sprite-svg/sprite-svg.js\");\n\n__webpack_require__(/*! ../blocks/burger/burger.js */ \"./src/blocks/burger/burger.js\");\n\n__webpack_require__(/*! ../blocks/expand/expand.js */ \"./src/blocks/expand/expand.js\");\n\n__webpack_require__(/*! ../blocks/field-text/field-text.js */ \"./src/blocks/field-text/field-text.js\");\n\n__webpack_require__(/*! ../blocks/form/form.js */ \"./src/blocks/form/form.js\");\n\n__webpack_require__(/*! ../blocks/main-nav/main-nav.js */ \"./src/blocks/main-nav/main-nav.js\");\n\n__webpack_require__(/*! ../blocks/main-slider/main-slider.js */ \"./src/blocks/main-slider/main-slider.js\");\n\n__webpack_require__(/*! ../blocks/modal/modal.js */ \"./src/blocks/modal/modal.js\");\n\n__webpack_require__(/*! ../blocks/off-canvas/off-canvas.js */ \"./src/blocks/off-canvas/off-canvas.js\");\n\n__webpack_require__(/*! ../blocks/page-header-video/page-header-video.js */ \"./src/blocks/page-header-video/page-header-video.js\");\n\n__webpack_require__(/*! ./script.js */ \"./src/js/script.js\");\n/*!*\n * ВНИМАНИЕ! Этот файл генерируется автоматически.\n * Любые изменения этого файла будут потеряны при следующей компиляции.\n * Любое изменение проекта без возможности компиляции ДОЛЬШЕ И ДОРОЖЕ в 2-5 раз.\n */\n\n//# sourceURL=webpack:///./src/js/entry.js?");
+eval("/*!*\n * ВНИМАНИЕ! Этот файл генерируется автоматически.\n * Любые изменения этого файла будут потеряны при следующей компиляции.\n * Любое изменение проекта без возможности компиляции ДОЛЬШЕ И ДОРОЖЕ в 2-5 раз.\n */\n\n/* global require */\n__webpack_require__(/*! ../blocks/object-fit-polyfill/object-fit-polyfill.js */ \"./src/blocks/object-fit-polyfill/object-fit-polyfill.js\");\n\n__webpack_require__(/*! ../blocks/sprite-svg/sprite-svg.js */ \"./src/blocks/sprite-svg/sprite-svg.js\");\n\n__webpack_require__(/*! ../blocks/article-slider/article-slider.js */ \"./src/blocks/article-slider/article-slider.js\");\n\n__webpack_require__(/*! ../blocks/burger/burger.js */ \"./src/blocks/burger/burger.js\");\n\n__webpack_require__(/*! ../blocks/expand/expand.js */ \"./src/blocks/expand/expand.js\");\n\n__webpack_require__(/*! ../blocks/field-text/field-text.js */ \"./src/blocks/field-text/field-text.js\");\n\n__webpack_require__(/*! ../blocks/form/form.js */ \"./src/blocks/form/form.js\");\n\n__webpack_require__(/*! ../blocks/main-nav/main-nav.js */ \"./src/blocks/main-nav/main-nav.js\");\n\n__webpack_require__(/*! ../blocks/main-slider/main-slider.js */ \"./src/blocks/main-slider/main-slider.js\");\n\n__webpack_require__(/*! ../blocks/modal/modal.js */ \"./src/blocks/modal/modal.js\");\n\n__webpack_require__(/*! ../blocks/off-canvas/off-canvas.js */ \"./src/blocks/off-canvas/off-canvas.js\");\n\n__webpack_require__(/*! ../blocks/page-header-video/page-header-video.js */ \"./src/blocks/page-header-video/page-header-video.js\");\n\n__webpack_require__(/*! ../blocks/persona-card/persona-card.js */ \"./src/blocks/persona-card/persona-card.js\");\n\n__webpack_require__(/*! ../blocks/subscribe/subscribe.js */ \"./src/blocks/subscribe/subscribe.js\");\n\n__webpack_require__(/*! ../blocks/tabs/tabs.js */ \"./src/blocks/tabs/tabs.js\");\n\n__webpack_require__(/*! ../blocks/vacs/vacs.js */ \"./src/blocks/vacs/vacs.js\");\n\n__webpack_require__(/*! ./script.js */ \"./src/js/script.js\");\n/*!*\n * ВНИМАНИЕ! Этот файл генерируется автоматически.\n * Любые изменения этого файла будут потеряны при следующей компиляции.\n * Любое изменение проекта без возможности компиляции ДОЛЬШЕ И ДОРОЖЕ в 2-5 раз.\n */\n\n//# sourceURL=webpack:///./src/js/entry.js?");
 
 /***/ }),
 

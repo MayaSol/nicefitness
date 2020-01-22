@@ -512,6 +512,13 @@
       @at-root &#{$block-name}__large {
         margin-bottom: 0;
       }
+
+      @at-root &#{$block-name}__lead--large {
+
+        @media (min-width: $screen-xl) {
+          margin-bottom: 100px;
+        }
+      }
     }
 
     .page__section-row--contacts {
