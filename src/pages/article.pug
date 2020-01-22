@@ -1,0 +1,44 @@
+extends ../pug/layout.pug
+
+block meta
+  title Главная
+  meta(name='description', content='')
+
+//- block append head
+//-   link(rel='stylesheet', href='css/some.css')
+
+block vars
+  -
+    var pageName = 'contacts';
+
+
+block off-canvas
+  +off-top()
+
+block nav
+  +main-nav-top('10')
+block page-header-add
+  .page-header__content.page-header__content--inner-page
+    .page-header__content-row.page-header__content-row--breadcrumbs
+      +breadcrumbs()
+        +breadcrumbs-item('Главная ', '/home')
+        +breadcrumbs-item('Контакты')
+    .page-header__content-row.page-header__content-row--title
+      h1.page-title.page-title--contacts Контакты
+
+block content
+    +caption-large('nicefitness','news')(class="page__section page__section--caption")
+    section.page__section.page__section--article
+    +mobile('short')(class="page__section page__section--mobile")
+
+
+block footer
+  +page-footer()
+  +modal-test-drive("test-drive","Закажите бесплатно 7&nbsp;дней фитнес тест-драйва")
+  +form-messages()
+
+//- block footer
+//-   p footer
+
+block append page-bottom
+  script(src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A18eb1a9e672202a960b32be8cd2cc0e8268e94c919b969a21c5b2713d9edc969&amp;width=100%25&amp;height=800&amp;lang=ru_RU&amp;scroll=true&amp;id=map" type="text/javascript" charset="utf-8" async)

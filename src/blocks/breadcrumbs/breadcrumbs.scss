@@ -3,6 +3,9 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .breadcrumbs {
+
+  $block-name: &;
+
   list-style: none;
   margin-top: 0;
   margin-bottom: 1em;
@@ -43,6 +46,19 @@
       font-size: 11px;
       font-weight: 400;
       color: currentColor;
+    }
+  }
+
+  &--article {
+
+    #{$block-name}__item {
+      span {
+        width: 290px;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
     }
   }
 }

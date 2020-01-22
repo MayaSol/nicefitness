@@ -1,0 +1,27 @@
+//- Все примеси в этом файле должны начинаться c имени блока (article)
+
+mixin article(mods,props)
+
+
+  -
+    if(typeof(props) === 'undefined') {
+      var props = {};
+    }
+    var allMods = '';
+    if(typeof(props.mods) !== 'undefined' && props.mods) {
+      var modsList = props.mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' article--' + modsList[i].trim();
+      }
+    }
+
+  article.article(class=allMods)&attributes(attributes)
+    .article__header
+      .article__date
+        .article__day !{props.day}
+        .article__month !{props.month}
+      h1.article__title !{props.title}
+    .article__img
+      img(src= props.src)
+    .article__content
+      block

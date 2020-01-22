@@ -1,0 +1,41 @@
+// В этом файле должны быть стили для БЭМ-блока social-widget, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.social-widget {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    border: 1px solid currentColor;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    line-height: 0;
+    color: currentColor;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: currentColor;
+    }
+  }
+
+  &--article {
+    padding-left: 48px;
+  }
+}

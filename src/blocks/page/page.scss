@@ -324,17 +324,39 @@ h6 {
   margin-top: 1em;
   margin-bottom: 0.5em;
   font-family: $font-family;
-  font-weight: 700;
-  line-height: 1.2;
   color: currentColor;
 }
 
-h1 { font-size: $font-size-h1; } // stylelint-disable-line
-h2 { font-size: $font-size-h2; } // stylelint-disable-line
-h3 { font-size: $font-size-h3; } // stylelint-disable-line
-h4 { font-size: $font-size-h4; } // stylelint-disable-line
-h5 { font-size: $font-size-h5; } // stylelint-disable-line
-h6 { font-size: $font-size-h6; } // stylelint-disable-line
+h1 {
+  font-size: $font-size-h1;
+  font-weight: 600;
+  line-height: 1.1;
+} // stylelint-disable-line
+h2 {
+  font-size: $font-size-h2;
+  font-weight: 600;
+  line-height: 1.2;
+} // stylelint-disable-line
+h3 {
+  font-size: $font-size-h3;
+  font-weight: 600;
+  line-height: 1.2;
+} // stylelint-disable-line
+h4 {
+  font-size: $font-size-h4;
+  font-weight: 400;
+  line-height: 1.2;
+} // stylelint-disable-line
+h5 {
+  font-size: $font-size-h5;
+  font-weight: 600;
+  line-height: 1.2;
+} // stylelint-disable-line
+h6 {
+  font-size: $font-size-h6;
+  font-weight: 400;
+  line-height: 1.67;
+} // stylelint-disable-line
 
 p,
 ul,
