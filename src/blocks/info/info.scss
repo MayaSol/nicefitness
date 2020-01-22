@@ -88,7 +88,7 @@
   p {
     font-size: 15px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 1.6;
 
     @media (min-width: $screen-xl) {
       width: 566px;
@@ -118,6 +118,21 @@
         padding-right: 292px;
       }
 
+      &--large {
+        margin-bottom: 1em;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.2;
+
+        @media (min-width: $screen-md) {
+          font-size: 30px;
+        }
+
+        @media (min-width: $screen-lg) {
+          font-size: 60px;
+        }
+      }
+
       &::after {
         content: '';
         position: absolute;
@@ -143,6 +158,16 @@
       }
     }
 
+    @at-root &#{$block-name}__large {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.2;
+
+      @media (min-width: $screen-lg) {
+        font-size: 36px;
+      }
+    }
+
     @at-root &#{$block-name}__bold {
       margin-bottom: 2em;
       font-size: 24px;
@@ -156,7 +181,6 @@
       font-weight: 400;
       line-height: 1.67;
     }
-
 
   }
 
@@ -470,6 +494,33 @@
       }
     }
 
+  }
+
+  &--contacts {
+    padding-bottom: 0;
+    margin-bottom: -30px;
+
+    @media (min-width: $screen-lg) {
+      padding-bottom: 0;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-bottom: 0;
+    }
+
+    p {
+      @at-root &#{$block-name}__large {
+        margin-bottom: 0;
+      }
+    }
+
+    .page__section-row--contacts {
+      margin-bottom: 60px;
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 140px;
+      }
+    }
   }
 
 

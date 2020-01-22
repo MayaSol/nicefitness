@@ -67,8 +67,8 @@ mixin modal-test-drive(id, title, mods)
               title: 'Я соглашаюсь с условиями <a class="privacy-link" href="/">обработки персональных данных</a>',
               mods: 'user-content',
               attrs: {
-                name: 'user-content',
+                name: 'user-content, modal',
                 checked: false,
               }
             }])
-      +btn('Отправить сообщение','submit')(class="form__btn-submit" type="submit")
+      +btn('Отправить сообщение','submit,modal')(class="form__btn-submit" type="submit")

@@ -42,4 +42,17 @@
       left: get-point(2, xl) - $screen-padding-xl;
     }
   }
+
+  &--contacts {
+
+    #{$block-name}__inner {
+      flex-direction: column;
+    }
+
+    #{$block-name}__col {
+      &--workdays {
+        margin-bottom: 12px;
+      }
+    }
+  }
 }

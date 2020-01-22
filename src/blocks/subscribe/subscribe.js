@@ -17,5 +17,18 @@ ready(function(){
     })
   }
 
+  if (document.documentElement.clientWidth > 1023) {
+
+    var subscribeInputs = document.querySelectorAll('.field-text--subscribe .field-text__input');
+    console.log(subscribeInputs);
+
+    for (let i=0; i<subscribeInputs.length; i++) {
+      subscribeInputs[i].setAttribute('rows',1);
+      subscribeInputs[i].style.height="1.2em";
+    }
+  }
+
+
+
 
 });

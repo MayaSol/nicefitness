@@ -74,3 +74,9 @@ mixin info-figures(mods)
       +figures({value: '3', caption: '3 года успешной<br> работы'})(class="info__figure")
       +figures({value: '800', caption: 'Клиентов<br> ежемесячно'})(class="info__figure")
 
+mixin info-contacts(mods)
+
+  +info(mods)&attributes(attributes)
+    .info__text
+      p.info__lead.info__lead--large Правильный фитнес-клуб в&nbsp;Чертаново
+      block

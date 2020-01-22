@@ -185,5 +185,32 @@
     }
   }
 
+  &--contacts {
+      padding-top: 24px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 30px;
+      margin-bottom: 60px;
+      background-color: #fff;
+
+    @media (min-width: $screen-md) {
+      position: absolute;
+      left: 40px;
+      top: 40px;
+      z-index: 15;
+      margin: 0;
+    }
+
+    @media (min-width: $screen-lg) {
+    }
+
+    @media (min-width: $screen-xl) {
+      left: 50%;
+      top: 272px;
+      transform: translateX(-50%);
+      margin-left: -470px;
+    }
+  }
+
 
 }

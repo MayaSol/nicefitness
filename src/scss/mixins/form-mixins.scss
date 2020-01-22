@@ -8,7 +8,8 @@
   margin: 0;
   padding: 0px 13px 22px 0px;
   border: none;
-  border-bottom: 1px solid #0f0c0c;;
+//  border-bottom: 1px solid #0f0c0c;
+ border-bottom: 1px solid currentColor;
   border-radius: 0;
   line-height: $line-height;
   font-size: 30px;

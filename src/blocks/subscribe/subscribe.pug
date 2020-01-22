@@ -23,11 +23,13 @@ mixin subscribe(mods)
       form.subscribe__form
         +field-text({
           title: 'Подпишитесь на рассылку',
+          isTextarea: true,
           mods: 'subscribe,subscribe-email',
           val: '',
           attrs: {
             name: 'email',
-            placeholder: 'Подпишитесь на рассылку'
+            placeholder: 'Подпишитесь на рассылку',
+            rows: '2'
           }
         })
         +btn('Подписаться','common')(class="subscribe__btn")

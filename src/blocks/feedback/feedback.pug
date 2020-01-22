@@ -1,0 +1,78 @@
+//- Все примеси в этом файле должны начинаться c имени блока (feedback)
+
+mixin feedback(mods, props)
+
+  //- Принимает:
+  //-   id      {string} - идентификатор
+  //-   title   {string} - заголовок
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +feedback('feedback-demo-01', 'Заголовок', 'some')
+          .feedback__body
+            p Текст
+          .feedback__footer
+            button.btn(type='button', data-dismiss='feedback') Закрыть
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' feedback--' + modsList[i].trim();
+      }
+    }
+
+  .feedback(class=allMods)&attributes(attributes)
+    .feedback__inner
+      .feedback__title Обратная<br> связь с Nicefitness
+      .feedback__content
+        form.feedback__form
+          .form__field.form__field--name
+            .form__field-inner
+              +field-text({
+                title: 'Ваше имя',
+                mods: 'feedback,form,name',
+                val: '',
+                attrs: {
+                  name: 'name',
+                  placeholder: '',
+                }
+              })
+          .form__field.form__field--phone
+            .form__field-inner
+              +field-text({
+                title: 'Контактный телефон',
+                mods: 'feedback,form,phone',
+                val: '',
+                attrs: {
+                  name: 'phone',
+                  placeholder: '',
+                }
+              })
+          .form__field.form__field--text
+            .form__field-inner
+              +field-text({
+                title: 'Сообщение',
+                isTextarea: true,
+                mods: 'feedback,form,msg',
+                val: '',
+                attrs: {
+                  name: 'msg',
+                  placeholder: '',
+                  rows: '1'
+                }
+              })
+          .form__field.form__field--user-content
+            .form__field-inner
+              +field-checkbox([
+                {
+                  title: 'Я соглашаюсь с условиями <a class="privacy-link" href="/">обработки персональных данных</a>',
+                  mods: 'user-content,feedback',
+                  attrs: {
+                    name: 'user-content',
+                    checked: false,
+                  }
+                }])
+          +btn('Отправить сообщение','submit')(class="form__btn-submit" type="submit")
+        .feedback__note ООО "Терминал А" ИНН 5009065770 / ОГРН 1115009002954, Юридический адрес: 142000, Московская обл., г. Домодедово, мкр. Центральный, Каширское шоссе, д. 49, оф. 38 Тел. 8(499)110-21-31

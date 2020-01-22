@@ -1,0 +1,35 @@
+//- Все примеси в этом файле должны начинаться c имени блока (contacts)
+
+mixin contacts(mods)
+
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' contacts--' + modsList[i].trim();
+      }
+    }
+
+  .contacts(class=allMods)&attributes(attributes)
+    block
+
+mixin contacts-bottom(mods)
+  +contacts(mods)&attributes(attributes)
+    .contacts__item Санкт-Петербург, ул. Братиславская, д.30
+    .contacts__metro Марьино
+
+mixin contacts-address(mods)
+
+  +contacts(mods)&attributes(attributes)
+    .contacts__title Адрес
+    .contacts__item г. Москва, мкр. Северное Чертаново, 1А
+
+
+mixin contacts-info(mods)
+
+  +contacts(mods)&attributes(attributes)
+    .contacts__title Контактная информация
+    .contacts__item nice-fitness@yandex.ru
+    .contacts__item Skype: nice_fitness
+    .contacts__item +7 (499) 110-21-31

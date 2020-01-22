@@ -486,6 +486,7 @@ pre {
 
    &--schedule {
    }
+
 }
 
 .section-title {
@@ -747,6 +748,24 @@ a:hover {
 
     @media (min-width: $screen-lg) {
       flex-wrap: nowrap;
+    }
+  }
+
+    &__section-row-col-left-2 {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (min-width: $screen-md) {
+      flex-wrap: nowrap;
+      width: get-width(1,2,md) - $screen-padding-md;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: get-width(1,2,lg) - $screen-padding-lg;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: get-width(1,2,xl) - $screen-padding-xl;
     }
   }
 
@@ -1137,6 +1156,53 @@ a:hover {
       }
 
     }
+
+    &--map {
+      position: relative;
+      z-index: 9;
+
+      @media (min-width: $screen-lg) {
+        height: 600px;
+        overflow: hidden;
+      }
+
+      @media (min-width: $screen-xl) {
+        height: 800px;
+      }
+
+      #map {
+        opacity: 0.48;
+        height: 400px;
+        overflow: hidden;
+
+        @media (min-width: $screen-lg) {
+          // height: 600px;
+          overflow: visible;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 100%;
+          z-index: -1;
+        }
+      }
+    }
+
+    &--feedback {
+      margin-top: -30px;
+
+      @media (min-width: $screen-lg) {
+        margin-top: -60px;
+      }
+    }
+
+    &--contacts-info {
+      margin-top: 60px;
+
+      @media (min-width: $screen-lg) {
+        margin-top: 0;
+      }
+    }
+
   }
 
 
