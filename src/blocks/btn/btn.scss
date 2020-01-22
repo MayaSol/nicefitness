@@ -199,6 +199,30 @@
     text-transform: uppercase;
   }
 
+  &--news-show-more {
+    border-bottom: none;
+    position: relative;
+    overflow: visible;
+    padding-bottom: 110px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      @include sprite($arrow-down);
+      left: 50%;
+      top: 3em;
+      transform: translateX(-50%);
+    }
+
+    &:hover {
+
+      &::after {
+        @include sprite($arrow-down-hover);
+      }
+    }
+
+  }
+
   // &__icon {
   //   display: inline-block;
   //   vertical-align: middle;

@@ -39,3 +39,44 @@ mixin news-item(props)
       .news__month !{props.month}
     .news__text !{props.text}
     block
+
+mixin news-item-img(props)
+
+  a(href="/").news__excerpt
+    .news__img
+      img(src="img/content/legs.jpg")
+    .news__date
+      .news__day !{props.day}
+      .news__month !{props.month}
+    .news__text !{props.text}
+    block
+
+
+mixin news-list-3-cols(mods, props)
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' news--' + modsList[i].trim();
+      }
+    }
+
+  ul.news__list.news__list--3-cols(class=allMods)&attributes(attributes)
+    block
+
+
+
+mixin news-list-2-cols(mods, props)
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' news--' + modsList[i].trim();
+      }
+    }
+
+  ul.news__list.news__list--2-cols(class=allMods)&attributes(attributes)
+    block
+

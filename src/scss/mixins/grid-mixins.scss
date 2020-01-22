@@ -225,7 +225,7 @@ $columns-width:              (xl: 426px 426px 426px, lg: 340px 341px 340px, md: 
   $width: 0;
 
   @for $i from $start through ($start + $columns - 1) {
-      $width: $width + nth(map-get($columns-width, $screen),$i) + $i - 1;
+      $width: $width + nth(map-get($columns-width, $screen),$i);
   }
 
   @return $width;

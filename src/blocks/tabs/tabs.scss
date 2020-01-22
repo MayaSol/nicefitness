@@ -11,9 +11,10 @@
 
   &__links {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: flex-start;
     margin: 0;
+    margin-bottom: 270px;
     padding: 0;
     list-style: none;
 
@@ -22,7 +23,6 @@
       display: none;
       flex-grow: 1;
       height: 1px;
-      background-color: $border-color;
 
       @media (min-width: $screen-md) {
         display: block;
@@ -36,9 +36,6 @@
 
   &__link-wrap {
     position: relative;
-    margin: 0 0.3em 0.3em 0;
-    border: 1px solid $border-color;
-    color: $text-color-muted;
 
     @media (min-width: $screen-md) {
       margin: 0;
@@ -48,36 +45,50 @@
       }
     }
 
-    &--active {
-      color: $text-color;
+    &--active,
+    &:hover {
 
       @media (min-width: $screen-md) {
-        border-bottom: 1px solid transparent;
       }
 
       #{$block-name}__link {
-        background-color: #fff;
+        position: relative;
+        font-size: 24px;
+        padding-right: 80px + 32px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 1em;
+          width: 80px;
+          height: 1px;
+          background-color: currentColor;
+        }
       }
     }
   }
 
   &__link {
     display: block;
-    padding: $field-padding-vertical $field-padding-horizontal;
     color: currentColor;
     text-decoration: none;
-    background-color: $gray-lightest;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 2;
 
     &:hover,
     &:focus {
       color: currentColor;
     }
+
+    &:active {
+      color: $link-color--hover;
+    }
   }
 
   &__content-wrapper {
     display: block;
-    border: 1px solid $border-color;
-    padding: $field-padding-vertical $field-padding-horizontal;
 
     @media (min-width: $screen-md) {
       border-top: none;

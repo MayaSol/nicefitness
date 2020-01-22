@@ -278,6 +278,26 @@
 
   }
 
+  &--news {
+    #{$block-name}__content {
+
+      @media (min-width: $screen-lg) {
+        position: absolute;
+        left: get-width(1,2,lg) - $screen-padding-lg;
+        top: -100px;
+        //transform: translateY(-100%);
+        width: get-width(3,1,lg) - $screen-padding-lg;
+        padding-left: 48px;
+      }
+
+      @media (min-width: $screen-xl) {
+        left: get-width(1,2,xl) - $screen-padding-xl;
+        width: get-width(3,1,xl) - $screen-padding-xl;
+      }
+    }
+
+  }
+
   &--service {
 
     @media (min-width: $screen-lg) {
