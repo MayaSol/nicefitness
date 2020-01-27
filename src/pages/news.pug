@@ -46,7 +46,7 @@ block content
           },
           ], 'news')
           +tabs-item('news', true, 'some')
-            +news-list-3-cols('news-social,news-list')
+            +news-list('news-list')
               li.news__item
                 +news-item-img({day: '26', month: 'октября',text: 'Установили новый, суперкрутой и эффективный тренажёр Foreman FS-404 жим от плеч'})
               li.news__item
@@ -65,16 +65,18 @@ block content
                 +news-item-img({day: '18', month: 'сентября',text: 'Объявляется набор в группу триатлон для начинающих и продолжающих после летнего перерыва!'})
               li.news__item
                 +news-item-img({day: '11', month: 'сентября',text: 'Презентация новых площадей в фитнес-бутике на Земляном валу'})
-            +social-section-narrow('right, news')(class="page__section page__section--news-social")
-            +news-list-2-cols('news-social,news-list')
+              //- +social-section-narrow('right, news')(class="page__section page__section--news-social")
+              //- +news-list-2-cols('news-social,news-list')
+              //- li.news__item
+              //-   +news-item-img({day: '07', month: 'сентября',text: 'Соревнования за звание самого подготовленного фитнес-атлета клуба Nicefitness'})
+              //- li.news__item
+              //-   +news-item-img({day: '03', month: 'сентября',text: 'Установили новый, суперкрутой и эффективный тренажёр Foreman FS-404 жим от плеч'})
+              li.news__item.news__item--social
+                +social-section-narrow('news-list')(class="page__section page__section--news-social")
               li.news__item
-                +news-item-img({day: '07', month: 'сентября',text: 'Соревнования за звание самого подготовленного фитнес-атлета клуба Nicefitness'})
+                +news-item-img({day: '26', month: 'августа',text: 'Установили новый, суперкрутой и эффективный тренажёр Foreman FS-404 жим от плеч'})
               li.news__item
-                +news-item-img({day: '03', month: 'сентября',text: 'Установили новый, суперкрутой и эффективный тренажёр Foreman FS-404 жим от плеч'})
-              li.news__item
-                +news-item-img({day: '26', month: 'октября',text: 'Установили новый, суперкрутой и эффективный тренажёр Foreman FS-404 жим от плеч'})
-              li.news__item
-                +news-item-img({day: '21', month: 'октября',text: 'Объявляется набор в группу триатлон для начинающих и продолжающих после летнего перерыва!'})
+                +news-item-img({day: '21', month: 'августа',text: 'Объявляется набор в группу триатлон для начинающих и продолжающих после летнего перерыва!'})
             .news__list-bottom
               +pagination('news')
                 +pagination-item('1', '/', true)

@@ -108,9 +108,9 @@
       display: none;
     }
 
-    & > *:last-child { // stylelint-disable-line  selector-combinator-blacklist
-      margin-bottom: 0;
-    }
+    // & > *:last-child { // stylelint-disable-line  selector-combinator-blacklist
+    //   margin-bottom: 0;
+    // }
 
     &--active {
 
@@ -125,5 +125,16 @@
     #{$block-name}__links {
       margin-top: 115px;
     }
+
+    .news__list-bottom {
+      @media (min-width: $screen-md) {
+        margin-bottom: 700px;
+      }
+
+      @media (min-width: $screen-lg) {
+        margin-bottom: 0;
+      }
+    }
+
   }
 }

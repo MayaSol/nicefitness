@@ -4,3 +4,31 @@ https://www.dropbox.com/sh/ihmaa69la4agi08/AABQwKlFeOKcYqxrlMxSSId_a?dl=0
 https://codepen.io/KingRider/pen/qNxror
 
 
+============================================================
+27.01
+==============================================================
+http://cy66018.tmweb.ru/raspisanie/
+1.Добавить обертку <div class="page__section-inner"> внутрь section
+2.После <div class="info__text"> убрать лишний пустой <p class="info__lead"></p>
+
+
+<section class="info  info--schedule page__section page__section--info">
+	<div class="page__section-inner"> <--!!!!-->
+			<div class="info__inner">
+			  <div class="info__text">
+				<p class="info__lead">
+					</p><p class="info__lead">Nicefitness – это правильный клуб для реализации Ваших планов по улучшению внешности, укреплению здоровья, созданию красивой и стройной фигуры.</p>
+				<p></p>
+			  </div>
+			  <div class="card  card--large card--schedule">
+  <div class="card__inner">
+	<div class="card__price">2 000 ₽</div><a class="card__link" href="/">
+	<div class="card__text">Клубная карта</div>
+	<div class="card__title"><span>nicefitness</span></div>
+	</a>
+  </div>
+</div>
+			</div>
+	</div> <--!!!!-->
+		  </section>
+

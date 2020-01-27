@@ -389,3 +389,11 @@ $columns-width:              (xl: 426px 426px 426px, lg: 340px 341px 340px, md: 
     }
   }
 }
+
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

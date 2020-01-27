@@ -52,6 +52,21 @@ mixin news-item-img(props)
     block
 
 
+
+mixin news-list(mods, props)
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' news--' + modsList[i].trim();
+      }
+    }
+
+  ul.news__list(class=allMods)&attributes(attributes)
+    block
+
+
 mixin news-list-3-cols(mods, props)
   -
     var allMods = '';

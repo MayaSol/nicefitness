@@ -240,6 +240,7 @@
 
       &--fb {
         @media (min-width: $screen-md) {
+
           margin-top: 180px;
           margin-right: 40px;
         }
@@ -342,6 +343,24 @@
       @media (min-width: $screen-lg) {
         margin-top: 60px;
       }
+    }
+  }
+
+  &--news-list {
+    #{$block-name}__content {
+      padding-right: 0;
+      padding-left: 0;
+
+      @media (min-width: $screen-lg) {
+        padding-right: 0;
+        padding-left: 0;
+      }
+
+      @media (min-width: $screen-xl) {
+        padding-right: 0;
+        padding-left: 0;
+      }
+
     }
   }
 

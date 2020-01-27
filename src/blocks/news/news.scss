@@ -79,172 +79,177 @@
     padding: 0;
     list-style: none;
 
-    &--3-cols {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
+    // &--3-cols {
+    //   display: flex;
+    //   flex-wrap: wrap;
+    //   align-items: flex-start;
 
-      #{$block-name}__item {
+    //   #{$block-name}__item {
 
-        @media (min-width: $screen-lg) {
-          margin-bottom: 125px;
-        }
+    //     @media (min-width: $screen-lg) {
+    //       margin-bottom: 125px;
+    //     }
 
-        @media (min-width: $screen-xl) {
-          margin-bottom: 260px;
-        }
+    //     @media (min-width: $screen-xl) {
+    //       margin-bottom: 260px;
+    //     }
 
-        #{$block-name}__text {
-          font-weight: 600;
-          min-height: 5em;
-        }
+    //     #{$block-name}__text {
+    //       font-weight: 600;
+    //       min-height: 5em;
+    //     }
 
-        &:nth-child(3n-2) {
+    //     &:nth-child(3n-2) {
 
-          @media (min-width: $screen-md) {
-            width: get-width(1,1,md) - $screen-padding-md;
-            padding-right: 40px;
-          }
+    //       @media (min-width: $screen-md) {
+    //         width: get-width(1,1,md) - $screen-padding-md;
+    //         padding-right: 40px;
+    //       }
 
-          @media (min-width: $screen-lg) {
-            width: get-width(1,1,lg) - $screen-padding-lg;
-            padding-right: 68px;
-          }
+    //       @media (min-width: $screen-lg) {
+    //         width: get-width(1,1,lg) - $screen-padding-lg;
+    //         padding-right: 68px;
+    //       }
 
-          @media (min-width: $screen-xl) {
-            width: get-width(1,1,xl) - $screen-padding-xl;
-            padding-right: 68px;
-          }
-        }
+    //       @media (min-width: $screen-xl) {
+    //         width: get-width(1,1,xl) - $screen-padding-xl;
+    //         padding-right: 68px;
+    //       }
+    //     }
 
-        &:nth-child(3n-1) {
+    //     &:nth-child(3n-1) {
 
-          @media (min-width: $screen-md) {
-            width: get-width(2,1,md) - 1px;
-            padding-right: 40px;
-            padding-left: 24px;
-          }
+    //       @media (min-width: $screen-md) {
+    //         width: get-width(2,1,md) - 1px;
+    //         padding-right: 40px;
+    //         padding-left: 24px;
+    //       }
 
-          @media (min-width: $screen-lg) {
-            width: get-width(2,1,lg) - 1px;
-            padding-right: 68px;
-            padding-left: 48px;
-          }
+    //       @media (min-width: $screen-lg) {
+    //         width: get-width(2,1,lg) - 1px;
+    //         padding-right: 68px;
+    //         padding-left: 48px;
+    //       }
 
-          @media (min-width: $screen-xl) {
-            width: get-width(2,1,xl) - 1px;
-            padding-right: 68px;
-            padding-left: 48px;
-          }
-        }
+    //       @media (min-width: $screen-xl) {
+    //         width: get-width(2,1,xl) - 1px;
+    //         padding-right: 68px;
+    //         padding-left: 48px;
+    //       }
+    //     }
 
-        &:nth-child(3n) {
+    //     &:nth-child(3n) {
 
-          @media (min-width: $screen-md) {
-            width: get-width(3,1,md) - $screen-padding-md;
-            padding-left: 40px;
-          }
+    //       @media (min-width: $screen-md) {
+    //         width: get-width(3,1,md) - $screen-padding-md;
+    //         padding-left: 40px;
+    //       }
 
-          @media (min-width: $screen-lg) {
-            width: get-width(3,1,lg) - $screen-padding-lg;
-            padding-left: 48px;
-          }
+    //       @media (min-width: $screen-lg) {
+    //         width: get-width(3,1,lg) - $screen-padding-lg;
+    //         padding-left: 48px;
+    //       }
 
-          @media (min-width: $screen-xl) {
-            width: get-width(3,1,xl) - $screen-padding-xl;
-            padding-left: 48px;
-          }
-        }
-      }
+    //       @media (min-width: $screen-xl) {
+    //         width: get-width(3,1,xl) - $screen-padding-xl;
+    //         padding-left: 48px;
+    //       }
+    //     }
+    //   }
 
-    }
+    // }
 
-      &--2-cols {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      align-content: flex-start;
+    //   &--2-cols {
+    //   display: flex;
+    //   flex-wrap: wrap;
+    //   align-items: flex-start;
+    //   align-content: flex-start;
 
-      @media (min-width: $screen-md) {
-        width: get-width(1,2,md) - $screen-padding-md;
-      }
+    //   @media (min-width: $screen-md) {
+    //     width: get-width(1,2,md) - $screen-padding-md;
+    //   }
 
-      @media (min-width: $screen-lg) {
-        width: get-width(1,2,lg) - $screen-padding-lg;
-      }
+    //   @media (min-width: $screen-lg) {
+    //     width: get-width(1,2,lg) - $screen-padding-lg;
+    //   }
 
-      @media (min-width: $screen-xl) {
-        width: get-width(1,2,xl) - $screen-padding-xl;
-      }
+    //   @media (min-width: $screen-xl) {
+    //     width: get-width(1,2,xl) - $screen-padding-xl;
+    //   }
 
-      #{$block-name}__item {
+    //   #{$block-name}__item {
 
-        @media (min-width: $screen-lg) {
-          margin-bottom: 125px;
-        }
+    //     @media (min-width: $screen-lg) {
+    //       margin-bottom: 125px;
+    //     }
 
 
-        @media (min-width: $screen-xl) {
-          margin-bottom: 250px;
-        }
+    //     @media (min-width: $screen-xl) {
+    //       margin-bottom: 250px;
+    //     }
 
-        #{$block-name}__text {
-          font-weight: 600;
-          min-height: 5em;
-        }
+    //     #{$block-name}__text {
+    //       font-weight: 600;
+    //       min-height: 5em;
+    //     }
 
-        &:nth-child(2n-1) {
+    //     &:nth-child(2n-1) {
 
-          @media (min-width: $screen-md) {
-            width: get-width(1,1,md) - $screen-padding-md;
-            padding-right: 40px;
-          }
+    //       @media (min-width: $screen-md) {
+    //         width: get-width(1,1,md) - $screen-padding-md;
+    //         padding-right: 40px;
+    //       }
 
-          @media (min-width: $screen-lg) {
-            width: get-width(1,1,lg) - $screen-padding-lg;
-            padding-right: 68px;
-          }
+    //       @media (min-width: $screen-lg) {
+    //         width: get-width(1,1,lg) - $screen-padding-lg;
+    //         padding-right: 68px;
+    //       }
 
-          @media (min-width: $screen-xl) {
-            width: get-width(1,1,xl) - $screen-padding-xl;
-            padding-right: 68px;
-          }
-        }
+    //       @media (min-width: $screen-xl) {
+    //         width: get-width(1,1,xl) - $screen-padding-xl;
+    //         padding-right: 68px;
+    //       }
+    //     }
 
-        &:nth-child(2n) {
+    //     &:nth-child(2n) {
 
-          @media (min-width: $screen-md) {
-            width: get-width(2,1,md);
-            padding-right: 40px;
-            padding-left: 24px;
-          }
+    //       @media (min-width: $screen-md) {
+    //         width: get-width(2,1,md);
+    //         padding-right: 40px;
+    //         padding-left: 24px;
+    //       }
 
-          @media (min-width: $screen-lg) {
-            width: get-width(2,1,lg);
-            padding-right: 68px;
-            padding-left: 48px;
-          }
+    //       @media (min-width: $screen-lg) {
+    //         width: get-width(2,1,lg);
+    //         padding-right: 68px;
+    //         padding-left: 48px;
+    //       }
 
-          @media (min-width: $screen-xl) {
-            width: get-width(2,1,xl);
-            padding-right: 68px;
-            padding-left: 48px;
-          }
-        }
+    //       @media (min-width: $screen-xl) {
+    //         width: get-width(2,1,xl);
+    //         padding-right: 68px;
+    //         padding-left: 48px;
+    //       }
+    //     }
 
-        &:nth-last-child(-n + 2) {
+    //     &:nth-last-child(-n + 2) {
 
-          @media (min-width: $screen-lg) {
-            margin-bottom: 0;
-          }
-        }
+    //       @media (min-width: $screen-lg) {
+    //         margin-bottom: 0;
+    //       }
+    //     }
 
-      }
+    //   }
 
-    }}
+    // }
+  }
 
   &__item {
     margin-bottom: 62px;
+
+    #{$block-name}__text {
+      min-height: 5em;
+    }
 
     @media (min-width: $screen-xl) {
       //width: $item-width;
@@ -445,12 +450,192 @@
 
   &--news-social {
 
-    @at-root &#{$block-name}__list--2-cols {
-        min-height: 590px;
-    }
+    // @at-root &#{$block-name}__list--2-cols {
+    //     min-height: 590px;
+    // }
   }
 
   &--news-list {
+    font-size: 0;
+
+    #{$block-name}__item {
+      display: inline-block;
+      vertical-align: top;
+
+        @media (min-width: $screen-lg) {
+          margin-bottom: 125px;
+        }
+
+        @media (min-width: $screen-xl) {
+          margin-bottom: 258px;
+        }
+
+        &:last-child {
+          @media (min-width: $screen-lg) {
+            margin-bottom: 0;
+          }
+
+          @media (min-width: $screen-xl) {
+            margin-bottom: 0;
+          }
+        }
+
+        &:nth-last-child(2) {
+          @media (min-width: $screen-lg) {
+            margin-bottom: 0;
+          }
+
+          @media (min-width: $screen-xl) {
+            margin-bottom: 0;
+          }
+        }
+
+        &:nth-child(3n-2) {
+
+          @media (min-width: $screen-md) {
+            width: get-width(1,1,md) - $screen-padding-md;
+            padding-right: 40px;
+          }
+
+          @media (min-width: $screen-lg) {
+            width: get-width(1,1,lg) - $screen-padding-lg;
+            padding-right: 68px;
+          }
+
+          @media (min-width: $screen-xl) {
+            width: get-width(1,1,xl) - $screen-padding-xl;
+            padding-right: 68px;
+          }
+
+          &:last-child,
+          &:nth-last-child(2) {
+            @media (min-width: $screen-md) and (max-width: $screen-lg - 1) {
+              width: get-width(3,1,md) - $screen-padding-md;
+              padding-left: 40px;
+              padding-right: 0;
+            }
+          }
+        }
+
+        &:nth-child(3n-1) {
+
+          @media (min-width: $screen-md) {
+            width: get-width(2,1,md) - 1px;
+            padding-right: 40px;
+            padding-left: 24px;
+          }
+
+          @media (min-width: $screen-lg) {
+            width: get-width(2,1,lg) - 1px;
+            padding-right: 68px;
+            padding-left: 48px;
+          }
+
+          @media (min-width: $screen-xl) {
+            width: get-width(2,1,xl) - 1px;
+            padding-right: 68px;
+            padding-left: 48px;
+          }
+
+          &:last-child,
+          &:nth-last-child(2)
+           {
+            @media (min-width: $screen-md) and (max-width: $screen-lg - 1) {
+              width: get-width(1,1,md) - $screen-padding-md;
+              padding-right: 40px;
+              padding-left: 0;
+            }
+          }
+
+        }
+
+        &:nth-child(3n) {
+
+          @media (min-width: $screen-md) {
+            width: get-width(3,1,md) - $screen-padding-md;
+            padding-left: 40px;
+          }
+
+          @media (min-width: $screen-lg) {
+            width: get-width(3,1,lg) - $screen-padding-lg;
+            padding-left: 48px;
+          }
+
+          @media (min-width: $screen-xl) {
+            width: get-width(3,1,xl) - $screen-padding-xl;
+            padding-left: 48px;
+          }
+
+          &:last-child,
+          &:nth-last-child(2)
+           {
+            @media (min-width: $screen-md) and (max-width: $screen-lg - 1) {
+              width: get-width(2,1,md) - 1px;
+              padding-right: 40px;
+              padding-left: 24px;
+            }
+          }
+        }
+
+
+        &--social {
+          margin-bottom: 50px;
+
+          @media (min-width: $screen-md) {
+            margin-bottom: 0;
+            float: none;
+            position: absolute;
+            bottom: 0;
+            left: 50px;
+          }
+
+          @media (min-width: $screen-lg) {
+            position: static;
+            float: right;
+            margin-top: -50px;
+            margin-bottom: 0;
+            padding-right: 0 !important;
+            width: get-width(3,1,lg) - $screen-padding-lg !important;
+            padding-left: 48px !important;
+          }
+
+          @media (min-width: $screen-xl) {
+            margin-bottom: 0;
+            width: get-width(3,1,xl) - $screen-padding-xl !important;
+            padding-left: 48px !important;
+            padding-right: 0 !important;
+          }
+        }
+
+
+        #{$block-name}__text {
+          font-weight: 600;
+
+          @media (min-width: $screen-md) {
+            // min-height: 8em;
+          }
+
+          @media (min-width: $screen-lg) {
+            min-height: 5em;
+          }
+        }
+
+        // &:nth-last-child(1) {
+        //   @media (min-width: $screen-md) {
+        //     width: get-width(3,1,md) - $screen-padding-md;
+        //     padding-left: 40px;
+        //   }
+        // }
+
+        // &:nth-last-child(2) {
+        //   @media (min-width: $screen-md) {
+        //     width: get-width(2,1,md) - 1px;
+        //     padding-right: 40px;
+        //     padding-left: 24px;
+        //   }
+        // }
+    }
+
 
     #{$block-name}__img {
       display: none;
@@ -472,9 +657,11 @@
 
       @media (min-width: $screen-xl) {
         position: relative;
+
         &:hover {
           #{$block-name}__img {
             display: block;
+            opacity: 0.48;
           }
         }
       }
