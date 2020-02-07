@@ -158,11 +158,13 @@
 
         @media (min-width: $screen-lg) {
           width: get-width(1,1,lg) - $screen-padding-lg;
+          padding-left: 0;
         }
 
         @media (min-width: $screen-xl) {
           width: get-width(1,1,xl) - $screen-padding-xl;
           padding-right: 90px;
+          padding-left: 0;
         }
       }
 

@@ -80,3 +80,24 @@
     }
   }
 }
+
+.address {
+  font-family: $font-family;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+
+  &__metro {
+    display: inline;
+    line-height: 1.5;
+    white-space: nowrap;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 0.3em;
+      @include sprite($metro);
+    }
+  }
+}

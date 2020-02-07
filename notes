@@ -2,13 +2,46 @@ https://www.dropbox.com/sh/ihmaa69la4agi08/AABQwKlFeOKcYqxrlMxSSId_a?dl=0
 
 ---------------
 https://codepen.io/KingRider/pen/qNxror
+--------------
+http://cy66018.tmweb.ru/karta/
+http://cy66018.tmweb.ru/raspisanie/
+http://cy66018.tmweb.ru/uslugi/
+http://cy66018.tmweb.ru/novosti/
+
+
+====================================
+31.01
+==================================
+
 
 
 ============================================================
 27.01
 ==============================================================
+
+1. http://cy66018.tmweb.ru/karta/
+http://joxi.ru/vAWDJVkug49MOr
+
+2. http://cy66018.tmweb.ru/raspisanie/ тут поплыло
+
+
+3. http://cy66018.tmweb.ru/uslugi/
+http://joxi.ru/12M1OVLulJZBe2
+
+
+4. в услугах доп услуги должны быть ссылками
 http://cy66018.tmweb.ru/raspisanie/
-1.Добавить обертку <div class="page__section-inner"> внутрь section
+http://cy66018.tmweb.ru/novosti/
+
+
+----------------
+1. Можно в тег <div class="page__inner page-services"> на каждой странице добавить класс, свой для каждой страницы (page-services, page-card и т.д.) 
+Это нужно, чтобы задавать разные свойства для одного и того же блока на разных стрнаицах (например, отступы)
+
+
+http://cy66018.tmweb.ru/raspisanie/
+1. Добавить обертку <div class="page__section-inner"> внутрь <section class="info  info--schedule page__section page__section--info">
+
 2.После <div class="info__text"> убрать лишний пустой <p class="info__lead"></p>
 
 
@@ -16,8 +49,8 @@ http://cy66018.tmweb.ru/raspisanie/
 	<div class="page__section-inner"> <--!!!!-->
 			<div class="info__inner">
 			  <div class="info__text">
-				<p class="info__lead">
-					</p><p class="info__lead">Nicefitness – это правильный клуб для реализации Ваших планов по улучшению внешности, укреплению здоровья, созданию красивой и стройной фигуры.</p>
+				<p class="info__lead"></p> <!--- убрать -->
+   <p class="info__lead">Nicefitness – это правильный клуб для реализации Ваших планов по улучшению внешности, укреплению здоровья, созданию красивой и стройной фигуры.</p>
 				<p></p>
 			  </div>
 			  <div class="card  card--large card--schedule">
@@ -31,4 +64,19 @@ http://cy66018.tmweb.ru/raspisanie/
 			</div>
 	</div> <--!!!!-->
 		  </section>
+
+
+http://cy66018.tmweb.ru/uslugi/
+1. В списке доп услуг вместо span сделать a
+<li class="common-list__item"><a href="/">Персональный тренинг с профессиональным тренером</a></li>
+
+2.<div class="page__section page__section--main-serv"> поменять на 
+<div class="page__section page__section--main-services">
+
+
+http://cy66018.tmweb.ru/karta/
+1.Поменять <li class="pass__item  pass__item--fitness"> на 
+<li class="pass__item  pass__item--freeze">
+
+2. Новый sprite.png в img
 

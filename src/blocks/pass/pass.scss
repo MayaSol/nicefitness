@@ -233,6 +233,14 @@
         }
       }
     }
+
+    &--freeze {
+      #{$block-name}__item-icon {
+        &::before {
+          @include sprite($freeze-white);
+        }
+      }
+    }
   }
 
   &__item-icon {

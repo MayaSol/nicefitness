@@ -32,7 +32,7 @@ block content
       .page__section-inner
         +info-short('services,short')(class="page__section page__section--info")
           +card('large, highlight', {price: '2 000 ₽',text: 'Клубная карта'})
-    .page__section.page__section--main-serv
+    .page__section.page__section--main-services
       .page__section-inner
           h2.section-title Основные услуги
           +desc-list('main-serv')
@@ -71,15 +71,15 @@ block content
       .page__section-inner
         h2.section-title Дополнительные<br> услуги
         +common-list('add-serv,services')
-          +common-list-item({name: 'Солярий'})
-          +common-list-item({name: 'Фитнес-бар'})
-          +common-list-item({name: 'Салон красоты'})
-          +common-list-item({name: 'Персональный тренинг с профессиональным тренером'})
-          +common-list-item({name: 'Лаборатория массажа'})
-          +common-list-item({name: 'Определение лактата капилярной крови при нагрузке'})
-          +common-list-item({name: 'Диетологическое сопровождение'})
-          +common-list-item({name: 'Тренировка для профилактики гипертонии'})
-          +common-list-item({name: 'Проектирование и строительство фитнесс-клубов под ключ'})
+          +common-list-item-link({name: 'Солярий'})
+          +common-list-item-link({name: 'Фитнес-бар'})
+          +common-list-item-link({name: 'Салон красоты'})
+          +common-list-item-link({name: 'Персональный тренинг с профессиональным тренером'})
+          +common-list-item-link({name: 'Лаборатория массажа'})
+          +common-list-item-link({name: 'Определение лактата капилярной крови при нагрузке'})
+          +common-list-item-link({name: 'Диетологическое сопровождение'})
+          +common-list-item-link({name: 'Тренировка для профилактики гипертонии'})
+          +common-list-item-link({name: 'Проектирование и строительство фитнесс-клубов под ключ'})
     .page__section.page__section--sign-up
       .page__section-inner
         +sign-up()

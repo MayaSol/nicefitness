@@ -943,6 +943,12 @@ a:hover {
       }
 
       .page__section-content {
+        margin-bottom: 60px;
+
+        @media (min-width: $screen-lg) {
+          margin-bottom: 0;
+        }
+
         @media (min-width: $screen-xl) {
           width: get-width(1,2,xl) - $screen-padding-xl;
         }
@@ -958,14 +964,14 @@ a:hover {
       }
 
       @media (min-width: $screen-lg) {
-        padding-bottom: 148px;
-        margin-bottom: 150px;
+        padding-bottom: 0;
+        margin-bottom: 30px;
       }
 
       @media (min-width: $screen-xl) {
         padding-bottom: 0;
         margin-top: 115px;
-        margin-bottom: 260px;
+        margin-bottom: 160px;
       }
     }
 
@@ -995,14 +1001,41 @@ a:hover {
       }
     }
 
+    &--main-services {
+      margin-top: 70px;
+      margin-bottom: 90px;
+
+      @media (min-width: $screen-lg) {
+        margin-top: 248px;
+        margin-bottom: 120px;
+      }
+
+      @media (min-width: $screen-xl) {
+        margin-top: 0;
+      }
+
+      .section-title {
+        width: 350px;
+      }
+    }
+
     &--add-serv {
       z-index: 20;
+
+      @media (min-width: $screen-xl) {
+        margin-bottom: -180px;
+      }
 
       .section-title {
         margin-bottom: 115px;
 
         @media (min-width: $screen-lg) {
           // width: 565px;
+          margin-bottom: 80px;
+        }
+
+        @media (min-width: $screen-xl) {
+          width: 680px;
         }
       }
 
@@ -1018,9 +1051,13 @@ a:hover {
     &--sign-up {
       z-index: 8;
 
+      @media (min-width: $screen-lg) {
+        padding-top: 290px;
+        margin-bottom: 25px;
+      }
+
       @media (min-width: $screen-xl) {
-          margin-top: 0;
-          padding-top: 240px;
+        margin-top: 0;
       }
 
       .caption-medium {
@@ -1081,29 +1118,40 @@ a:hover {
     }
 
     &--sign-up-about {
-      @media (min-width: $screen-xl) {
-        margin-top: 50px;
-      }
+      // @media (min-width: $screen-xl) {
+      //   margin-top: 50px;
+      // }
     }
 
     &--sign-up-news {
-      margin-bottom: 60px;
+      // margin-bottom: 60px;
 
-      @media (min-width: $screen-md) {
-        margin-bottom: 166px;
-      }
+      // @media (min-width: $screen-md) {
+      //   margin-bottom: 166px;
+      // }
 
-      @media (min-width: $screen-xl) {
-        // margin-top: 0;
-        // padding-top: 240px;
-      }
+      // @media (min-width: $screen-xl) {
+      //   // margin-top: 0;
+      //   // padding-top: 240px;
+      // }
     }
 
     &--services-social {
       margin-bottom: 90px;
     }
 
+    &--services-info {
+      margin-top: 60px;
+      @media (min-width: $screen-xl) {
+        margin-top: 0;
+      }
+    }
+
     &--coaches {
+
+      @media (min-width: $screen-lg) {
+        margin-bottom: -90px;
+      }
 
       .page__section-inner {
         @include container;
@@ -1164,11 +1212,11 @@ a:hover {
 
     &--sign-up-pass {
 
-      margin-top: 90px;
+      // margin-top: 90px;
 
-      @media (min-width: $screen-lg) {
-        margin-top: 400px;
-      }
+      // @media (min-width: $screen-lg) {
+      //   margin-top: 400px;
+      // }
     }
 
     &--programms {
@@ -1223,6 +1271,13 @@ a:hover {
     }
 
     &--about-features {
+
+      @media (min-width: $screen-lg) {
+        margin-bottom: -240px;
+      }
+
+      @media (min-width: $screen-xl) {
+      }
 
       .section-title {
         @media (min-width: $screen-lg) {

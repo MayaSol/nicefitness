@@ -35,17 +35,18 @@ block page-header-bg
       source(src="video/nicefit.mp4" type="video/mp4")
 
 block content
-    +main-slider()
-    +services(class="page__section page__section--services")
-    section.page__section.page__section--info
-      .page__section-inner
-        +info-main('main')
-    +caption-large('nicefitness')(class="page__section page__section--caption")
-    +social-section(class="page__section page__section--social")
-    +mobile(class="page__section page__section--mobile")
-    +tour(class="page__section page__section--tour")
-      +card-tour('large,tour', {text: 'Виртуальный тур'})
-    +news(class="page__section page__section--news")
+    .page-inner-content
+      +main-slider()
+      +services(class="page__section page__section--services")
+      section.page__section.page__section--info
+        .page__section-inner
+          +info-main('main')
+      +caption-large('nicefitness')(class="page__section page__section--caption")
+      +social-section(class="page__section page__section--social")
+      +mobile(class="page__section page__section--mobile")
+      +tour(class="page__section page__section--tour")
+        +card-tour('large,tour', {text: 'Виртуальный тур'})
+      +news(class="page__section page__section--news")
 
 block footer
   +page-footer()

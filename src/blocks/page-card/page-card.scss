@@ -1,0 +1,15 @@
+// В этом файле должны быть стили для БЭМ-блока page-card, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.page-card {
+
+  $block-name:                &; // #{$block-name}__element
+
+
+  .page__section--add-serv {
+    @media (min-width: $screen-xl) {
+      margin-bottom: 70px;
+    }
+  }
+}

@@ -30,3 +30,17 @@ mixin common-list-item(props,mods)
   li.common-list__item(class=allMods)&attributes(attributes)
     span !{props.name}
 
+
+mixin common-list-item-link(props,mods)
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' common-list__item--' + modsList[i].trim();
+      }
+    }
+
+  li.common-list__item(class=allMods)&attributes(attributes)
+    a(href="/") !{props.name}
+

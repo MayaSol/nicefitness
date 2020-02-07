@@ -28,79 +28,80 @@ block page-header-add
 
 block content
     +caption-large('nicefitness','card')(class="page__section page__section--caption")
-    .page__section
-      .price.price--right.price--card
-        .price__inner
-          span 2 000 ₽
-    section.page__section.page__section--info-card
-      .page__section-inner
-        +info('short,card')
-          .info__text
-            p.info__lead Nicefitness – это правильный клуб для реализации Ваших планов по улучшению внешности, укреплению здоровья, созданию красивой и стройной фигуры.
-            p Добиться максимального расслабления после занятий поможет уникальный термальный комплекс, включающий в себя: паровую баню и традиционный хаммам, снежную комнату, биосауну, соляную баню, финскую сауну, душ впечатлений, дорожку Кнайпа и лаундж-зону с массажными креслами Yamaguchi. Главной особенностью комплекса является необычная соляная баня. Помещение парной расположено в центре комплекса и выполнено в виде большого стеклянного прямоугольника, что создает ощущение невесомости окружающего пространства. Ультрасовременное пространство занимает общую площадь в 3900 кв.м и представляет собой новое поколение клубов премиум-класса.
-    section.page__section.page__section--card
-      .page__section-inner
-        +card('xl',{text: 'Клубная карта'})
-    section.page__section.page__section--card-features
-      .page__section-inner
-          h2.section-title Клубная карта включает
-          +features('cols-3')
-            +features-item()
-              p Неограниченное посещение клуба в будни с 07:00 до 00:00, в выходные и праздники - с 08:00 утра до 23:00
-            +features-item()
-              p Тренажерный зал c кардио-зоной
-            +features-item()
-              p Фитнес-тестирование
-            +features-item()
-              p Финская сауна
-            +features-item()
-              p Посещение зала групповых программ (более 30 классов - силовые, танцевальные, йога, здоровительные и др.)
-            +features-item()
-              p Студия единоборств
-            +features-item()
-              p «Приостановка членства» - возможность приостановить действие клубной карты на срок 45 дней (в зависимости от вида членства)
-            +features-item()
-              p При каждом визите выдается полотенце
-            +features-item()
-              p Пользование сейфовой ячейкой на время нахождения в клубе
-            +features-item()
-              p Бесплатная парковка
-            +features-item()
-              p Один гостевой визит в течении контракта
-    section.page__section.page__section--pass
-      .page__section-inner
-        h2.section-title Абонементы Nicefitness
-        +pass()
-          +pass-item({name: 'Кардио', month: true, year: true},'cardio')
-          +pass-item({name: 'Единоборства', month: true, year: true},'combat')
-          +pass-item({name: 'Тренажерка', month: true, year: true},'gym')
-          +pass-item({name: 'Групповые', month: true, year: true},'group')
-          +pass-item({name: 'Фитнес', month: false, year: true},'fitness')
-          +pass-item({name: 'Сауна', month: false, year: true},'sauna')
+    .page-inner-content
+      .page__section
+        .price.price--right.price--card
+          .price__inner
+            span 2 000 ₽
+      section.page__section.page__section--info-card
+        .page__section-inner
+          +info('short,card')
+            .info__text
+              p.info__lead Nicefitness – это правильный клуб для реализации Ваших планов по улучшению внешности, укреплению здоровья, созданию красивой и стройной фигуры.
+              p Добиться максимального расслабления после занятий поможет уникальный термальный комплекс, включающий в себя: паровую баню и традиционный хаммам, снежную комнату, биосауну, соляную баню, финскую сауну, душ впечатлений, дорожку Кнайпа и лаундж-зону с массажными креслами Yamaguchi. Главной особенностью комплекса является необычная соляная баня. Помещение парной расположено в центре комплекса и выполнено в виде большого стеклянного прямоугольника, что создает ощущение невесомости окружающего пространства. Ультрасовременное пространство занимает общую площадь в 3900 кв.м и представляет собой новое поколение клубов премиум-класса.
+      section.page__section.page__section--card
+        .page__section-inner
+          +card('xl',{text: 'Клубная карта'})
+      section.page__section.page__section--card-features
+        .page__section-inner
+            h2.section-title Клубная карта включает
+            +features('cols-3')
+              +features-item()
+                p Неограниченное посещение клуба в будни с 07:00 до 00:00, в выходные и праздники - с 08:00 утра до 23:00
+              +features-item()
+                p Тренажерный зал c кардио-зоной
+              +features-item()
+                p Фитнес-тестирование
+              +features-item()
+                p Финская сауна
+              +features-item()
+                p Посещение зала групповых программ (более 30 классов - силовые, танцевальные, йога, здоровительные и др.)
+              +features-item()
+                p Студия единоборств
+              +features-item()
+                p «Приостановка членства» - возможность приостановить действие клубной карты на срок 45 дней (в зависимости от вида членства)
+              +features-item()
+                p При каждом визите выдается полотенце
+              +features-item()
+                p Пользование сейфовой ячейкой на время нахождения в клубе
+              +features-item()
+                p Бесплатная парковка
+              +features-item()
+                p Один гостевой визит в течении контракта
+      section.page__section.page__section--pass
+        .page__section-inner
+          h2.section-title Абонементы Nicefitness
+          +pass()
+            +pass-item({name: 'Кардио', month: true, year: true},'cardio')
+            +pass-item({name: 'Единоборства', month: true, year: true},'combat')
+            +pass-item({name: 'Тренажерка', month: true, year: true},'gym')
+            +pass-item({name: 'Групповые', month: true, year: true},'group')
+            +pass-item({name: 'Фитнес', month: false, year: true},'freeze')
+            +pass-item({name: 'Сауна', month: false, year: true},'sauna')
 
 
-    section.page__section.page__section--add-serv
-      .page__section-inner
-        .page__section-row
-          .page__section-col.col-left-2
-            h2.section-title Услуги за дополнительную плату
-            +common-list('add-serv,card')
-              +common-list-item({name: 'Солярий'})
-              +common-list-item({name: 'Фитнес-бар'})
-              +common-list-item({name: 'Салон красоты'})
-              +common-list-item({name: 'Персональный тренинг с профессиональным тренером'})
-              +common-list-item({name: 'Лаборатория массажа'})
-              +common-list-item({name: 'Определение лактата капилярной крови при нагрузке'})
-              +common-list-item({name: 'Диетологическое сопровождение'})
-              +common-list-item({name: 'Тренировка для профилактики гипертонии'})
-              +common-list-item({name: 'Проектирование и строительство фитнесс-клубов под ключ'})
-          .page__section-col
-            +social-section-narrow()
-    section.page__section.page__section--sign-up.page__section--sign-up-pass
-      .page__section-inner
-        +sign-up()
-    +news('card')(class="page__section page__section--news")
-    +mobile('short')(class="page__section page__section--mobile")
+      section.page__section.page__section--add-serv
+        .page__section-inner
+          .page__section-row
+            .page__section-col.col-left-2
+              h2.section-title Услуги за дополнительную плату
+              +common-list('add-serv,card')
+                +common-list-item({name: 'Солярий'})
+                +common-list-item({name: 'Фитнес-бар'})
+                +common-list-item({name: 'Салон красоты'})
+                +common-list-item({name: 'Персональный тренинг с профессиональным тренером'})
+                +common-list-item({name: 'Лаборатория массажа'})
+                +common-list-item({name: 'Определение лактата капилярной крови при нагрузке'})
+                +common-list-item({name: 'Диетологическое сопровождение'})
+                +common-list-item({name: 'Тренировка для профилактики гипертонии'})
+                +common-list-item({name: 'Проектирование и строительство фитнесс-клубов под ключ'})
+            .page__section-col
+              +social-section-narrow()
+      section.page__section.page__section--sign-up.page__section--sign-up-pass
+        .page__section-inner
+          +sign-up()
+      +news('card')(class="page__section page__section--news")
+      +mobile('short')(class="page__section page__section--mobile")
 
 
 block footer
