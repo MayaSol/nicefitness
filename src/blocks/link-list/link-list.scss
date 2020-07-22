@@ -25,10 +25,11 @@
     }
 
     @media (min-width: $screen-lg) {
-      flex-wrap: nowrap;
-      align-items: flex-end;
-      justify-content: space-between;
-      min-height: 100px;
+      // flex-wrap: nowrap;
+      // align-items: flex-end;
+      // min-height: 100px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
     }
 
     .w100 {
@@ -46,6 +47,8 @@
   }
 
   &__item {
+
+    outline: 1px solid red;
 
     margin-bottom: 85px;
 
@@ -67,6 +70,9 @@
     @media (min-width: $screen-lg) {
       margin-right: 0;
       min-width: 0;
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
     }
 
     @media (min-width: $screen-xl) {
@@ -80,35 +86,39 @@
       }
     }
 
-    &:nth-child(-n+3):hover {
+    // &:nth-child(-n+3):hover {
+    &:nth-child(-n+3).active {
 
-      @media (min-width: $screen-xl) {
-        margin-right: 70px;
-      }
+      // @media (min-width: $screen-xl) {
+      //   // margin-right: 70px;
+      // }
 
-      #{$block-name}__img {
-        left: 90px;
+      #{$block-name}__link.active #{$block-name}__img {
+        // left: 90px;
 
         @media (min-width: $screen-lg) {
           left: 145px;
+          // transform: translate(115px, 50%);
+          outline: 1px solid red;
         }
       }
     }
 
-    &:nth-child(n+4):hover {
+    // &:nth-child(n+4):hover {
+    // &:nth-child(n+4).active {
 
-      @media (min-width: $screen-xl) {
-        margin-left: 70px;
-      }
+    //   @media (min-width: $screen-xl) {
+    //     // margin-left: 70px;
+    //   }
 
-      #{$block-name}__img {
+    //   #{$block-name}__img {
 
-        @media (min-width: $screen-lg) {
-          left: 86px;
-          transform: translate(-100%, 50%);
-        }
-      }
-    }
+    //     @media (min-width: $screen-lg) {
+    //       left: 86px;
+    //       transform: translate(-100%, 50%);
+    //     }
+    //   }
+    // }
 
   }
 
@@ -125,7 +135,9 @@
       color: currentColor;
     }
 
-    &:hover {
+    // &:hover {
+    &.active {
+      outline: 1px solid red;
       z-index: 9;
       flex-shrink: 0;
       color: $link-color--hover;
@@ -157,7 +169,7 @@
 
       @media (min-width: $screen-md) {
         z-index: 9;
-        margin-bottom: -5px;
+        // margin-bottom: -5px;
         padding-left: 96px;
       }
 
@@ -190,12 +202,29 @@
       }
 
       #{$block-name}__img {
-        display: block;
+        max-width: 1000px;
+        // display: block;
+
+
+        // &:nth-child(-n+3) {
+        //   @media (min-width: $screen-lg) {
+        //     left: 145px;
+        //     right: auto;
+        //   }
+        // }
+
+        // &:nth-child(n+4) {
+
+        //   @media (min-width: $screen-lg) {
+        //     right: 145px;
+        //     left: auto;
+        //   }
+        // }
       }
 
-    }
+    } // &.active
 
-  }
+  } // &__link
 
   &__name {
     position: relative;
@@ -243,7 +272,7 @@
   }
 
   &__img {
-    display: none;
+    max-width: 0;
     position: absolute;
     left: 45px;
     bottom: 50%;
@@ -251,6 +280,7 @@
     height: 318px;
     transform: translateY(50%);
     z-index: -1;
+    transition: max-width 0.6s;
 
     img {
       width: 100%;

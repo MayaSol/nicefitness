@@ -20,10 +20,10 @@ ready(function(){
       }
     }
 
-    videoElem.addEventListener('canplay', function () {
-      console.log('canplaythrough');
-      videoElem.play();
-    });
+    // videoElem.addEventListener('canplay', function () {
+    //   console.log('canplaythrough');
+    //   videoElem.play();
+    // });
 
     videoElem.addEventListener('play', function(e) {
       console.log('play');
