@@ -27,12 +27,11 @@ block page-header-add
           +btn('','play')(class="page-header__btn-play paused")
         .page-header__links-row
           +btn('Как получить клубную карту?','common')(href="/" class="page-header__card-link")
-          +btn('','')(class="btn-sound")
 block page-header-bg
   .page-header__bg
     //- <iframe  id="page-header-video" class="video" width="100%" height="auto" src="https://www.youtube.com/embed/bp76QUMUVVk?enablejsapi=1&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-    video#page-header-video.page-header-video(width="100%" poster="http://placekitten.com/1200/600")
+    video#page-header-video.page-header-video(width="100%" poster="http://placekitten.com/1200/600" muted)
       source(src="video/nicefit.mp4" type="video/mp4")
 
 block content

@@ -7,10 +7,6 @@ block meta
 //- block append head
 //-   link(rel='stylesheet', href='css/some.css')
 
-block vars
-  -
-    var pageName = 'card';
-
 
 block off-canvas
   +off-top()
@@ -28,7 +24,7 @@ block page-header-add
 
 block content
     +caption-large('nicefitness','card')(class="page__section page__section--caption")
-    .page-inner-content
+    .karta
       .page__section
         .price.price--right.price--card
           .price__inner

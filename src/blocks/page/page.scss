@@ -656,7 +656,7 @@ pre {
   }
   &--group-white-xl {
     &::before {
-      @include sprite($group-white-large);
+      @include sprite($group-white-xl);
     }
   }
 
@@ -707,6 +707,36 @@ pre {
   &--photo-tour {
     &::before {
       @include sprite($photo-tour);
+    }
+  }
+
+  &--children-white {
+    &::before {
+      @include sprite($children-white);
+    }
+  }
+
+  &--children-white-large {
+    &::before {
+      @include sprite($children-white-large);
+    }
+  }
+
+  &--children-white-xl {
+    &::before {
+      @include sprite($children-white-xl);
+    }
+  }
+
+  &--corp-white-large {
+    &::before {
+      @include sprite($corp-white-large);
+    }
+  }
+
+  &--corp-white-xl {
+    &::before {
+      @include sprite($corp-white-xl);
     }
   }
 
@@ -1336,8 +1366,16 @@ a:hover {
 
   }
 
+  &__section-col > * {
+      margin-bottom: 24px;
 
-}
+      &:last-child {
+        margin-bottom: 0;
+      }
+  }
+
+
+} //.page
 
   .col-left-1 {
 
@@ -1398,4 +1436,5 @@ a:hover {
       width: get-width(1,2,xl) - $screen-padding-xl;
     }
   }
+
 

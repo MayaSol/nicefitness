@@ -206,6 +206,12 @@
       @media (min-width: $screen-lg) {
         padding-left: 48px;
       }
+
+      .page__section--service-desc & {
+        @media (min-width: $screen-lg) {
+          padding-left: 0;
+        }
+      }
     }
 
     #{$block-name}__list {

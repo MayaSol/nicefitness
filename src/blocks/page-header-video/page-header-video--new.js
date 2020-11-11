@@ -8,6 +8,7 @@ ready(function(){
 
     function videoPlay(event) {
       console.log('videoPlay');
+      console.log(playBtn);
       if (playBtn.classList.contains('paused')) {
         playBtn.classList.remove('paused');
       }
@@ -42,29 +43,6 @@ ready(function(){
           videoElem.pause();
       }
     }, false);
-
-    soundBtn = document.querySelector('.btn-sound');
-
-    if (soundBtn) {
-      videoElem.muted=true;
-      if (!soundBtn.classList.contains('btn-sound--off')) {
-          soundBtn.classList.add('btn-sound--off');
-      }
-
-      soundBtn.addEventListener('click', function() {
-        console.log(videoElem.muted);
-        if (videoElem.muted) {
-          videoElem.muted=false;
-          this.classList.remove('btn-sound--off');
-        }
-        else {
-          if (!this.classList.contains('btn-sound--off')) {
-            videoElem.muted=true;
-            this.classList.add('btn-sound--off');
-          }
-        }
-      });
-    }
 
   }
 

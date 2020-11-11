@@ -3,6 +3,7 @@ PSD/
 pictures/
 build/*
 !build/readme.md
+old/
 
 src/pug/mixins.pug
 src/js/entry.js

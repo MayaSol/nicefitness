@@ -1,0 +1,20 @@
+// В этом файле должны быть стили для БЭМ-блока btn-sound, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.btn-sound {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 0;
+  @include sprite($sound-on);
+
+  align-self: flex-end;
+  margin-right: 36px;
+  margin-left: auto;
+
+
+  &--off {
+    @include sprite($sound-off);
+  }
+}
