@@ -9,6 +9,100 @@ http://cy66018.tmweb.ru/uslugi/
 http://cy66018.tmweb.ru/novosti/
 
 
+
+
+
+====================================
+11.11.2020
+==================================
+вот список
+http://cy66018.tmweb.ru/
+
+> 1. Возвращаемся к первоночальному функционалу видео. Запускаем его автоматом после начала загрузки страницы.
+именно после начала, то есть как код блока загрузился, а не после полной загрузки всей страницы.
+
+Добавить в head   <link rel="preload" href="video/nicefit.mp4" as="video" type="video/mp4">
+
+Добавить в тег video атрибуты muted preload
+
+<video class="page-header-video" id="page-header-video" width="100%" poster="http://placekitten.com/1200/600" autoplay muted preload>
+
+Сделала, чтобы видео начинало загружаться как можно быстрей, но все равно может загрузиться после загрузки страницы, потому что большое
+
+
+> 2. в слайдере акций переделать блок с цифрой в дату, вот Толя черканул как можно https://monosnap.com/file/o2HmHsSZsAXUb3MEMNNOyOgqZ9nw8N
+
+
+Внутри каждого <li class="primary-slider__item glide__slide">
+заменить
+
+<div class="primary-slider__number">01</div>
+
+на
+
+<div class="primary-slider__number-wrapper">
+  <div class="primary-slider__number">01</div>
+  <div class="primary-slider__month">июль 2020</div>
+</div>
+
+Внтури каждого <li class="second-slider__item glide__slide">
+заменить
+
+<div class="second-slider__number">...</div>
+
+на
+
+<div class="second-slider__number-wrapper">
+  <div class="second-slider__number"><svg width="300" height="220"><text fill="white" fill-opacity="0" x="150" y="180" text-anchor="middle" stroke="#fff">01</text></svg></div>
+  <div class="second-slider__month"><svg width="300" height="60"><text fill="white" fill-opacity="0" x="100" y="30" text-anchor="middle" stroke="#fff">июль 2020</text></svg></div>
+</div>
+
+
+а еще чтьо-то случилось с самим слайдером, там три слайда, но они не переключаются
++
+
+
+Убрать комментарии для
+ <div class="page-bg__line page-bg__line--first"></div>
+и <div class="page-bg__line page-bg__line--second"></div>
+
+Сделаю их прозрачными
+
+2. не смог понять в каком файле уменьшить шрифт http://joxi.ru/zAN0nQKuvDk4xm до 200
++
+
+> 4. куда-нибудь сюда http://joxi.ru/DmBXQ7VFJbMELA вставить qr код
+
+Добавить в  <div class="mobile__download">:
+<div class="mobile__download-item mobile__download-item--qr"><img src="img/qr.gif" /></div>
+
+> 5. я на картинке с 3д туром спрятал блок с тектом о 3д туре, и блок новостей поднялся - исправить чтобы он встал на свое место
+
+Надо последний закрывающий </div> раскомментить, иначе новости получаются внутри блока с 3д туром
+
+5. убрал лишние соц сети, мне кажется выравнивание надо сделать по правому краю http://joxi.ru/p278ngluKB1QPA
+
+http://cy66018.tmweb.ru/karta/
+
++
+
+6. на зеленый фон клубной карты попробовать вставить фото реальной карты http://joxi.ru/Drla8EwhVP7v1m
+файл вышлю
+
+
+На странице http://cy66018.tmweb.ru/karta/ поменять
+  <div class="card  card--xl">
+    <div class="card__inner"><a class="card__link" href="/">
+        <div class="card__text">Клубная карта</div>
+        <div class="card__title"><span>nicefitness</span></div>
+      </a></div>
+  </div>
+на
+  <a class="card card--xl" href="/">
+    <div class="card__inner"></div>
+  </a>
+
+
 ====================================
 16.07.2020
 ==================================

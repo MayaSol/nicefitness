@@ -12,9 +12,10 @@
     font-size: 190px;
     font-weight: 700;
     line-height: 0.8;
+    white-space: nowrap;
 
     @media (min-width: $screen-md) {
-      font-size: 212px;
+      font-size: 200px;
     }
 
     @media (min-width: $screen-xl) {

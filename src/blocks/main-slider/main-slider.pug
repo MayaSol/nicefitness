@@ -17,9 +17,9 @@ mixin main-slider(mods)
         .glide.main-slider__primary-slider.primary-slider
           .glide__track.primary-slider__track(data-glide-el="track")
             ul.primary-slider__list.glide__slides
-              +primary-slider-item({id: '1', num: '01', title: 'Зона Кроссфит, TRX, Twisterbag, RIP, Flowin, Bosu – все для полноценных функциональных тренировок', text: 'Для современного человека, живущего в мегаполисе, помимо ежедневной рутины и работы над собой, отдых является неотъемлемой частью жизни. Именно поэтому на территории нашего клуба мы разработали уникальную Recovery-зону и роскошный SPA-комплекс.', src: 'img/content/card-02.jpg'})
-              +primary-slider-item({id: '2', num: '02',title: 'Зона Кроссфит, TRX, Twisterbag, RIP, Flowin, Bosu – все для полноценных функциональных тренировок', text: 'Для современного человека, живущего в мегаполисе, помимо ежедневной рутины и работы над собой, отдых является неотъемлемой частью жизни. Именно поэтому на территории нашего клуба мы разработали уникальную Recovery-зону и роскошный SPA-комплекс.', src: 'img/content/card-03.jpg'})
-              +primary-slider-item({id: '3', num: '03',title: 'Зона Кроссфит, TRX, Twisterbag, RIP, Flowin, Bosu – все для полноценных функциональных тренировок', text: 'Для современного человека, живущего в мегаполисе, помимо ежедневной рутины и работы над собой, отдых является неотъемлемой частью жизни. Именно поэтому на территории нашего клуба мы разработали уникальную Recovery-зону и роскошный SPA-комплекс.', src: 'img/content/card-02.jpg'})
+              +primary-slider-item({id: '1', num: '01', month: 'июль 2020', title: 'Зона Кроссфит, TRX, Twisterbag, RIP, Flowin, Bosu – все для полноценных функциональных тренировок', text: 'Для современного человека, живущего в мегаполисе, помимо ежедневной рутины и работы над собой, отдых является неотъемлемой частью жизни. Именно поэтому на территории нашего клуба мы разработали уникальную Recovery-зону и роскошный SPA-комплекс.', src: 'img/content/card-02.jpg'})
+              +primary-slider-item({id: '2', num: '30', month: 'декабрь 2020', title: 'Зона Кроссфит, TRX, Twisterbag, RIP, Flowin, Bosu – все для полноценных функциональных тренировок', text: 'Для современного человека, живущего в мегаполисе, помимо ежедневной рутины и работы над собой, отдых является неотъемлемой частью жизни. Именно поэтому на территории нашего клуба мы разработали уникальную Recovery-зону и роскошный SPA-комплекс.', src: 'img/content/card-03.jpg'})
+              +primary-slider-item({id: '3', num: '23', month: 'сентябрь 2020', title: 'Зона Кроссфит, TRX, Twisterbag, RIP, Flowin, Bosu – все для полноценных функциональных тренировок', text: 'Для современного человека, живущего в мегаполисе, помимо ежедневной рутины и работы над собой, отдых является неотъемлемой частью жизни. Именно поэтому на территории нашего клуба мы разработали уникальную Recovery-зону и роскошный SPA-комплекс.', src: 'img/content/card-02.jpg'})
         +card('large, main-slider', {price: '2 000 ₽',text: 'Клубная карта'})(class="main-slider__card-link")
         .main-slider__arrows
           +btn('','arrow-left,slider-prev')(class="main-slider__prev")
@@ -28,9 +28,9 @@ mixin main-slider(mods)
         .glide.main-slider__second-slider.second-slider
           .glide__track.second-slider__track(data-glide-el="track")
             ul.second-slider__list.glide__slides
-              +second-slider-item({id: '1', num: '01',title: 'title1', text: 'desc1', src: 'img/content/card-02.jpg'})
-              +second-slider-item({id: '2', num: '02',title: 'title2', text: 'desc2', src: 'img/content/card-03.jpg'})
-              +second-slider-item({id: '3', num: '03',title: 'title3', text: 'desc3', src: 'img/content/card-02.jpg'})
+              +second-slider-item({id: '1', num: '01', month: 'июль 2020', title: 'title1', text: 'desc1', src: 'img/content/card-02.jpg'})
+              +second-slider-item({id: '2', num: '02', month: 'декабрь 2020', title: 'title2', text: 'desc2', src: 'img/content/card-03.jpg'})
+              +second-slider-item({id: '3', num: '03', month: 'сентябрь 2020', title: 'title3', text: 'desc3', src: 'img/content/card-02.jpg'})
 
 
 mixin primary-slider-item(props)
@@ -38,7 +38,9 @@ mixin primary-slider-item(props)
     .primary-slider__item-inner
       .primary-slider__desc
         .primary-slider__item-title !{props.title}
-        .primary-slider__number !{props.num}
+        .primary-slider__number-wrapper
+          .primary-slider__number !{props.num}
+          .primary-slider__month !{props.month}
         .primary-slider__item-text !{props.text}
       .primary-slider__img
         img(src= props.src)
@@ -49,6 +51,10 @@ mixin second-slider-item(props)
     .second-slider__item-inner
       .second-slider__img
         img(src= props.src)
-      .second-slider__number
-        svg(width="300" height="220")
-          text(fill="white" fill-opacity="0" x="150" y="180" text-anchor="middle" stroke="#fff") !{props.num}
+      .second-slider__number-wrapper
+        .second-slider__number
+          svg(width="300" height="220")
+            text(fill="white" fill-opacity="0" x="150" y="180" text-anchor="middle" stroke="#fff") !{props.num}
+        .second-slider__month
+          svg(width="300" height="60")
+            text(fill="white" fill-opacity="1" x="50%" y="30" text-anchor="middle" stroke="#fff") !{props.month}

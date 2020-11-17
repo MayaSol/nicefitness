@@ -2,6 +2,7 @@ const ready = require('../../js/utils/documentReady.js');
 const closest = require('closest');
 
 ready(function(){
+  console.log('video.js');
 
   if (!document.querySelector('.video')) {
     return;

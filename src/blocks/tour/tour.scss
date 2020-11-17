@@ -15,6 +15,10 @@
   background-position: center top;
   margin-bottom: 50px;
 
+  @media (min-width: $screen-md) {
+    margin-top: -57px;
+  }
+
   @media (min-width: $screen-lg) {
     margin-top: -120px;
   }

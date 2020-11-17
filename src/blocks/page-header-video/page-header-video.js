@@ -1,6 +1,7 @@
 const ready = require('../../js/utils/documentReady.js');
 
 ready(function(){
+  console.log('page-header-video');
   var videoElem = document.querySelector('.page-header-video');
   var playBtn = document.querySelector('.page-header__btn-play');
 

@@ -129,7 +129,7 @@
     &--first {
       left: get-point(1, sm);
       width: 1px;
-      background-color: #fff;
+      background-color: transparent;
       opacity: 0.2;
 
       @media (min-width: $screen-md) {
@@ -148,7 +148,7 @@
     &--second {
       left: get-point(2, sm);
       width: 1px;
-      background-color: #66cc33;
+      background-color: transparent;
 
       @media (min-width: $screen-md) {
         left: get-point(2, md);
@@ -1209,6 +1209,13 @@ a:hover {
     &--card {
       padding-bottom: 1px;
       margin-bottom: 90px;
+
+      @media (max-width: $screen-md) {
+        .page__section-inner {
+          width: 320px;
+        }
+      }
+
 
       @media (min-width: $screen-lg) {
         margin-bottom: 150px;

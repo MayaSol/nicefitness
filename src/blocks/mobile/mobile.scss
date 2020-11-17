@@ -78,6 +78,11 @@
 
     &:last-child {
       margin-bottom: 0;
+
+      @media (min-width: $screen-lg) {
+        margin-left: auto;
+      }
+
     }
 
     @media (min-width: $screen-xl) {

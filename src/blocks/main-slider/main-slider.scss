@@ -177,7 +177,7 @@
     color: #000;
 
     @media (min-width: $screen-md) {
-      padding-top: 35px;
+      padding-top: 48px;
       padding-left: 38px;
       width: 729px;
     }
@@ -207,18 +207,30 @@
     // right: 235px;
   }
 
-  &__number {
+  &__number-wrapper {
     margin-bottom: 40px;
-    font-family: $font-family--monospace;
-    font-size: 210px;
-    font-weight: 700;
-    line-height: 0.7;
     order: -1;
 
     @media (min-width: $screen-md) {
-      order: 0;
       margin-bottom: 0;
+      order: 0;
     }
+
+  }
+
+  &__number {
+    font-family: $font-family--monospace;
+    font-size: 160px;
+    font-weight: 700;
+    line-height: 0.7;
+  }
+
+  &__month {
+    margin-top: 24px;
+    font-family: $font-family--monospace;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 0.8;
   }
 
   &__item-title {
@@ -230,14 +242,17 @@
 
     @media (min-width: $screen-md) {
       flex-basis: 376px;
+      max-width: 376px;
     }
 
     @media (min-width: $screen-lg) {
       flex-basis: 355px;
+      max-width: 355px;
     }
 
     @media (min-width: $screen-xl) {
       flex-basis: 320px;
+      max-width: 320px;
     }
   }
 
@@ -295,11 +310,14 @@
     // }
   }
 
-  &__number {
+  &__number-wrapper {
     position: absolute;
     display: block;
     left: 140px;
     top: 240px;
+  }
+
+  &__number {
 
     text {
       font-family: $font-family--monospace;
@@ -308,6 +326,16 @@
       line-height: 0.7;
     }
 
+  }
+
+  &__month {
+
+    text {
+      font-family: $font-family--monospace;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 0.7;
+    }
   }
 
   &__img {
