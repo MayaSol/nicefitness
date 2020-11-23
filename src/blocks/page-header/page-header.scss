@@ -102,24 +102,22 @@
 
   &__btn-play {
     margin-left: auto;
-    margin-right: 44px;
-    margin-bottom: 48px;
-    order: -2;
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
 
     @media (min-width: $screen-md) {
       margin-left: 0;
       margin-right: 0;
       margin-bottom: 0;
-      order: 1;
     }
 
     @media (min-width: $screen-lg) {
-      position: absolute;
-      top: -140px;
-      right: 0;
+      // position: absolute;
+      // top: -140px;
+      // right: 0;
     }
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-lg) {
       position: relative;
       top: auto;
       right: auto;
@@ -133,15 +131,28 @@
   &__card-link {
     margin-top: 3px;
     font-size: 13px;
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 2;
+
+    @media (min-width: $screen-lg) {
+      grid-row: 2 / span 1;
+      grid-column: 1 / span 1;
+      align-self: end;
+    }
   }
 
   &__links {
+    display: grid;
+    grid-template-columns: auto auto;
     margin-bottom: 55px;
     order: -1;
 
     @media (min-width: $screen-md) {
       width: 100%;
       margin-top: 0;
+      grid-template-rows: auto auto;
+      grid-template-columns: auto auto;
+      justify-content: space-between;
     }
 
     @media (min-width: $screen-lg) {
@@ -154,6 +165,41 @@
     @media (min-width: $screen-xl) {
       margin-bottom: 0;
       margin-top: 0;
+    }
+
+    .btn--accent {
+      grid-row: 2 / span 1;
+      grid-column: 1 / span 2;
+      margin-top: 30px;
+
+      @media (min-width: $screen-md) {
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 1;
+        align-self: center;
+        margin-top: 0;
+      }
+    }
+
+    .btn--play {
+
+      @media (min-width: $screen-md) {
+        grid-row: 1 / span 1;
+        grid-column: 2 / span 1;
+        align-self: center;
+      }
+    }
+
+    .btn-sound {
+
+      grid-row: 1 / span 1;
+      grid-column: 2 / span 2;
+      align-self: center;
+
+      @media (min-width: $screen-md) {
+        grid-row: 2 / span 1;
+        grid-column: 2 / span 1;
+        align-self: end;
+      }
     }
   }
 
@@ -182,7 +228,7 @@
       }
     }
 
-    @media (min-width: $screen-xl) {
+    @media (min-width: $screen-lg) {
       // display: block;
       flex-direction: row;
     }
