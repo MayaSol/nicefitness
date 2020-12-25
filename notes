@@ -9,7 +9,110 @@ http://cy66018.tmweb.ru/uslugi/
 http://cy66018.tmweb.ru/novosti/
 
 
+1. Убрать в head:
 
+ <script>
+var Hyphenopoly = {
+    require: {
+        "ru": "FORCEHYPHENOPOLY"
+    },
+    setup: {
+        selectors: {
+            ".page-title": {}
+        }
+    }
+};</script>
+<script type="text/javascript" src="js/Hyphenopoly_Loader.js"></script><script type="text/javascript" src="https://vk.com/js/api/openapi.js?116"></script>
+
+Добавить
+    <script type="text/javascript" src="js/hypenopolyMediaLoad.js"></script>
+И сам файл hypenopolyMediaLoad.js в папку js
+
+2. на странице статьи заменить содержимое блока <div class="social-widget__inner">
+на
+
+<div class="ya-share2" data-curtain="data-curtain" data-size="l" data-color-scheme="blackwhite" data-services="vkontakte,facebook,telegram,whatsapp"></div>
+
+В head добавить <script type="text/javascript" src="https://yastatic.net/share2/share.js"></script>
+
+
+
+====================================
+08.12.2020
+==================================
+
+1. Иконки для услуг:
+Добавить классы: info__lead--icon info__lead--cardio
+<p class="info__lead info__lead--icon info__lead--cardio">
+
+Есть такие классы для иконок:
+    info__lead--sauna
+    info__lead--gym
+    info__lead--fitness
+    info__lead--group
+    info__lead--cardio
+    info__lead--combat
+
+Добавить иконки в img
+
+2. Переносы
+
+Добавить в <head> после <title>:
+  <script>
+var Hyphenopoly = {
+    require: {
+        "ru": "FORCEHYPHENOPOLY"
+    },
+    setup: {
+        selectors: {
+            ".page-title": {}
+        }
+    }
+};</script>
+<script type="text/javascript" src="js/Hyphenopoly_Loader.js"></script><script type="text/javascript" src="https://vk.com/js/api/openapi.js?116"></script>
+
+
+В js добавить файлы
+
+В js/patterns добавить
+
+Убрать <div class="schedule-widget__header">
+
+====================================
+23.11.2020
+==================================
+1. В index.html убрать из <div class="page-header__links"> обертки <div class="page-header__links-row">
+
+Должно остаться:
+<div class="page-header__links">
+  <button class="btn  btn--accent" data-toggle="modal" data-target="#test-drive">Получить 7 дней тест драйва</button>
+  <button class="btn  btn--play page-header__btn-play paused"></button>
+  <a class="btn  btn--common page-header__card-link" href="/">Как получить клубную карту?</a>
+  <button class="btn btn-sound"></button>
+</div>
+
+2. Страница О клубе.
+
+Блок <div class="card  card--large card--photo-tour card--about">...</div>
+
+заменить на
+
+<a class="card gallery card--large card--photo-tour card--about">
+  <div class="card__inner">
+    <div class="card__header">
+      <div class="card__text">Фототур</div>
+      <div class="card__title"><span>nicefitness</span></div>
+    </div>
+    <div class="card__bottom"><button class="btn  btn--common btn--photo-tour">Начать</button>
+      <div class="icon icon--photo-tour"></div>
+    </div>
+  </div>
+  <ul class="gallery-content visuallyhidden">
+    <li href="img/slider-02-big.jpg" title="Изображение 1"><img src="img/slider-02-thumb2.jpg" /></li>
+    <li href="img/slider-03-big.jpg" title="Изображние 2"><img src="img/slider-03-thumb2.jpg" /></li>
+    <li href="img/slider-02-big.jpg" title="Изображние 3"><img src="img/slider-02-thumb2.jpg" /></li>
+  </ul>
+</a>
 
 
 ====================================

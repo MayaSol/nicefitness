@@ -25,6 +25,8 @@
     padding-top: 30px;
     @include container;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
   }
 
@@ -133,6 +135,11 @@
     font-size: 13px;
     grid-row: 3 / span 1;
     grid-column: 1 / span 2;
+
+    @media (min-width: $screen-md) {
+      grid-row: 2 / span 1;
+      grid-column: 1 / span 1;
+    }
 
     @media (min-width: $screen-lg) {
       grid-row: 2 / span 1;

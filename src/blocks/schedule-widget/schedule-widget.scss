@@ -9,12 +9,15 @@
   @include container;
 
   &__inner {
-    background-color: #fff;
-    padding: 10px;
+    background-color: #090606;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 5px;
 
     @media (min-width: $screen-xl) {
+      padding: 10px;
       width: 1044px;
-      padding: 64px 40px 55px;
+      // padding: 64px 40px 55px;
     }
   }
 
@@ -25,4 +28,52 @@
   &__content {
     background-image: url('../img/schedule-widget.jpg');
   }
+
+  // .container {
+  //   max-width: none;
+  //   padding: 0;
+  // }
+
+  // .mf-widget {
+  //   min-width: 270px;
+  // }
+
+  // .mf-widget_reg {
+  //   padding: 0;
+  // }
+
+  // .is-fullwidth.is-schedule .mf-widget_reg .mf-widget__body {
+  //   padding-left: 0;
+  //   padding-right: 0;
+
+  //   @media (min-width: $screen-xl) {
+  //     padding-left: 20px;
+  //     padding-right: 20px;
+  //   }
+  // }
 }
+
+.mf-widget.mf-widget_reg {
+    min-width: 270px;
+    padding: 0;
+}
+
+.mf-widget.mf-widget_reg .container {
+    max-width: none;
+    padding: 0;
+}
+
+.is-fullwidth.is-schedule .mf-widget.mf-widget_reg .mf-widget__body {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media (min-width: $screen-xl) {
+  .is-fullwidth.is-schedule .mf-widget.mf-widget_reg .mf-widget__body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+
+

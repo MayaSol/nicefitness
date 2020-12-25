@@ -1,0 +1,21 @@
+.mf-widget.mf-widget_reg {
+    min-width: 270px;
+    padding: 0;
+}
+
+.mf-widget.mf-widget_reg .container {
+    max-width: none;
+    padding: 0;
+}
+
+.is-fullwidth.is-schedule .mf-widget.mf-widget_reg .mf-widget__body {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media (min-width: $screen-xl) {
+  .is-fullwidth.is-schedule .mf-widget.mf-widget_reg .mf-widget__body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

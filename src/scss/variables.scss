@@ -66,9 +66,9 @@ $font-family--monospace:     'HelveticaNeue', SFMono-Regular, Menlo, Monaco, Con
 
 $screen-xs:                   0;
 $screen-sm:                   320px;
-$screen-md:                   768px;
-$screen-lg:                   1024px;
-$screen-xl:                   1280px;
+$screen-md:                   768px  + 20px;
+$screen-lg:                   1024px + 20px;
+$screen-xl:                   1280px + 20px;
 // $screen-xxl:                  1800px;
 
 
@@ -79,9 +79,9 @@ $screen-padding-xl:          40px;
 
 
 $container-sm:                $screen-sm - $screen-padding-sm * 2;
-$container-md:                $screen-md - $screen-padding-md * 2;
-$container-lg:                $screen-lg - $screen-padding-lg * 2;
-$container-xl:                $screen-xl - $screen-padding-xl * 2;
+$container-md:                $screen-md - $screen-padding-md * 2 - 20px;
+$container-lg:                $screen-lg - $screen-padding-lg * 2 - 20px;
+$container-xl:                $screen-xl - $screen-padding-xl * 2 - 20px;
 // $container-xxl:               $screen-xxl - 30;
 
 

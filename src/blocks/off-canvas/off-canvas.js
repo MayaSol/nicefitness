@@ -14,6 +14,14 @@ ready(function(){
 
   function offCanvasToggle() {
     document.getElementById('off-canvas').classList.toggle('off-canvas--open');
+    if (document.getElementById('off-canvas').classList.contains('off-canvas--open')) {
+      if(!document.body.classList.contains('off-canvas-wrapper--open')) {
+        document.body.classList.add('off-canvas-wrapper');
+      }
+    }
+    else {
+      document.body.classList.remove('off-canvas-wrapper');
+    }
   }
 
   function offsetBtnClick (event) {

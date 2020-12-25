@@ -5,6 +5,14 @@ ready(function(){
   var videoElem = document.querySelector('.page-header-video');
   var playBtn = document.querySelector('.page-header__btn-play');
 
+  console.log('videoElem autoplay');
+  console.log(videoElem.autoplay);
+  console.log('videoElem paused');
+  console.log(videoElem.paused);
+  // videoElem.pause();
+  console.log('state');
+  console.log(videoElem.readyState);
+
   if (videoElem) {
 
     function videoPlay(event) {
@@ -12,6 +20,9 @@ ready(function(){
       if (playBtn.classList.contains('paused')) {
         playBtn.classList.remove('paused');
       }
+      // !!!
+    // videoElem.pause();
+    // !!!
     }
 
     function videoPause(event) {
@@ -66,6 +77,9 @@ ready(function(){
         }
       });
     }
+
+    console.log('videoElem');
+    console.log(videoElem);
 
   }
 

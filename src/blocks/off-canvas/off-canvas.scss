@@ -3,9 +3,9 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 $off-canvas-height-xl:            768px; // высота этого блока
-$off-canvas-height-lg:            768px; // высота этого блока
-$off-canvas-height-md:            1024px; // высота этого блока
-$off-canvas-height-sm:            712px;
+$off-canvas-height-lg:            1024px; // высота этого блока
+// $off-canvas-height-md:            1024px; // высота этого блока
+// $off-canvas-height-sm:            712px;
 
 
 .off-canvas {
@@ -35,21 +35,21 @@ $off-canvas-height-sm:            712px;
       transform: translateY(0);
     }
 
-    #{$block-name}__page-content {
-      transform: translateY($off-canvas-height-sm);
+    // #{$block-name}__page-content {
+    //   transform: translateY($off-canvas-height-sm);
 
-      @media (min-width: $screen-md) {
-        transform: translateY($off-canvas-height-md);
-      }
+    //   @media (min-width: $screen-md) {
+    //     transform: translateY($off-canvas-height-md);
+    //   }
 
-      @media (min-width: $screen-lg) {
-        transform: translateY($off-canvas-height-lg);
-      }
+    //   @media (min-width: $screen-lg) {
+    //     transform: translateY($off-canvas-height-lg);
+    //   }
 
-      @media (min-width: $screen-xl) {
-        transform: translateY($off-canvas-height-xl);
-      }
-    }
+    //   @media (min-width: $screen-xl) {
+    //     transform: translateY($off-canvas-height-xl);
+    //   }
+    // }
   }
 
   &__aside {
@@ -65,23 +65,23 @@ $off-canvas-height-sm:            712px;
       position: fixed;
       z-index: 999;
       width: 100%;
-      height: $off-canvas-height-sm;
-      transform: translateY(($off-canvas-height-sm * -1));
+      height: 100%;
+      transform: translateY(-100%);
       max-height: none;
 
       @media (min-width: $screen-md) {
-        height: $off-canvas-height-md;
-        transform: translateY(($off-canvas-height-md * -1));
+        // height: $off-canvas-height-md;
+        // transform: translateY(($off-canvas-height-md * -1));
       }
 
       @media (min-width: $screen-lg) {
-        height: $off-canvas-height-lg;
-        transform: translateY(($off-canvas-height-lg * -1));
+        max-height: $off-canvas-height-lg;
+        // transform: translateY(($off-canvas-height-lg * -1));
       }
 
       @media (min-width: $screen-xl) {
-        height: $off-canvas-height-xl;
-        transform: translateY(($off-canvas-height-xl * -1));
+        max-height: $off-canvas-height-xl;
+        // transform: translateY(($off-canvas-height-xl * -1));
       }
     }
   }
@@ -132,4 +132,9 @@ $off-canvas-height-sm:            712px;
     opacity: 0;
     visibility: hidden;
   }
+}
+
+
+.off-canvas-wrapper {
+  overflow: hidden;
 }

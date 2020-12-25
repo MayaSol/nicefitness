@@ -1,0 +1,82 @@
+.mf-widget.mf-widget_reg {
+    min-width: 270px;
+    padding: 0;
+}
+
+.mf-widget.mf-widget_reg .container {
+    max-width: none;
+    padding: 0;
+}
+
+.is-fullwidth.is-schedule .mf-widget.mf-widget_reg .mf-widget__body {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media (min-width: 1280px) {
+  .is-fullwidth.is-schedule .mf-widget.mf-widget_reg .mf-widget__body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.mf-widget__content.ng-scope,
+tr.ng-scope {
+  background-color: #090606;
+}
+
+.mf-widget-hour.ng-scope {
+  background: ;
+  background-color: #090606;
+}
+
+.mf-day.ng-scope.past {
+  background-color: #090606;
+}
+
+.mf-day.ng-scope.current {
+  background-color: background-color: #090606;
+  background-color: #090606;
+}
+
+.mf-widget-table {
+  background-color: #090606;
+}
+
+.mf-widget-table.mf-table-lines tbody tr:nth-child(n) td, .mf-widget-table.mf-table-lines th {
+  background-color: #090606;
+}
+
+.mf-widget-table th.current {
+  background: #090606 !important;
+}
+
+.mf-widget-table tbody tr:nth-child(n) td {
+  background-color: #090606;
+}
+
+.mf-widget-table td.current {
+  background-color: #090606 !important;
+}
+
+.mf-widget-table.mf-table-lines tbody tr:nth-child(n) td.current {
+  background-color: #090606 !important;
+}
+
+.mf-schedule-cell {
+  box-shadow: 0 2px 7px rgba(255,255,255,.25);
+  background-color: #090606;
+}
+
+.mf-widget_reg {
+  color: #fff;
+}
+
+.mf-filter-item {
+color: #000;
+}
+
+.ng-scope[ng-app] {
+background-color: #090606;
+}
+

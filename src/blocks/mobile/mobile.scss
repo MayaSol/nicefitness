@@ -18,7 +18,7 @@
     }
 
     @media (min-width: $screen-lg) {
-      align-items: center;
+      // align-items: center;
     }
   }
 
@@ -56,9 +56,11 @@
     @media (min-width: $screen-lg) {
       width: auto;
       margin-bottom: 40px;
+      margin-top: 20px;
     }
 
     @media (min-width: $screen-xl) {
+      margin-top: 40px;
       width: 700px;
     }
   }
@@ -169,15 +171,17 @@
 
   &--schedule,
   &--short {
-    height: 842px;
+    margin-top: 20px;
+    height: 992px;
     overflow: hidden;
 
     @media (min-width: $screen-md) {
-      height: 452px;
+      height: 600px;
       z-index: 110;
     }
 
     @media (min-width: $screen-lg) {
+      height: 442px;
       z-index: 2;
     }
 

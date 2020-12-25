@@ -85,6 +85,30 @@
     }
   }
 
+  @mixin info-lead {
+    position: relative;
+    width: auto;
+    padding-right: 75px;
+    margin-bottom: 46px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.2;
+    hyphens: auto;
+
+    @media (min-width: $screen-md) {
+      padding-right: get-width(3,1,md) - $screen-padding-md - 2px;
+      font-size: 30px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-right: 176px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-right: 292px;
+    }
+  }
+
   p {
     font-size: 15px;
     font-weight: 400;
@@ -96,27 +120,7 @@
 
 
     @at-root &#{$block-name}__lead {
-      position: relative;
-      width: auto;
-      padding-right: 75px;
-      margin-bottom: 46px;
-      font-size: 24px;
-      font-weight: 400;
-      line-height: 1.2;
-      hyphens: none;
-
-      @media (min-width: $screen-md) {
-        padding-right: get-width(3,1,md) - $screen-padding-md - 2px;
-        font-size: 30px;
-      }
-
-      @media (min-width: $screen-lg) {
-        padding-right: 176px;
-      }
-
-      @media (min-width: $screen-xl) {
-        padding-right: 292px;
-      }
+      @include info-lead;
 
       &--large {
         margin-bottom: 1em;
@@ -156,6 +160,72 @@
           // transform: translateX(100%);
         }
       }
+
+      &--icon {
+        @media (max-width: $screen-md) {
+          &::after {
+            width: 75px;
+            background-color: transparent;
+            transform: translateY(-50%);
+            background-repeat: no-repeat;
+          }
+        }
+      }
+
+      @media (max-width: $screen-md) {
+
+        &--sauna {
+          &::after {
+            @include sprite($sauna-white-md);
+          }
+        }
+
+        &--gym {
+          &::after {
+            @include sprite($gym-white-md);
+          }
+        }
+
+        &--fitness {
+          &::after {
+            @include sprite($fitness-white-md);
+          }
+        }
+
+        &--group {
+          &::after {
+            @include sprite($group-white-md);
+          }
+        }
+
+        &--cardio {
+          &::after {
+            @include sprite($cardio-white-md);
+          }
+        }
+
+        &--combat {
+          &::after {
+            @include sprite($combat-white-md);
+          }
+        }
+
+        &--corp {
+          &::after {
+            @include sprite($corp-white-md);
+          }
+        }
+
+        &--children {
+          &::after {
+            @include sprite($children-white-md);
+          }
+        }
+
+      }
+
+
+
     }
 
     @at-root &#{$block-name}__large {
@@ -195,9 +265,14 @@
   }
 
   .icon {
-    display: block;
-    margin-left: 40px;
-    margin-bottom: 70px;
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: block;
+      margin-left: 40px;
+      margin-bottom: 70px;
+    }
+
 
     @media (min-width: $screen-lg) {
       margin-bottom: 140px;

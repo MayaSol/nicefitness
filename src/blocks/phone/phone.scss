@@ -26,20 +26,20 @@
 
   &--top {
     display: none;
-    position: absolute;
-    bottom: 0;
-    padding-left: 48px;
+    // position: absolute;
+    // bottom: 0;
+    // padding-left: 48px;
 
 
     @media (min-width: $screen-lg) {
-      left: get-point(2, lg) - $screen-padding-lg;
+      // left: get-point(2, lg) - $screen-padding-lg;
       display: block;
     }
 
-    @media (min-width: $screen-xl) {
-      left: get-point(2, xl) - $screen-padding-xl;
-      display: block;
-    }
+    // @media (min-width: $screen-xl) {
+      // left: get-point(2, xl) - $screen-padding-xl;
+    //   display: block;
+    // }
   }
 
 }

@@ -95,19 +95,19 @@ $columns-width:              (xl: 426px 426px 426px, lg: 340px 341px 340px, md: 
   margin-right: auto;
 
   @media (min-width: $screen-sm) {
-    width: $screen-sm;
+    width: $screen-sm - 20px;
   }
 
   @media (min-width: $screen-md) {
-    width: $screen-md;
+    width: $screen-md  - 20px;
   }
 
   @media (min-width: $screen-lg) {
-    width: $screen-lg;
+    width: $screen-lg  - 20px;
   }
 
   @media (min-width: $screen-xl) {
-    width: $screen-xl;
+    width: $screen-xl  - 20px;
   }
 
 }

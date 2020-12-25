@@ -35,12 +35,21 @@ mixin card-tour(mods,props)
     if (typeof props.text == 'undefined') {
       props.text = 'Клубная карта'
     }
-    console.log('card-tour');
-    console.log(props);
+    //- console.log('card-tour');
+    //- console.log(props);
 
   +card(mods,props)
     .card__bottom
-      +btn('Начать','common,tour')(href="/")
+      div(class="btn btn--common btn--tour gallery")
+        span Начать
+        ul.gallery-content.visuallyhidden
+          li(href="img/slider-02-big.jpg" title='Изображение 1')
+            img(src="img/slider-02-thumb2.jpg")
+          li(href="img/slider-03-big.jpg" title='Изображние 2')
+            img(src="img/slider-03-thumb2.jpg")
+          li(href="img/slider-02-big.jpg" title='Изображние 3')
+            img(src="img/slider-02-thumb2.jpg")
+      //- +btn('Начать','common,tour')(href="/")
       .card__big-figure 360
         span &ocy;
 
@@ -54,10 +63,36 @@ mixin card-photo-tour(mods, props)
       props.text = 'Клубная карта'
     }
 
-  +card(mods,props)
-    .card__bottom
-      +btn('Начать','common,photo-tour')(href="/")
-      .icon.icon--photo-tour
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' card--' + modsList[i].trim();
+      }
+    }
+
+    if (typeof props == 'undefined') {
+      props = {}
+    }
+
+  a.card(class='gallery' + allMods)&attributes(attributes)
+    .card__inner
+      .card__header
+        if ( !(typeof props.text == 'undefined') )
+          .card__text !{props.text}
+        .card__title
+          span nicefitness
+      .card__bottom
+        +btn('Начать','common,photo-tour')
+        .icon.icon--photo-tour
+    ul.gallery-content.visuallyhidden
+      li(href="img/slider-02-big.jpg" title='Изображение 1')
+        img(src="img/slider-02-thumb2.jpg")
+      li(href="img/slider-03-big.jpg" title='Изображние 2')
+        img(src="img/slider-03-thumb2.jpg")
+      li(href="img/slider-02-big.jpg" title='Изображние 3')
+        img(src="img/slider-02-thumb2.jpg")
 
 mixin card-contacts(mods,props)
   +card(mods,props)

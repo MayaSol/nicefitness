@@ -6,7 +6,7 @@
 
   $block-name:                &; // #{$block-name}__element
   overflow: hidden;
-  height: 100%;
+  // height: 100%;
 
   &__inner {
     display: flex;
@@ -36,7 +36,8 @@
   }
 
   &__title {
-    margin-top: 65px;
+    margin-top: 10px;
+    min-height: 1em;
 
     @media (min-width: $screen-md) {
       margin-top: auto;

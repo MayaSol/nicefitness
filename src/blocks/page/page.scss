@@ -283,6 +283,7 @@ a {
   color: $link-color;
   background-color: transparent;
   transition: color 0.3s;
+  text-decoration: none;
 
   &:hover,
   &:focus {
@@ -801,11 +802,11 @@ a:hover {
     //   margin-right: -15px;
     // }
 
-    &::after {
-      content: '';
-      position: absolute;
-      @include sprite($quotes);
-    }
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   @include sprite($quotes);
+    // }
 }
 
 .w100 {
@@ -1045,7 +1046,7 @@ a:hover {
       }
 
       .section-title {
-        width: 350px;
+        max-width: 350px;
       }
     }
 
@@ -1281,12 +1282,15 @@ a:hover {
         margin-top: 540px;
       }
 
-      // .page__section-col--photo-tour {
+      .page__section-col--photo-tour {
 
-      //   @media (min-width: $screen-md) {
-      //     width: get-width(3,1,md) - $screen-padding-md;
-      //   }
-      // }
+        margin-bottom: 70px;
+
+        @media (min-width: $screen-lg) {
+          margin-bottom: 0;
+          // width: get-width(3,1,md) - $screen-padding-md;
+        }
+      }
 
       .card--photo-tour {
         margin-left: auto;
@@ -1445,3 +1449,16 @@ a:hover {
   }
 
 
+.visuallyhidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  font-size: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
